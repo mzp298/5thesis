@@ -1,0 +1,19 @@
+clear;
+clc
+
+s=1:0.001:15;
+beta=2;
+c=beta-1;
+p=c*s.^-beta;
+%loglog(s,p,'r')
+
+plot(s,p,'b','LineWidth',2);
+set(gca,'xtick',1:2:15,'xticklabel',1:2:15) 
+%xtick就是你要在哪些地方显示刻度，xticklabel就是显示什么
+set(gca,'FontSize',25);
+set(gca,'xlim',[1 15]);
+title('Weakening scales distribution curve when \beta=2 ','Fontsize',25)
+xlabel('s','Fontsize',25);
+ylabel('P(s)','Fontsize',25);
+
+

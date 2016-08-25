@@ -1,0 +1,22 @@
+clear;clc
+
+alpha=0.8;
+
+beta1=0.1;
+beta2=0.3;
+beta3=0.5;
+ratio=0:0.1:1;
+
+D1=(1-(1-ratio.^(1/(1-alpha)))).^(1/(beta1+1));
+D2=(1-(1-ratio.^(1/(1-alpha)))).^(1/(beta2+1));
+D3=(1-(1-ratio.^(1/(1-alpha)))).^(1/(beta3+1));
+D4=(1-(1-ratio.^(1/(1-0))));
+
+plot(ratio,D1,'r',ratio,D2,'b',ratio,D3,'g',ratio,D4,'--p')
+title('Linear damage rule and nonlinear rule at three stress levels in a plot of fatigue damage versus cycle ratio');
+xlabel('N/N_{F}');
+ylabel('D');
+text(0.5,0.25,'\alpha=0.8,\beta=0.1');
+text(0.6,0.2,'\alpha=0.8,\beta=0.3');
+text(0.7,0.15,'\alpha=0.8,\beta=0.5');
+text(0.25,0.4,'\alpha=0,\beta=0');

@@ -1,0 +1,81 @@
+This is BibTeX, Version 0.99d (TeX Live 2014/W32TeX)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: unsrt.bst
+Database file #1: 11.bib
+Warning--entry type for "zepeng" isn't style-file defined
+--line 39 of file 11.bib
+Repeated entry---line 285 of file 11.bib
+ : @book{lemaitre1990mechanics
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 461 of file 11.bib
+ : @article{Papadopoulos1997219
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 497 of file 11.bib
+ : @article{ballard1995high
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 569 of file 11.bib
+ : @article{Papadopoulos1996513
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 953 of file 11.bib
+ : \@article{Maitournam2011232
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 991 of file 11.bib
+ : @thesis{zepeng
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1007 of file 11.bib
+ : @book{lemaitre1990mechanics
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1021 of file 11.bib
+ : @article{Bosia201239
+ :                     ,
+I'm skipping whatever remains of this entry
+You've used 31 entries,
+            1791 wiz_defined-function locations,
+            631 strings with 8704 characters,
+and the built_in function-call counts, 6731 in all, are:
+= -- 613
+> -- 266
+< -- 1
++ -- 102
+- -- 71
+* -- 467
+:= -- 1073
+add.period$ -- 92
+call.type$ -- 31
+change.case$ -- 28
+chr.to.int$ -- 0
+cite$ -- 31
+duplicate$ -- 279
+empty$ -- 684
+format.name$ -- 71
+if$ -- 1488
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 32
+newline$ -- 157
+num.names$ -- 30
+pop$ -- 73
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 113
+stack$ -- 0
+substring$ -- 527
+swap$ -- 39
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 66
+width$ -- 33
+write$ -- 331
+(There were 8 error messages)

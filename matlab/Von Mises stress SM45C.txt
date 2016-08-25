@@ -1,0 +1,98 @@
+clc;
+clear;
+% steel SM45C data from Jabbado thesis
+sigmay=sqrt(1/2*((6.38E8)^2)+3*((3.68E8)^2));%should be only tension yield
+sigmau=8.24E8;
+E=213E9;
+%*****************bending-torsion without mean stress**************************
+Sxx=[449E6 354E6 485E6 357E6 449E6 370E6 449E6 457E6 354E6 437E6];
+Syy=0;
+Szz=0;
+Txy=[282E6 334E6 223E6 309E6 217E6 285E6 199E6 194E6 252E6 154E6];
+Tyz=0;
+Tzx=0;
+%*****************Von Mises stress********************
+Smax=sqrt(1/2*((Sxx-Syy).^2+(Syy-Szz).^2+(Szz-Sxx).^2)+3*(Txy.^2+Tyz.^2+Tzx.^2))
+%*****************Fitting********************************
+clear;clc;
+Smax=[663455348.912043 678221202.853464 620009677.343830 643344386.778963	585549314.746418	616907610.586869	566042401.238635	567236282.337440	561985764.944273	511973632.133531];
+Nf=[29.9E3 35.7E3 50E3 73.8E3 106E3 106E3 112E3 131E3 333E3 431E3];
+cftool
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+213E9)*b*(b+1)*7.8089E8^(b-1))).^-1
+Wf=1E9~5E11
+b=1~50
+k=0~1
+
+clc;
+clear;
+sigmay=sqrt(1/2*((6.38E8)^2)+3*((3.68E8)^2));
+sigmau=8.24E8;
+%*****************bending-torsion with mean stress**************************
+Sxx=[441E6 286E6 464E6 473E6 173E6 403E6 437E6 167E6 357E6 182E6];
+Syy=0;
+Szz=0;
+Txy=[215E6 309E6 155E6 136E6 334E6 209E6 177E6 321E6 179E6 274E6];
+Tyz=0;
+Tzx=0;
+Sm=1.96E8;
+%*****************Von Mises stress********************
+Smax=sqrt(1/2*((Sxx-Syy).^2+(Syy-Szz).^2+(Szz-Sxx).^2)+3*(Txy.^2+Tyz.^2+1Tzx.^2))
+%*****************Fitting********************************
+clear;clc;
+Smax=[577196673.587089 606826993.466837 536069958.121139 528409878.787291 603818681.393678 541712100.658643 533812701.235180 580527346.470431 472834008.929138 508283385.524257];
+Nf=[53E3 59.2E3 70.1E3 86.3E3 89.9E3 92.1E3 102E3 135E3 351E3 394E3];
+cftool
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+213E9)*b*(b+1)*(7.8089E8-alp*196E6)^(b-1))).^-1
+Wf=2E19~5E21
+alp=0~1000
+b=1~10
+k=0.02~1
+
+
+
+%*****************Plotting********************************
+clc;
+clear;
+sigmay=sqrt(1/2*((6.38E8)^2)+3*((3.68E8)^2))
+Smax=5E8:1000:7E8;
+
+b=7.921;
+k=0.6463;
+Wf=1.139E10;
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+213E9)*b*(b+1)*7.8089E8^(b-1))).^-1
+
+figure(1);
+fittingbt=plot(Smax, Nf, '-b', 'LineWidth' ,2)
+axis([4.5E8 7E8 1E4 5E5]);
+
+hold on;
+Smaxbt=[663455348.912043 678221202.853464 620009677.343830 643344386.778963...
+585549314.746418 616907610.586869 566042401.238635...
+567236282.337440 561985764.944273 511973632.133531];
+Nfbt=[29.9E3 35.7E3 50E3 73.8E3 106E3 106E3 112E3 131E3 333E3 431E3];
+expbt=plot(Smaxbt, Nfbt, 'p', 'MarkerSize', 10,  'MarkerFaceColor', 'k');
+
+hold on;
+alp=1.719;
+b=6.955;
+k=0.7655;
+Wf=2.5E11;
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+213E9)*b*(b+1)*(7.8089E8-alp*196E6)^(b-1))).^-1
+fittingbtm=plot(Smax, Nf, '--r', 'LineWidth', 2)
+
+hold on;
+Smaxbtm=[577196673.587089 606826993.466837 536069958.121139 528409878.787291...
+ 603818681.393678 541712100.658643 533812701.235180 580527346.470431...
+ 472834008.929138 508283385.524257];
+Nfbtm=[53E3 59.2E3 70.1E3 86.3E3 89.9E3 92.1E3 102E3 135E3 351E3 394E3];
+expbtm=plot(Smaxbtm ,Nfbtm ,'s' ,'MarkerSize' ,10 , 'MarkerFaceColor', 'r');
+hold off;
+
+grid on;
+grid minor;
+legend('Bending-torsion fitted curve', 'Bending-torsion test data with \sigma_m=0',...
+'Bending-torsion fitted curve with \sigma_m=196MPa','Bending-torsion test data with \sigma_m=196MPa')
+set(gca ,'FontSize',20);
+title('Bending-torsion tests of SM45C steel' ,'Fontsize' ,25)
+xlabel('S_{max}' ,'Fontsize' ,25);
+ylabel('N_f', 'Fontsize' ,25);

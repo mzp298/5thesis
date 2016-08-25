@@ -1,0 +1,33 @@
+clc;
+clear;
+
+sigmay=5E8;
+Smax=sigmay/20:1000:sigmay;
+b=2;
+k=0.2;
+
+Wcyc=2*(b-1)*Smax.^(b+1)/(k*(b+1)*(b+2)*sigmay^(b-1));
+
+Wf=5E22;
+Nf=Wf*Wcyc.^-1;
+
+figure(1);
+plot(Smax,Wcyc,'b','LineWidth',2)
+set(gca,'xlim',[sigmay/20 sigmay]);
+set(gca,'FontSize',20);
+title('Dissipated energy per cycle W_{cyc} vs. maximum weakening  scale S_{max}','Fontsize',25);
+xlabel('S_{max} when \beta=2, \sigma_y=5E8Pa, k=0.2','Fontsize',25);
+ylabel('W_{cyc}','Fontsize',25);
+
+figure(2);
+plot(Smax,Nf,'b','LineWidth',2)
+set(gca,'xlim',[sigmay/20 sigmay]);
+set(gca,'FontSize',20);
+title('Number of cycles to failure N_f vs. maximum weakening  scale S_{max}','Fontsize',25)
+xlabel('S_{max} when \beta=2, \sigma_y=5E8, k=0.2,W_f=5E22','Fontsize',25);
+ylabel('N_f','Fontsize',25);
+
+%figure(3);
+%loglog(Smax,Wcyc,'k','LineWidth',2)
+%figure(4);
+%loglog(Smax,Nf,'k','LineWidth',2)

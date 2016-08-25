@@ -1,0 +1,22 @@
+clc;
+clear;
+a=0.5;
+ga=6;
+WF=5E5
+b=10
+k=0.05
+E=2.1E5
+sigy=500
+lam=1.1
+Tr=50
+smax=200
+D=0:0.01:1;
+
+T=(1 - (1 - D).^(ga + 1)).^(1-a)*WF*k*E*b*(b+1)/((1+ga)*(1-a)*4*(E-k)*...
+(b-1))*(sigy-lam*Tr).^(b-1)/(smax.^(b+1));
+plot(T,D,'b','LineWidth',2);
+title('T-N curve','Fontsize',25);
+xlabel('Loading time T(s) of constant stress S_{max}=200MPa','Fontsize',25);
+ylabel('Damage D','Fontsize',25);
+
+

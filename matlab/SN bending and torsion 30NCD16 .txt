@@ -1,0 +1,59 @@
+clc;
+clear;
+% steel 30 NCD 16 data from Jabbado thesis
+sigmay=10.8E8;
+Smax=4E8:1000:sigmay;
+
+b=8.716;
+k=550;
+E=191E9;
+Wf=9.23E9;
+Nf=Wf*((4*(b-1)*Smax.^(b+1)/((k+191E9)*b*(b+1)*sigmay^(b-1))).^-1)
+
+figure(1);
+fittingben=plot(Smax,Nf,'-b','LineWidth',2)
+axis([4E8 sigmay 1E4 3E5]);
+hold on;
+Smaxben=[8.2E8 7.95E8 7.9E8 7.85E8 7.8E8 7.65E8 7.52E8 7.25E8 7.20E8 7.15E8 7.08E8]£»
+Nfben=[51000 80000 90000 95000 100000 120000 140000 200000 210000 230000 250000] £»
+expben=plot(Smaxben,Nfben,'d','MarkerSize',10, 'MarkerFaceColor','k');
+
+hold on;
+sigmay=6.24E8;
+Wf=1.282E10;
+b=7.043;
+k=550;
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+191E9)*b*(b+1)*6.24E8^(b-1))).^-1
+fittingtor=plot(Smax,Nf,'--r','LineWidth',2)
+
+hold on;
+Smaxtor=[5.27E8 5.05E8 5E8 4.97E8 4.95E8 4.82E8 4.7E8 4.5E8 4.46E8 4.45E8 4.4E8]£»
+Nftor=[51000 80000 90000 95000 100000 120000 140000 200000 210000 230000 250000] £»
+exptor=plot(Smaxtor,Nftor,'^','MarkerSize',10, 'MarkerFaceColor','k');
+hold off;
+
+grid on;
+grid minor;
+legend('Bending fitted curve','Bending data','Torsion fitted curve','Torsion data')
+set(gca,'FontSize',20);
+title('Bending and torsion tests of 30NCD16 steel','Fontsize',25)
+xlabel('S_{max}','Fontsize',25);
+ylabel('N_f','Fontsize',25);
+
+
+%*****************Fitting********************
+clear;clc;
+Smaxben=[8.2E8 7.95E8 7.9E8 7.85E8 7.8E8 7.65E8 7.52E8 7.25E8 7.20E8 7.15E8 7.08E8]£»
+Nfben=[51000 80000 90000 95000 100000 120000 140000 200000 210000 230000 250000] £»
+cftool
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+191E9)*b*(b+1)*10.8E8^(b-1))).^-1
+
+clear;clc;
+Smaxtor=[5.27E8 5.05E8 5E8 4.97E8 4.95E8 4.82E8 4.7E8 4.5E8 4.46E8 4.45E8 4.4E8]£»
+Nftor=[51000 80000 90000 95000 100000 120000 140000 200000 210000 230000 250000] £»
+cftool
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+191E9)*b*(b+1)*6.24E8^(b-1))).^-1
+
+Wf=1E9~5E11
+b=1~50
+k=100~1000

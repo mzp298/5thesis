@@ -1,0 +1,22 @@
+matlab
+
+syms W real S real s real b real y real a real p real    %定义符号变量S,h,R
+assume(W>0)
+assume(S>0)
+assume(s>1)
+assume(b>0)
+assume(y>0)
+assume(a>0)
+assume(p>0)
+W=int('-((a*p - y/s)*(b - 1)*(S + a*p - y/s))/s^b', s, y/S-a*p, inf) % int表积分，''内表示被积函数，h表示积分变量，0,R表示下上限
+
+syms W real S real s real b real y real a real p real
+W=(b-1)*s^(-b)*(y/s-a*p)*(S-y/s+a*p)
+=-((a*p - y/s)*(b - 1)*(S + a*p - y/s))/s^b
+
+
+
+Mathmatica
+Integrate[(b-1)*s^(-b)*(y/s)*(S-y/s),{s, y/S, inf}]
+
+\sigma_y-\alpha \Tr\uline{\uline{\sigma}}

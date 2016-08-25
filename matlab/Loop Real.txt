@@ -1,0 +1,128 @@
+% Program to get the Gauss-Legendre Quadrature results
+clear;clc;
+format long e
+
+load('FY_RAVG.mat');
+signal.data=double(signal.data);
+force= transpose(signal.data);
+stress=force.*2e5;
+stress=[stress ; stress; stress; stress];
+
+v = [-0.98799251802048542848956571858661
+ -0.93727339240070590430775894771021
+ -0.84820658341042721620064832077422
+ -0.72441773136017004741618605461394
+ -0.57097217260853884753722673725391
+ -0.39415134707756336989720737098105
+  -0.2011940939974345223006283033946
+                                   0
+   0.2011940939974345223006283033946
+  0.39415134707756336989720737098105
+  0.57097217260853884753722673725391
+  0.72441773136017004741618605461394
+  0.84820658341042721620064832077422
+  0.93727339240070590430775894771021
+  0.98799251802048542848956571858661];%scale s
+weight = [ 0.030753241996117268354628393577204
+ 0.070366047488108124709267416450667
+  0.10715922046717193501186954668587
+  0.13957067792615431444780479451103
+  0.16626920581699393355320086048121
+  0.18616100001556221102680056186642
+  0.19843148532711157645611832644384
+  0.20257824192556127288062019996752
+  0.19843148532711157645611832644384
+  0.18616100001556221102680056186642
+  0.16626920581699393355320086048121
+  0.13957067792615431444780479451103
+  0.10715922046717193501186954668587
+ 0.070366047488108124709267416450667
+ 0.030753241996117268354628393577204];%scale weight
+
+
+syms t;
+E=2e11;              %Young¡¯s modulus
+k=6e8;                 %hardening parameter
+b=7;                    %weakening scales distribution exponent
+lam=1.7;             %hydrostatic pressure sensitivity
+y=6.38e8;           %macroscopic yield stress
+m=1.96e8;           %mean stress
+nu=0.3;                     %poisson's ratio
+%S=2.7e8*sin(t);  %loading history
+
+tt=2e8;                 %torsion fatigue limit
+ff=2.5e8;              %bending fatigue limit
+ac=(tt-ff/sqrt(3))/(ff/3); %crossland criterial constant
+bc=tt;                     %crossland criterial constant 
+sigu=8e8;             %ultimite stress
+gam=6;                %material parameter from Chaboche law(Wohler curve exponent)
+
+D=1e-15;            %initial damage
+WF=1e7;           %dissipated energy to failure per unit volume
+samplerate=256;   %recorded samples per second
+n=1;       %initial recording point
+
+
+
+sig1 = [0 0 0;0 0 0;0 0 3e8;] ;                           %Stress tensor
+p1=1/3*sum(diag(sig1));                                           %Hydraustatic stress
+S1=2*sig1-(1/3*sum(diag(sig1)))*diag([1,1,1]);      % deviatoric stress
+sqrj1=1/2*sqrt(1/2*(S1(1,1)^2+S1(2,2)^2+S1(3,3)^2+2*(S1(1,2)^2)+...
+2*(S1(1,3)^2)+2*(S1(2,3)^2)));                               % second invariant of the deviatoric stress tensor
+sqrj=max(sqrj1);
+p=max(p1);
+cross=sqrj+ac*p-bc;
+cross(cross<0)=0                                                  %turn negative values to 0
+alp=1-1*(cross*(sigu-2*sqrj).^-1)  
+
+while D<1
+  
+sig1 = [0 0 0;0 0 0;0 0 stress(n);] ;                           %Stress tensor
+p1=1/3*sum(diag(sig1));                                           %Hydraustatic stress
+S1=2*sig1-(1/3*sum(diag(sig1)))*diag([1,1,1]);      % deviatoric stress
+sqrj1=1/2*sqrt(1/2*(S1(1,1)^2+S1(2,2)^2+S1(3,3)^2+2*(S1(1,2)^2)+...
+2*(S1(1,3)^2)+2*(S1(2,3)^2)));                               % second invariant of the deviatoric stress tensor
+sqrj=max(sqrj1);
+p=max(p1);
+cross=sqrj+ac*p-bc;
+cross(cross<0)=0   ;                                               %turn negative values to 0
+alp=1-1*(cross*(sigu-2*sqrj).^-1)  ;                        %characterizes non-linearity of damage accumulation
+
+Ep=abs(sig1(3,3))-abs((y-lam*m)*(v/2+1/2).^(-1/(1-b)));   %plastic strains under different scales
+Ep2=abs(sig1(3,3))-abs((y-lam*m)*(v/2+1/2).^(-1/(1-b))); %plastic strains under different scales
+Ep(Ep<0)=0;                      %turn negative values to 0 (elastic regime)
+
+W=(E-k)*(1+nu)/(4*E*(E-k*nu)*(y-lam*m)^(b-1))*(sig1(3,3)^b*(v/2+1/2).^(-1/(1-b))).*Ep.*Ep2.^-1*...
+          abs(stress(n+1)-stress(n))/(1/samplerate)              %energy dissipation rate
+W = sum(weight.*W); %Gauss-Legendre Quadrature
+D=D+(1 - (1 - D).^(gam + 1)).^alp*W*(1/samplerate)/WF
+n=n+1;
+
+hold on;
+%plot (n,cross,'*r');
+plot (n,D,'*r');
+%pause(1e-10)
+
+end
+
+grid on;
+grid minor;
+set(gca ,'FontSize',25);
+
+%title('Crossland fatigue criterion evolution' ,'Fontsize' ,25)
+%xlabel('n' ,'Fontsize' ,25);
+%ylabel('Crossland criterion', 'Fontsize' ,25);
+
+title('Damage evolution' ,'Fontsize' ,25)
+xlabel('n' ,'Fontsize' ,25);
+ylabel('D', 'Fontsize' ,25);
+fprintf('Total points to failure=%d \n',n)
+fprintf('Total time to failure=%d s \n',n/256)
+
+
+%D=1e-10
+%Total points to failure=84927 
+%Total time to failure=3.317461e+02 s 
+%D=1e-15
+%Total points to failure=84935 
+%Total time to failure=3.317773e+02 s 

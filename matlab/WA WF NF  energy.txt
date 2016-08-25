@@ -1,0 +1,23 @@
+clear;clc
+beta=-1;
+A=1e5;
+
+NF=0:1e6:1e10;
+WA=(NF/A).^(1/beta);
+WF=(NF.^(1+beta)/A).^(1/beta);
+
+%loglog(NF,As,'g',NF,Ac,'r',NF,Ad,'b','LineWidth',2);
+figure(1)
+semilogx(NF,WA,'g','LineWidth',2);
+grid on;
+title('Proposed additive energy criterion');
+xlabel('N_F');
+ylabel('W_A');
+%text(1e5,1.5e4,'Crossland: red');
+hold on
+figure(2)
+semilogx(NF,WF,'r','LineWidth',2);
+grid on;
+title('Proposed additive energy criterion');
+xlabel('N_F');
+ylabel('W_F');

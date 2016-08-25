@@ -1,0 +1,150 @@
+clc;
+clear;
+% 39NiCrMo3 steel data from Jabbado thesis
+sigmay=6.25E8;
+sigmau=8.24E8;
+E=206E9;
+%*****************torsion without mean stress**************************
+Sxx=0;
+Syy=0;
+Szz=0;
+Txy=[255E6 255E6 255E6 255E6 255E6 270E6 270E6 270E6 270E6 ...
+ 270E6 270E6 285E6 285E6];
+Tyz=0;
+Tzx=0;
+%*****************Von Mises stress********************
+Smax=sqrt(1/2*((Sxx-Syy).^2+(Syy-Szz).^2+(Szz-Sxx).^2)+3*(Txy.^2+Tyz.^2+Tzx.^2))
+%*****************Fitting********************************
+clear;clc;
+Smax=1E8*[4.4167 4.4167 4.4167 4.4167 4.4167 4.6765 4.6765 4.6765 ...
+4.6765 4.6765 4.6765 4.9363 4.9363];
+Nf=[5E6 5E6 5E6 5E6 5E6 2.41E6 1.706E6 1.72E6 1.263E6 5E6 1.58E6 ...
+6.97E5 2.89E5];
+cftool
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+206E9)*b*(b+1)*6.25E8^(b-1))).^-1
+Wf=1E9~1E12
+b=1~50
+k=0~1
+
+clc;
+clear;
+sigmay=6.25E8;
+sigmau=8.24E8;
+E=206E9;
+%*****************torsion with mean stress=45MPa**************************
+Sxx=0;
+Syy=0;
+Szz=0;
+Txy=[240E6 255E6 255E6 255E6 255E6 255E6 255E6 255E6 270E6 ...
+270E6 270E6 270E6 270E6 ];
+Tyz=0;
+Tzx=0;
+Sm=45E6;
+%*****************Von Mises stress********************
+Smax=sqrt(1/2*((Sxx-Syy).^2+(Syy-Szz).^2+(Szz-Sxx).^2)+3*(Txy.^2+Tyz.^2+Tzx.^2))
+%*****************Fitting********************************
+clear;clc;
+Smax=1E8*[4.1569    4.4167    4.4167    4.4167    4.4167    4.4167 ...
+   4.4167    4.4167    4.6765    4.6765    4.6765    4.6765    4.6765];
+Nf=[5E6 5E6 5E6 3.54E6 5E6 5E6 5E6 5E6 2.516E6 1.397E6 7.24E5 ...
+2.55E6 2.05E6];
+cftool
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+206E9)*b*(b+1)*(6.25E8-lam*45E6)^(b-1))).^-1
+Wf=1E10~1E13
+lam=0~1000
+b=1~10
+k=0.02~1
+
+clc;
+clear;
+sigmay=6.25E8;
+sigmau=8.24E8;
+E=206E9;
+%*****************torsion with mean stress=90MPa**************************
+Sxx=0;
+Syy=0;
+Szz=0;
+Txy=[240E6 240E6 240E6 240E6 255E6 255E6 255E6 255E6 255E6 ...
+255E6 255E6 270E6 270E6 ];
+Tyz=0;
+Tzx=0;
+Sm=90E6;
+%*****************Von Mises stress********************
+Smax=sqrt(1/2*((Sxx-Syy).^2+(Syy-Szz).^2+(Szz-Sxx).^2)+3*(Txy.^2+Tyz.^2+Tzx.^2))
+%*****************Fitting********************************
+clear;clc;
+Smax=1E8*[4.1569    4.1569    4.1569    4.1569    4.4167    4.4167  ...
+  4.4167    4.4167    4.4167    4.4167    4.4167    4.6765    4.6765];
+Nf=[5E6 5E6 5E6 5E6 2.29E6 5E6 2.53E6 2.95E6 5E6 3.85E6 3.21E6 ...
+6.55E5 1.06E6];
+cftool
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+206E9)*b*(b+1)*(6.25E8-lam*90E6)^(b-1))).^-1
+Wf=1E10~1E13
+lam=0~1000
+b=1~10
+k=0.02~1
+
+
+%*****************Plotting********************************
+clc;
+clear;
+sigmay=sqrt(1/2*((0)^2)+3*((6.25E8)^2));
+Smax=4E8:1000:5E8;
+
+figure(1);%*****************torsion without mean stress
+b=13.92;
+k=0.3404; 
+Wf=1.336E10; %total energy of 39NiCrMo3 steel
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+206E9)*b*(b+1)*6.25E8^(b-1))).^-1
+
+fittingbt=plot(Smax, Nf, '-b', 'LineWidth' ,2)
+axis([4E8 5E8 1E4 8E6]);
+
+hold on;
+Smaxt=1E8*[4.4167 4.4167 4.4167 4.4167 4.4167 4.6765 4.6765 4.6765 ...
+4.6765 4.6765 4.6765 4.9363 4.9363];
+Nft=[5E6 5E6 5E6 5E6 5E6 2.41E6 1.706E6 1.72E6 1.263E6 5E6 1.58E6 ...
+6.97E5 2.89E5];
+expbt=plot(Smaxt, Nft, 'p', 'MarkerSize', 10,  'MarkerFaceColor', 'k');
+
+hold on;%*****************torsion with mean stress=45MPa
+lam=1.734;
+b=6.671;
+k=0.506;
+Wf=5.102E11;
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+206E9)*b*(b+1)*(6.25E8-lam*45E6)^(b-1))).^-1
+fittingbtm=plot(Smax, Nf, '--r', 'LineWidth', 2)
+
+hold on;
+Smaxtm=1E8*[4.1569    4.4167    4.4167    4.4167    4.4167    4.4167 ...
+   4.4167    4.4167    4.6765    4.6765    4.6765    4.6765    4.6765];
+Nftm=[5E6 5E6 5E6 3.54E6 5E6 5E6 5E6 5E6 2.516E6 1.397E6 7.24E5 ...
+2.55E6 2.05E6];
+expbtm=plot(Smaxtm ,Nftm ,'s' ,'MarkerSize' ,10 , 'MarkerFaceColor', 'r');
+
+hold on;%*****************torsion with mean stress=90MPa
+lam=3.003;
+b=7.221;
+k=0.9293;
+Wf=4.907E12;
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+206E9)*b*(b+1)*(6.25E8-lam*90E6)^(b-1))).^-1
+fittingbtm=plot(Smax, Nf, '-.g', 'LineWidth', 2)
+
+hold on;
+Smaxtmm=1E8*[4.1569    4.1569    4.1569    4.1569    4.4167    4.4167  ...
+  4.4167    4.4167    4.4167    4.4167    4.4167    4.6765    4.6765];
+Nftmm=[5E6 5E6 5E6 5E6 2.29E6 5E6 2.53E6 2.95E6 5E6 3.85E6 3.21E6 ...
+6.55E5 1.06E6];
+expbtm=plot(Smaxtmm ,Nftmm ,'v' ,'MarkerSize' ,10 , 'MarkerFaceColor', 'g');
+
+hold off;
+
+grid on;
+grid minor;
+legend('Torsion curve with \sigma_m=0', 'Torsion test data with \sigma_m=0',...
+'Torsion curve with \sigma_m=45', 'Torsion test data with \sigma_m=45', ...
+'Torsion curve with \sigma_m=90', 'Torsion test data with \sigma_m=90')
+set(gca ,'FontSize',20);
+title('Torsion tests of 39NiCrMo3 steel' ,'Fontsize' ,25)
+xlabel('S_{max}' ,'Fontsize' ,25);
+ylabel('N_f', 'Fontsize' ,25);

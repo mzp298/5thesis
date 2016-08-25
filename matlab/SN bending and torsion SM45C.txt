@@ -1,0 +1,60 @@
+clc;
+clear;
+% steel SM45C data from Jabbado thesis
+sigmay=6.38E8;
+Smax=3E8:1000:6.38E8;
+
+b=14.31;
+k=550;
+Wf=9.415E9;
+E=213E9;
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+213E9)*b*(b+1)*6.38E8^(b-1))).^-1;
+
+figure(1);
+fittingben=plot(Smax,Nf,'-b','LineWidth',2)
+axis([3E8 6.38E8 1E4 1E7]);
+
+hold on;
+Smaxben=[6.3E8 5.9E8 5.52E8 5.35E8 5.05E8 4.9E8 4.7E8 4.65E8 4.62E8 4.65E8 4.6E8 4.6E8 4.4E8 4.58E8 4.3E8 4.48E8]£»
+Nfben=[1.9E4 3.6E4 5.8E4 9E4 1.7E5 2.2E5 4.4E5 8E5 1.4E6 1.5E6 2.4E6 3.3E6 6E6 6.6E6 7E6 9E6]£»
+expben=plot(Smaxben,Nfben,'d','MarkerSize',10, 'MarkerFaceColor','k');
+
+hold on;
+sigmay=3.6835E8;
+Wf=1.72E9;
+b=34.68;
+k=550;
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+213E9)*b*(b+1)*3.6835E8^(b-1))).^-1
+fittingtor=plot(Smax,Nf,'--r','LineWidth',2)
+
+hold on;
+Smaxtor=[4.05E8 3.99E8 3.80E8 3.65E8 3.55E8 3.49E8 3.40E8 3.35E8 3.33E8 3.25E8];
+Nftor=[2.9E4 5E4 7.8E4 1E5 1.8E5 1.9E5 3E5 5.8E5 8.2E5 2.25E6] ;
+exptor=plot(Smaxtor,Nftor,'^','MarkerSize',10, 'MarkerFaceColor','k');
+hold off;
+
+grid on;
+grid minor;
+legend('Bending fitted curve','Bending data','Torsion fitted curve','Torsion data')
+set(gca,'FontSize',20);
+title('Bending and torsion tests of SM45C steel','Fontsize',25)
+xlabel('S_{max}','Fontsize',25);
+ylabel('N_f','Fontsize',25);
+
+
+%*****************Fitting********************
+clear;clc;
+Smax=[6.3E8 5.9E8 5.52E8 5.35E8 5.05E8 4.9E8 4.7E8 4.65E8 4.62E8 4.65E8 4.6E8 4.6E8 4.4E8 4.58E8 4.3E8 4.48E8]£»
+Nf=[1.9E4 3.6E4 5.8E4 9E4 1.7E5 2.2E5 4.4E5 8E5 1.4E6 1.5E6 2.4E6 3.3E6 6E6 6.6E6 7E6 9E6]£»
+cftool
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+213E9)*b*(b+1)*6.38E8^(b-1))).^-1
+
+clear;clc;
+Smaxtor=[4.05E8 3.99E8 3.80E8 3.65E8 3.55E8 3.49E8 3.40E8 3.35E8 3.33E8 3.25E8];
+Nftor=[2.9E4 5E4 7.8E4 1E5 1.8E5 1.9E5 3E5 5.8E5 8.2E5 2.25E6] ;
+cftool
+Nf=Wf*(4*(b-1)*Smax.^(b+1)/((k+213E9)*b*(b+1)*3.6835E8^(b-1))).^-1
+
+Wf=1E9~5E11
+b=1~50
+k=100~1000

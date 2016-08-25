@@ -1,0 +1,16 @@
+clc;
+clear;
+a=0.5;
+b=6;
+A= 7.7606E5;
+M=1e8;
+D=0:0.01:1;
+
+N=(1 - (1 - D).^(b + 1)).^(1-a)*(A/M).^-b/(1+b)/(1-a);
+plot(N,D);
+title('D-N curve');
+xlabel('Number of cycles N');
+ylabel('Damage D');
+
+
+

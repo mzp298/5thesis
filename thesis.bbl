@@ -1,0 +1,182 @@
+\begin{thebibliography}{10}
+
+\bibitem{Crossland}
+Crossland B.
+\newblock Effect of large hydrostatic pressures on the torsional fatigue
+  strength of an alloy steel.
+\newblock {\em In: Proceedings of the Inter-national Conference on Fatigue of
+  Metals, Institution of Mechan-ical Engineers, London.}, pages 138--149, 1956.
+
+\bibitem{Papadopoulos1997219}
+Ioannis~V. Papadopoulos, Piermaria Davoli, Carlo Gorla, Mauro Filippini, and
+  Andrea Bernasconi.
+\newblock A comparative study of multiaxial high-cycle fatigue criteria for
+  metals.
+\newblock {\em International Journal of Fatigue}, 19(3):219 -- 235, 1997.
+
+\bibitem{ballard1995high}
+P~Ballard, K~Dang Van, A~Deperrois, and YV~Papadopoulos.
+\newblock High cycle fatigue and a finite element analysis.
+\newblock {\em Fatigue \& Fracture of Engineering Materials \& Structures},
+  18(3):397--411, 1995.
+
+\bibitem{papadopoulos2001long}
+Ioannis~V Papadopoulos.
+\newblock Long life fatigue under multiaxial loading.
+\newblock {\em International Journal of Fatigue}, 23(10):839--849, 2001.
+
+\bibitem{suresh1998fatigue}
+Subra Suresh.
+\newblock {\em Fatigue of materials}.
+\newblock Cambridge university press, 1998.
+
+\bibitem{luu2013formulation}
+DH~Luu, MH~Maitournam, and QS~Nguyen.
+\newblock Formulation of gradient multiaxial fatigue criteria.
+\newblock {\em International Journal of Fatigue}, 2013.
+
+\bibitem{Papadopoulos1996513}
+Ioannis~V. Papadopoulos and Vassilis~P. Panoskaltsis.
+\newblock Invariant formulation of a gradient dependent multiaxial high-cycle
+  fatigue criterion.
+\newblock {\em Engineering Fracture Mechanics}, 55(4):513 -- 528, 1996.
+
+\bibitem{Amargier20101904}
+R.~Amargier, S.~Fouvry, L.~Chambon, C.~Schwob, and C.~Poupon.
+\newblock Stress gradient effect on crack initiation in fretting using a
+  multiaxial fatigue framework.
+\newblock {\em International Journal of Fatigue}, 32(12):1904 -- 1912, 2010.
+
+\bibitem{maitournam2009fatigue}
+Mahaman~Habibou Maitournam, Ky~Dang Van, and Jean-Fran{\c{c}}ois Flavenot.
+\newblock Fatigue design of notched components with stress gradients and cyclic
+  plasticity.
+\newblock {\em Advanced Engineering Materials}, 11(9):750--754, 2009.
+
+\bibitem{taylor2010theory}
+David Taylor.
+\newblock {\em The theory of critical distances: a new perspective in fracture
+  mechanics}.
+\newblock Elsevier, 2010.
+
+\bibitem{Araujo200795}
+J.A. Araújo, L.~Susmel, D.~Taylor, J.C.T. Ferro, and E.N. Mamiya.
+\newblock On the use of the theory of critical distances and the modified
+  wöhler curve method to estimate fretting fatigue strength of cylindrical
+  contacts.
+\newblock {\em International Journal of Fatigue}, 29(1):95 -- 107, 2007.
+
+\bibitem{flavenot1983epaisseur}
+JF~Flavenot and N~Skalli.
+\newblock L’{\'e}paisseur de couche critique ou une nouvelle approche du
+  calcul en fatigue des structures soumisesa des sollicitations multiaxiales.
+\newblock {\em Mec. Mater. Electr}, 397:15--25, 1983.
+
+\bibitem{palin2000stress}
+T~Palin-Luc.
+\newblock Stress gradient and size effects in multiaxial fatigue.
+\newblock {\em Materials Week (Munich, Germany)}, 2000.
+
+\bibitem{Banvillet2003755}
+A.~Banvillet, T.~Palin-Luc, and S.~Lasserre.
+\newblock A volumetric energy based high cycle multiaxial fatigue citerion.
+\newblock {\em International Journal of Fatigue}, 25(8):755 -- 769, 2003.
+
+\bibitem{papadopoulos1996invariant}
+Ioannis~V Papadopoulos and Vassilis~P Panoskaltsis.
+\newblock Invariant formulation of a gradient dependent multiaxial high-cycle
+  fatigue criterion.
+\newblock {\em Engineering Fracture Mechanics}, 55(4):513--528, 1996.
+
+\bibitem{findley1956theory}
+William~Nichols Findley, JJ~Coleman, and BC~Hanley.
+\newblock {\em Theory for Combined Bending and Torsion Fatigue with Data for
+  SAE4340 Steel}.
+\newblock Division of Engineering, Brown University, 1956.
+
+\bibitem{lemaitre1990mechanics}
+Jean Lemaitre and Jean-Louis Chaboche.
+\newblock {\em Mechanics of solid materials}.
+\newblock Cambridge university press, 1990.
+
+\bibitem{FFE:FFE1}
+J.~L. Chaboche and P.~M. Lesne.
+\newblock A non-linear continuous fatigue damage model.
+\newblock {\em Fatigue , Fracture of Engineering Materials , Structures},
+  11(1):1--17, 1988.
+
+\bibitem{xi2008strengthening}
+Lu~Xi and Zheng Songlin.
+\newblock Strengthening of transmission gear under low-amplitude loads.
+\newblock {\em Materials Science and Engineering: A}, 488(1):55--63, 2008.
+
+\bibitem{xi2009strengthening}
+Lu~Xi and Zheng Songlin.
+\newblock Strengthening and damaging under low-amplitude loads below the
+  fatigue limit.
+\newblock {\em International Journal of Fatigue}, 31(2):341--345, 2009.
+
+\bibitem{xi2009changes}
+Lu~Xi and Zheng Songlin.
+\newblock Changes in mechanical properties of vehicle components after
+  strengthening under low-amplitude loads below the fatigue limit.
+\newblock {\em Fatigue \& Fracture of Engineering Materials \& Structures},
+  32(10):847--855, 2009.
+
+\bibitem{sinclair1952investigation}
+GM~Sinclair.
+\newblock An investigation of the coaxing effect in fatigue of metals.
+\newblock Technical report, DTIC Document, 1952.
+
+\bibitem{nakajima2007coaxing}
+Masaki Nakajima, Jae~Woong Jung, Yoshihiko Uematsu, and Keiro Tokaji.
+\newblock Coaxing effect in stainless steels and high-strength steels.
+\newblock {\em Key Engineering Materials}, 345:235--238, 2007.
+
+\bibitem{yuan2013prediction}
+Li~Yuan and Han Xu Liu Jie~Jiang Chao.
+\newblock A prediction method on high-cycle fatigue parameters based on
+  dissipated energy computation.
+\newblock {\em Chinese Journal of Theoretical and Applied Mechanics}, 3:008,
+  2013.
+
+\bibitem{palin1998energy}
+Thierry Palin-Luc and Serge Lasserre.
+\newblock An energy based criterion for high cycle multiaxial fatigue.
+\newblock {\em European Journal of Mechanics-A/Solids}, 17(2):237--251, 1998.
+
+\bibitem{lagoda1999critical}
+Tadeusz {\L}agoda, Ewald Macha, and W{\l}odzimierz Bedkowski.
+\newblock A critical plane approach based on energy concepts: application to
+  biaxial random tension-compression high-cycle fatigue regime.
+\newblock {\em International Journal of Fatigue}, 21(5):431--443, 1999.
+
+\bibitem{christensen2000yield}
+Richard~M Christensen.
+\newblock Yield functions, damage states, and intrinsic strength.
+\newblock {\em Mathematics and Mechanics of Solids}, 5(3):285--300, 2000.
+
+\bibitem{Maitournam2011232}
+M.H. Maitournam, C.~Krebs, and A.~Galtier.
+\newblock A multiscale fatigue life model for complex cyclic multiaxial
+  loading.
+\newblock {\em International Journal of Fatigue}, 33(2):232 -- 240, 2011.
+
+\bibitem{Bosia201239}
+Stefano Bosia and Andrei Constantinescu.
+\newblock Fast time-scale average for a mesoscopic high cycle fatigue
+  criterion.
+\newblock {\em International Journal of Fatigue}, 45:39 -- 47, 2012.
+
+\bibitem{zepeng}
+Ma~Zepeng.
+\newblock Structures under multiaxial fatigue taking consideration of gradients
+  of the constraints with time and space variation.
+
+\bibitem{legendre}
+{Legendre Gauss Quadrature weights and nodes}.
+\newblock
+  \url{https://www.mathworks.com/matlabcentral/fileexchange/4540-legendre-gauss-quadrature-weights-and-nodes}.
+\newblock Accessed: 2004-05-11.
+
+\end{thebibliography}
