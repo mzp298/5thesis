@@ -244,8 +244,8 @@ Fatigue; Energy; High cycle; Plasticity; Mean stress
 						$a$ & material parameter from Chaboche law &  &  &  \\
 						$\sigma_{y}$ & macroscopic yield stress(normal or shear) &  &  &  \\
 						$\lambda=0\sim5$& hydrostatic pressure sensitivity &  &  &  \\
-						$dev\dot{\uline{\uline{\Sigma}}}$ & deviatoric part of the stress tensor &  &  &  \\
-						$\sigma_H=P$& macroscopic hydrostatic pressure &  &  &  \\
+		             	$\uline{\uline{S}}=dev\dot{\uline{\uline{\Sigma}}}$ & deviatoric part of the stress tensor &  &  &  \\
+						$\sigma_H$& macroscopic hydrostatic pressure &  &  &  \\
 						$A_{\uppercase\expandafter{\romannumeral2}}=\tau_{oct,a}=\sqrt{\dfrac{1}{3}J_{2,a}}$& the amplitude of octahedral shear stress &  &  &  \\
 						$s_{-1}$& tensile fatigue limit for $R=-1$  &  &  &  \\
 		\end{tabular}
@@ -2555,6 +2555,10 @@ We are grateful for the financial and technical support of Chaire PSA.
 	stringstyle=\ttfamily, % typewriter type for strings
 	showstringspaces=false} % no special string spaces
 \begin{subappendices}
+	\section{DETAILED EXPLOITATION}
+	\input{apendices//EXPLOITATION}
+	\input{apendices//REGIME}
+	\input{apendices//3DTENSOR}    
 	\section{MATLAB CODE LISTING}
 	\input{apendices//SINUSOIDALCODE}
 	\input{apendices//3DCODE}

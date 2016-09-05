@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014/W32TeX) (preloaded format=xelatex 2015.4.2)  25 AUG 2016 10:57
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014/W32TeX) (preloaded format=xelatex 2015.4.2)  5 SEP 2016 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1063,10 +1063,6 @@ File: elsevier-logo-3p.pdf Graphic file (type QTm)
 <use  "elsevier-logo-3p.pdf" >
 File: SDlogo-3p.pdf Graphic file (type QTm)
  <use  "SDlogo-3p.pdf" >
-
-LaTeX Warning: Reference `lastpage' on page 1 undefined on input line 209.
-
-
 Overfull \hbox (1.23996pt too wide) has occurred while \output is active
 | \OT1/txr/m/n/8 www.elsevier.com/locate/procedia 
  []
@@ -1085,19 +1081,12 @@ Overfull \hbox (116.30658pt too wide) in paragraph at lines 214--252
 [][] 
  []
 
-
-LaTeX Warning: Reference `lastpage' on page 2 undefined on input line 255.
-
 [2
 
 ]
 Missing character: There is no τ in font txr!
 Missing character: There is no σ in font txr!
-
-
-LaTeX Warning: Reference `lastpage' on page 3 undefined on input line 295.
-
-[3
+ [3
 
 ]
 Missing character: There is no – in font txr!
@@ -1106,32 +1095,9 @@ File: figures//demopp.png Graphic file (type QTm)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `lastpage' on page 4 undefined on input line 343.
-
-[4]
-
-LaTeX Warning: Reference `lastpage' on page 5 undefined on input line 364.
-
-[5]
+[4] [5]
 File: figures//fig2.jpg Graphic file (type QTm)
- <use  "figures//fig2.jpg" >
-
-LaTeX Warning: Reference `lastpage' on page 6 undefined on input line 388.
-
-[6]
-
-LaTeX Warning: Reference `lastpage' on page 7 undefined on input line 413.
-
-[7]
-
-LaTeX Warning: Reference `lastpage' on page 8 undefined on input line 462.
-
-[8]
-
-LaTeX Warning: Reference `lastpage' on page 9 undefined on input line 507.
-
-[9]
+ <use  "figures//fig2.jpg" > [6] [7] [8] [9]
 
 LaTeX Warning: Reference `eq:modified papa' on page 10 undefined on input line 
 525.
@@ -1141,18 +1107,7 @@ File: figures//fig11.jpg Graphic file (type QTm)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `lastpage' on page 10 undefined on input line 561.
-
-[10]
-
-LaTeX Warning: Reference `lastpage' on page 11 undefined on input line 609.
-
-[11]
-
-LaTeX Warning: Reference `lastpage' on page 12 undefined on input line 629.
-
-[12]
+[10] [11] [12]
 File: figures//fig3.jpg Graphic file (type QTm)
  <use  "figures//fig3.jpg" >
 File: figures//4pcarbon.png Graphic file (type QTm)
@@ -1176,18 +1131,7 @@ Overfull \hbox (41.77711pt too wide) in paragraph at lines 655--658
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 671.
 
-
-LaTeX Warning: Reference `lastpage' on page 13 undefined on input line 686.
-
-[13]
-
-LaTeX Warning: Reference `lastpage' on page 14 undefined on input line 726.
-
-[14]
-
-LaTeX Warning: Reference `lastpage' on page 15 undefined on input line 777.
-
-[15]
+[13] [14] [15]
 
 LaTeX Warning: Reference `eq:modified papa' on page 16 undefined on input line 
 778.
@@ -1197,21 +1141,11 @@ File: figures//4340.png Graphic file (type QTm)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `lastpage' on page 16 undefined on input line 822.
-
-[16]
-
-LaTeX Warning: Reference `lastpage' on page 17 undefined on input line 851.
-
-[17]
+[16] [17]
 File: figures//linearevolution.png Graphic file (type QTm)
  <use  "figures//linearevolution.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `lastpage' on page 18 undefined on input line 884.
 
 [18]
 File: figures//linearaccumulation.png Graphic file (type QTm)
@@ -1226,77 +1160,35 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 888--898
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[19] [20] [21
 
-LaTeX Warning: Reference `lastpage' on page 19 undefined on input line 899.
-
-[19]
-
-LaTeX Warning: Reference `lastpage' on page 20 undefined on input line 899.
-
-[20]
-
-LaTeX Warning: Reference `lastpage' on page 21 undefined on input line 949.
-
-[21
-
-]
-
-LaTeX Warning: Reference `lastpage' on page 22 undefined on input line 1001.
-
-[22]
+] [22]
 File: figures//D-N.png Graphic file (type QTm)
- <use  "figures//D-N.png" >
-
-LaTeX Warning: Reference `lastpage' on page 23 undefined on input line 1028.
-
-[23]
+ <use  "figures//D-N.png" > [23]
 File: figures//Dratio1.png Graphic file (type QTm)
- <use  "figures//Dratio1.png" >
+
+<use  "figures//Dratio1.png" >
 File: figures//Dratio2.png Graphic file (type QTm)
  <use  "figures//Dratio2.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[24] [25] [26
 
-LaTeX Warning: Reference `lastpage' on page 24 undefined on input line 1061.
-
-[24]
-
-LaTeX Warning: Reference `lastpage' on page 25 undefined on input line 1061.
-
-[25]
-
-LaTeX Warning: Reference `lastpage' on page 26 undefined on input line 1113.
-
-[26
-
-]
-
-LaTeX Warning: Reference `lastpage' on page 27 undefined on input line 1153.
-
-[27]
+] [27]
 File: figures//JNrotation.png Graphic file (type QTm)
  <use  "figures//JNrotation.png" >
 File: figures//2stressR.png Graphic file (type QTm)
- <use  "figures//2stressR.png" >
+
+<use  "figures//2stressR.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `lastpage' on page 28 undefined on input line 1202.
-
 [28]
 File: figures//JNbending.png Graphic file (type QTm)
- <use  "figures//JNbending.png" >
-
-LaTeX Warning: Reference `lastpage' on page 29 undefined on input line 1226.
-
-[29]
+ <use  "figures//JNbending.png" > [29]
 File: figures//2stressB.png Graphic file (type QTm)
  <use  "figures//2stressB.png" >
-
-LaTeX Warning: Reference `lastpage' on page 30 undefined on input line 1249.
-
 [30]
 File: figures//JNRB.png Graphic file (type QTm)
  <use  "figures//JNRB.png" >
@@ -1305,31 +1197,21 @@ File: figures//2stressRB.png Graphic file (type QTm)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `lastpage' on page 31 undefined on input line 1291.
-
-[31]
-
-LaTeX Warning: Reference `lastpage' on page 32 undefined on input line 1291.
-
-[32]
+[31] [32]
 File: figures//complexloading.png Graphic file (type QTm)
  <use  "figures//complexloading.png" >
 File: figures//rainflow.jpg Graphic file (type QTm)
- <use  "figures//rainflow.jpg" >
 
-LaTeX Warning: Reference `lastpage' on page 33 undefined on input line 1318.
-
-[33
+<use  "figures//rainflow.jpg" > [33
 
 ]
 File: figures//Reorder.png Graphic file (type QTm)
  <use  "figures//Reorder.png" >
 File: figures//StressRange.png Graphic file (type QTm)
- <use  "figures//StressRange.png" >
-File: figures//DrainWater.png Graphic file (type QTm)
 
-<use  "figures//DrainWater.png" >
+<use  "figures//StressRange.png" >
+File: figures//DrainWater.png Graphic file (type QTm)
+ <use  "figures//DrainWater.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1337,9 +1219,6 @@ File: figures//rfdemo.png Graphic file (type QTm)
 <use  "figures//rfdemo.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `lastpage' on page 34 undefined on input line 1367.
 
 [34]
 File: figures//loadhistory.png Graphic file (type QTm)
@@ -1355,55 +1234,22 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 3128) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `lastpage' on page 35 undefined on input line 1396.
-
-[35]
-
-LaTeX Warning: Reference `lastpage' on page 36 undefined on input line 1402.
-
+ [35]
 [36]
 File: figures//kinhard.png Graphic file (type QTm)
- <use  "figures//kinhard.png" >
-
-LaTeX Warning: Reference `lastpage' on page 37 undefined on input line 1449.
-
-[37]
+ <use  "figures//kinhard.png" > [37]
 Missing character: There is no – in font txr!
 Missing character: There is no – in font txr!
 Missing character: There is no – in font txr!
-
-
-LaTeX Warning: Reference `lastpage' on page 38 undefined on input line 1501.
-
-[38]
-
-LaTeX Warning: Reference `lastpage' on page 39 undefined on input line 1563.
-
-[39]
-
-LaTeX Warning: Reference `lastpage' on page 40 undefined on input line 1614.
-
-[40]
+ [38] [39] [40]
 File: figures//ps.png Graphic file (type QTm)
- <use  "figures//ps.png" >
 
-LaTeX Warning: Reference `lastpage' on page 41 undefined on input line 1646.
-
-[41]
-
-LaTeX Warning: Reference `lastpage' on page 42 undefined on input line 1687.
-
-[42]
+<use  "figures//ps.png" > [41] [42]
 File: figures//Gerber.png Graphic file (type QTm)
- <use  "figures//Gerber.png" >
-
-LaTeX Warning: Reference `lastpage' on page 43 undefined on input line 1732.
-
-[43]
+ <use  "figures//Gerber.png" > [43]
 File: figures//torsionSN.png Graphic file (type QTm)
- <use  "figures//torsionSN.png" >
+
+<use  "figures//torsionSN.png" >
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 1785.
@@ -1411,31 +1257,13 @@ LaTeX Warning: No positions in optional float specifier.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `lastpage' on page 44 undefined on input line 1815.
-
 [44]
 File: figures//backstress.png Graphic file (type QTm)
  <use  "figures//backstress.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `lastpage' on page 45 undefined on input line 1857.
-
-[45]
-
-LaTeX Warning: Reference `lastpage' on page 46 undefined on input line 1897.
-
-[46]
-
-LaTeX Warning: Reference `lastpage' on page 47 undefined on input line 1968.
-
-[47]
-
-LaTeX Warning: Reference `lastpage' on page 48 undefined on input line 2016.
-
-[48]
+[45] [46] [47] [48]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2038.
@@ -1456,43 +1284,22 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2038.
 
-
-LaTeX Warning: Reference `lastpage' on page 49 undefined on input line 2066.
-
 [49]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `lastpage' on page 50 undefined on input line 2143.
-
-[50]
-
-LaTeX Warning: Reference `lastpage' on page 51 undefined on input line 2161.
-
-[51]
-
-LaTeX Warning: Reference `lastpage' on page 52 undefined on input line 2204.
-
-[52]
+[50] [51] [52]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: figures//trialsin.png Graphic file (type QTm)
-<use  "figures//trialsin.png" >
+<use  "figures//trialsin.png" > [53]
+Underfull \vbox (badness 5533) has occurred while \output is active []
 
-LaTeX Warning: Reference `lastpage' on page 53 undefined on input line 2279.
-
-[53]
-Underfull \vbox (badness 5490) has occurred while \output is active []
-
-
-
-LaTeX Warning: Reference `lastpage' on page 54 undefined on input line 2281.
-
-[54]
+ [54]
 File: figures//damagesin.png Graphic file (type QTm)
- <use  "figures//damagesin.png" >
+
+<use  "figures//damagesin.png" >
 File: figures//NCdiff100.png Graphic file (type QTm)
  <use  "figures//NCdiff100.png" >
 
@@ -1509,11 +1316,7 @@ File: figures//x.png Graphic file (type QTm)
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: figures//trialreal1d1.png Graphic file (type QTm)
-<use  "figures//trialreal1d1.png" >
-
-LaTeX Warning: Reference `lastpage' on page 55 undefined on input line 2326.
-
-[55]
+<use  "figures//trialreal1d1.png" > [55]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1527,9 +1330,6 @@ File: figures//damage1d.png Graphic file (type QTm)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `lastpage' on page 56 undefined on input line 2340.
-
 [56]
 File: figures//xyz.png Graphic file (type QTm)
  <use  "figures//xyz.png" >
@@ -1541,23 +1341,9 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-LaTeX Warning: Reference `lastpage' on page 57 undefined on input line 2359.
-
-[57]
-
-LaTeX Warning: Reference `lastpage' on page 58 undefined on input line 2364.
-
-[58]
+[57] [58]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `lastpage' on page 59 undefined on input line 2377.
 
 [59]
 File: figures//trialreal3d.png Graphic file (type QTm)
@@ -1570,14 +1356,7 @@ File: figures//damage3d.png Graphic file (type QTm)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `lastpage' on page 60 undefined on input line 2438.
-
-[60]
-
-LaTeX Warning: Reference `lastpage' on page 61 undefined on input line 2438.
-
-[61]
+[60] [61]
 Underfull \hbox (badness 10000) in paragraph at lines 2454--2458
 
  []
@@ -1595,23 +1374,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 2484.
 
-
-LaTeX Warning: Reference `lastpage' on page 62 undefined on input line 2506.
-
 [62]
 File: figures//filtered.png Graphic file (type QTm)
  <use  "figures//filtered.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `lastpage' on page 63 undefined on input line 2538.
-
-[63]
-
-LaTeX Warning: Reference `lastpage' on page 64 undefined on input line 2540.
-
-[64] (./thesis.bbl
+[63] [64] (./thesis.bbl
 Missing character: There is no ú in font txr!
 Missing character: There is no ö in font txr!
 Missing character: There is no ’ in font txr!
@@ -1621,21 +1390,48 @@ Underfull \hbox (badness 2698) in paragraph at lines 177--181
 m/n/8 https : / / www . mathworks . com / matlabcentral / fileexchange /
  []
 
-)
+) [65
 
-LaTeX Warning: Reference `lastpage' on page 65 undefined on input line 2546.
-
-[65
-
-] (./apendices//SINUSOIDALCODE.tex
-
-LaTeX Warning: Reference `lastpage' on page 66 undefined on input line 1.
+] (./apendices//EXPLOITATION.tex
+Overfull \hbox (6.28pt too wide) in paragraph at lines 1--2
+[]\OT1/txr/m/n/10 *************************************************************
+*********************** 
+ []
 
 [66
 
+] [67]) (./apendices//REGIME.tex [68]
+Overfull \hbox (6.28pt too wide) in paragraph at lines 2--3
+[]\OT1/txr/m/n/10 *************************************************************
+*********************** 
+ []
+
+
+Overfull \hbox (6.28pt too wide) in paragraph at lines 6--7
+[]\OT1/txr/m/n/10 *************************************************************
+*********************** 
+ []
+
+) (./apendices//3DTENSOR.tex [69
+
+]
+Overfull \hbox (6.28pt too wide) in paragraph at lines 2--3
+[]\OT1/txr/m/n/10 *************************************************************
+*********************** 
+ []
+
+
+Overfull \hbox (6.28pt too wide) in paragraph at lines 6--7
+[]\OT1/txr/m/n/10 *************************************************************
+*********************** 
+ []
+
+) (./apendices//SINUSOIDALCODE.tex [70
+
 ]
 LaTeX Font Info:    Try loading font information for OMS+txr on input line 3.
- (c:/texlive/2014/texmf-dist/tex/latex/txfonts/omstxr.fd
+
+(c:/texlive/2014/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <9> not available
@@ -1644,15 +1440,12 @@ Missing character: There is no ’ in font txr!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `lastpage' on page 67 undefined on input line 52.
-
-[67
+ [71
 
 ]
 LaTeX Font Info:    Try loading font information for OML+txr on input line 61.
- (c:/texlive/2014/texmf-dist/tex/latex/txfonts/omltxr.fd
+
+(c:/texlive/2014/texmf-dist/tex/latex/txfonts/omltxr.fd
 File: omltxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OML/txr/m/n' in size <9> not available
@@ -1660,78 +1453,40 @@ LaTeX Font Info:    Font shape `OML/txr/m/n' in size <9> not available
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `lastpage' on page 68 undefined on input line 95.
-
-[68]
+ [72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `lastpage' on page 69 undefined on input line 137.
-
-[69]
+ [73]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `lastpage' on page 70 undefined on input line 185.
-
-[70]) (./apendices//3DCODE.tex
-
-LaTeX Warning: Reference `lastpage' on page 71 undefined on input line 1.
-
-[71]
+ [74])
+(./apendices//3DCODE.tex [75]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `lastpage' on page 72 undefined on input line 53.
-
-[72
+ [76
 
 ]
 Missing character: There is no ’ in font txr!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `lastpage' on page 73 undefined on input line 101.
-
-[73]
+ [77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `lastpage' on page 74 undefined on input line 141.
-
-[74]
+ [78]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `lastpage' on page 75 undefined on input line 180.
-
-[75]
+ [79]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [80])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2566.
 
-
-LaTeX Warning: Reference `lastpage' on page 76 undefined on input line 225.
-
-[76])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2562.
-
-
-LaTeX Warning: Reference `lastpage' on page 77 undefined on input line 2562.
-
-[77]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2562.
+[81]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2566.
  (./thesis.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2562.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2562.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2566.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2566.
 
 
 LaTeX Warning: There were undefined references.
@@ -1739,15 +1494,15 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2562.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2566.
  ) 
 Here is how much of TeX's memory you used:
- 16824 strings out of 493734
- 233930 string characters out of 6149469
- 609750 words of memory out of 5000000
- 19833 multiletter control sequences out of 15000+600000
+ 16834 strings out of 493734
+ 234110 string characters out of 6149469
+ 610949 words of memory out of 5000000
+ 19834 multiletter control sequences out of 15000+600000
  66336 words of font info for 192 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 41i,23n,51p,1344b,1721s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,23n,51p,1344b,1731s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (77 pages).
+Output written on thesis.pdf (81 pages).
