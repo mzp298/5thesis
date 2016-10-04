@@ -2071,7 +2071,7 @@ So the dissipated energy rate integrated over all scales takes the form of Eq.\e
 	\dot{W}=\frac{1}{2}\int_{-1}^{1}\dot{w}\left[  \left( \frac{x+1}{2}\right) ^{\frac{1}{1-\beta}},t\right] dx\approx\frac{1}{2}\sum_{i}\omega_id\dot{w}\left[  \left( \frac{x_i+1}{2}\right) ^{\frac{1}{1-\beta}},t\right],
 	\label{allscalerate}
 \end{equation}
-where $\omega_i$ and $x_i$ are respectively the weights and nodes of the Gauss Legerndre integration rule used for the numerical integration. In this work, we used 25 points\cite{legendre}. After changing the integration limit, $\left( \dfrac{x+1}{2}\right) ^{\frac{1}{1-\beta}}$ represents the scale $s$. The values are shown in Table.\ref{Gauss}. 
+where $\omega_i$ and $x_i$ are respectively the weights and nodes of the Gauss Legendre integration rule used for the numerical integration. In this work, we used 25 points\cite{legendre}. After changing the integration limit, $\left( \dfrac{x+1}{2}\right) ^{\frac{1}{1-\beta}}$ represents the scale $s$. The values are shown in Table.\ref{Gauss}. 
 
 \begin{table}[!h]
 	\centering
@@ -2263,7 +2263,7 @@ The test is first performed on a sinusoidal axial load $\Sigma=Csin(t)$ with par
 		Initial damage                                              & $D=0$                          \\
 		Initial time                                                & $t=0$ s                            \\
 		Dissipated energy to failure per unit volume                & $W_F=3e6$ J                       \\
-		Looping step                                           & 1 s              \\ \hline
+		Looping step                                           & 1e-4 s              \\ \hline
 	\end{tabular}
 	\caption{Material parameters in a simple cyclic load }
 	\label{Sin}
