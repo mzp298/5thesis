@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014/W32TeX) (preloaded format=xelatex 2015.4.2)  5 SEP 2016 12:38
+This is XeTeX, Version 3.14159265-2.6-0.99991 (TeX Live 2014/W32TeX) (preloaded format=xelatex 2015.4.2)  15 NOV 2016 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -909,6 +909,21 @@ LaTeX Warning: Label `damage' multiply defined.
 
 LaTeX Warning: Label `eta' multiply defined.
 
+
+LaTeX Warning: Label `eqyield' multiply defined.
+
+
+LaTeX Warning: Label `eta' multiply defined.
+
+
+LaTeX Warning: Label `eqdirection' multiply defined.
+
+
+LaTeX Warning: Label `eta2' multiply defined.
+
+
+LaTeX Warning: Label `tensor2' multiply defined.
+
 )
 \openout1 = `thesis.aux'.
 
@@ -1084,38 +1099,52 @@ Overfull \hbox (116.30658pt too wide) in paragraph at lines 214--252
 [2
 
 ]
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 260.
+
+ (c:/texlive/2014/texmf-dist/tex/latex/txfonts/omstxr.fd
+File: omstxr.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10> not available
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 260.
 Missing character: There is no τ in font txr!
 Missing character: There is no σ in font txr!
  [3
 
 ]
-Missing character: There is no – in font txr!
+Missing character: There is no Δ in font txr!
+File: figures//DV.png Graphic file (type QTm)
+
+<use  "figures//DV.png" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4] [5]
 File: figures//demopp.png Graphic file (type QTm)
  <use  "figures//demopp.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4] [5]
+[6] [7] [8] [9]
 File: figures//fig2.jpg Graphic file (type QTm)
- <use  "figures//fig2.jpg" > [6] [7] [8] [9]
-
-LaTeX Warning: Reference `eq:modified papa' on page 10 undefined on input line 
-525.
-
-File: figures//fig11.jpg Graphic file (type QTm)
-<use  "figures//fig11.jpg" >
+ <use  "figures//fig2.jpg" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10] [11] [12]
+[10] [11] [12] [13]
+
+LaTeX Warning: Reference `eq:modified papa' on page 14 undefined on input line 
+687.
+
+File: figures//fig11.jpg Graphic file (type QTm)
+<use  "figures//fig11.jpg" > [14] [15] [16]
 File: figures//fig3.jpg Graphic file (type QTm)
  <use  "figures//fig3.jpg" >
 File: figures//4pcarbon.png Graphic file (type QTm)
- <use  "figures//4pcarbon.png" >
-File: figures//4p1220.png Graphic file (type QTm)
 
-<use  "figures//4p1220.png" >
-Overfull \hbox (37.24841pt too wide) in paragraph at lines 652--655
+<use  "figures//4pcarbon.png" >
+File: figures//4p1220.png Graphic file (type QTm)
+ <use  "figures//4p1220.png" >
+Overfull \hbox (37.24841pt too wide) in paragraph at lines 814--817
 []|   | [][]| [][]|  
  []
 
@@ -1123,59 +1152,62 @@ File: figures//4p1035.png Graphic file (type QTm)
 <use  "figures//4p1035.png" >
 File: figures//4p40kh.png Graphic file (type QTm)
  <use  "figures//4p40kh.png" >
-Overfull \hbox (41.77711pt too wide) in paragraph at lines 655--658
+Overfull \hbox (41.77711pt too wide) in paragraph at lines 817--820
 []|  [][]|  [][]|  
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 671.
+               Default added (so using `tbp') on input line 833.
 
-[13] [14] [15]
+[17] [18] [19]
 
-LaTeX Warning: Reference `eq:modified papa' on page 16 undefined on input line 
-778.
+LaTeX Warning: Reference `eq:modified papa' on page 20 undefined on input line 
+940.
 
 File: figures//4340.png Graphic file (type QTm)
 <use  "figures//4340.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16] [17]
+[20] [21]
 File: figures//linearevolution.png Graphic file (type QTm)
  <use  "figures//linearevolution.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[18]
+[22]
 File: figures//linearaccumulation.png Graphic file (type QTm)
  <use  "figures//linearaccumulation.png" >
 File: figures//nonlinearaccumulation.png Graphic file (type QTm)
 
 <use  "figures//nonlinearaccumulation.png" >
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 888--898
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 1050--1060
 [][] [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19] [20] [21
+[23] [24] [25
 
-] [22]
+] [26]
 File: figures//D-N.png Graphic file (type QTm)
- <use  "figures//D-N.png" > [23]
+ <use  "figures//D-N.png" > [27]
 File: figures//Dratio1.png Graphic file (type QTm)
 
 <use  "figures//Dratio1.png" >
-File: figures//Dratio2.png Graphic file (type QTm)
- <use  "figures//Dratio2.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24] [25] [26
+File: figures//Dratio2.png Graphic file (type QTm)
+<use  "figures//Dratio2.png" >
 
-] [27]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[28] [29] [30] [31
+
+] [32]
 File: figures//JNrotation.png Graphic file (type QTm)
  <use  "figures//JNrotation.png" >
 File: figures//2stressR.png Graphic file (type QTm)
@@ -1184,12 +1216,12 @@ File: figures//2stressR.png Graphic file (type QTm)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[28]
+[33]
 File: figures//JNbending.png Graphic file (type QTm)
- <use  "figures//JNbending.png" > [29]
+ <use  "figures//JNbending.png" > [34]
 File: figures//2stressB.png Graphic file (type QTm)
  <use  "figures//2stressB.png" >
-[30]
+[35]
 File: figures//JNRB.png Graphic file (type QTm)
  <use  "figures//JNRB.png" >
 File: figures//2stressRB.png Graphic file (type QTm)
@@ -1197,12 +1229,12 @@ File: figures//2stressRB.png Graphic file (type QTm)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[31] [32]
+[36] [37]
 File: figures//complexloading.png Graphic file (type QTm)
  <use  "figures//complexloading.png" >
 File: figures//rainflow.jpg Graphic file (type QTm)
 
-<use  "figures//rainflow.jpg" > [33
+<use  "figures//rainflow.jpg" > [38
 
 ]
 File: figures//Reorder.png Graphic file (type QTm)
@@ -1220,7 +1252,7 @@ File: figures//rfdemo.png Graphic file (type QTm)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34]
+[39]
 File: figures//loadhistory.png Graphic file (type QTm)
  <use  "figures//loadhistory.png" >
 
@@ -1234,74 +1266,72 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 3128) has occurred while \output is active []
 
- [35]
-[36]
+ [40]
+[41]
 File: figures//kinhard.png Graphic file (type QTm)
- <use  "figures//kinhard.png" > [37]
+ <use  "figures//kinhard.png" > [42]
 Missing character: There is no – in font txr!
 Missing character: There is no – in font txr!
 Missing character: There is no – in font txr!
- [38] [39] [40]
+ [43]
 File: figures//ps.png Graphic file (type QTm)
-
-<use  "figures//ps.png" > [41] [42]
+ <use  "figures//ps.png" >
+[44] [45]
 File: figures//Gerber.png Graphic file (type QTm)
- <use  "figures//Gerber.png" > [43]
+ <use  "figures//Gerber.png" > [46]
 File: figures//torsionSN.png Graphic file (type QTm)
-
-<use  "figures//torsionSN.png" >
+ <use  "figures//torsionSN.png" >
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1785.
+               Default added (so using `tbp') on input line 1846.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[44]
+[47]
 File: figures//backstress.png Graphic file (type QTm)
  <use  "figures//backstress.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[45] [46] [47] [48]
+[48] [49] [50] [51]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2038.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2038.
+(hyperref)                removing `math shift' on input line 2099.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2038.
+(hyperref)                removing `math shift' on input line 2099.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\delta' on input line 2038.
+(hyperref)                removing `math shift' on input line 2099.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2038.
+(hyperref)                removing `\delta' on input line 2099.
 
-[49]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2099.
+
+[52]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[50] [51] [52]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[53] [54] [55] [56]
 File: figures//trialsin.png Graphic file (type QTm)
-<use  "figures//trialsin.png" > [53]
-Underfull \vbox (badness 5533) has occurred while \output is active []
+ <use  "figures//trialsin.png" >
 
- [54]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: figures//damagesin.png Graphic file (type QTm)
-
 <use  "figures//damagesin.png" >
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: figures//NCdiff100.png Graphic file (type QTm)
- <use  "figures//NCdiff100.png" >
+<use  "figures//NCdiff100.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1311,12 +1341,13 @@ File: figures//NCdiff300.png Graphic file (type QTm)
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: figures//x.png Graphic file (type QTm)
-<use  "figures//x.png" >
+<use  "figures//x.png" > [57]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[58]
 File: figures//trialreal1d1.png Graphic file (type QTm)
-<use  "figures//trialreal1d1.png" > [55]
+ <use  "figures//trialreal1d1.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1330,7 +1361,7 @@ File: figures//damage1d.png Graphic file (type QTm)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[56]
+[59]
 File: figures//xyz.png Graphic file (type QTm)
  <use  "figures//xyz.png" >
 File: figures//xab.png Graphic file (type QTm)
@@ -1341,11 +1372,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[57] [58]
+[60] [61]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[59]
+[62]
 File: figures//trialreal3d.png Graphic file (type QTm)
  <use  "figures//trialreal3d.png" >
 
@@ -1356,14 +1387,14 @@ File: figures//damage3d.png Graphic file (type QTm)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[60] [61]
-Underfull \hbox (badness 10000) in paragraph at lines 2454--2458
+[63] [64]
+Underfull \hbox (badness 10000) in paragraph at lines 2515--2519
 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 2460.
+               Default added (so using `tbp') on input line 2521.
 
 File: figures//fx.png Graphic file (type QTm)
 <use  "figures//fx.png" >
@@ -1372,15 +1403,15 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 2484.
+               Default added (so using `tbp') on input line 2545.
 
-[62]
+[65]
 File: figures//filtered.png Graphic file (type QTm)
  <use  "figures//filtered.png" >
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[63] [64] (./thesis.bbl
+[66] [67] (./thesis.bbl
 Missing character: There is no ú in font txr!
 Missing character: There is no ö in font txr!
 Missing character: There is no ’ in font txr!
@@ -1390,7 +1421,7 @@ Underfull \hbox (badness 2698) in paragraph at lines 177--181
 m/n/8 https : / / www . mathworks . com / matlabcentral / fileexchange /
  []
 
-) [65
+) [68
 
 ] (./apendices//EXPLOITATION.tex
 Overfull \hbox (6.28pt too wide) in paragraph at lines 1--2
@@ -1398,9 +1429,9 @@ Overfull \hbox (6.28pt too wide) in paragraph at lines 1--2
 *********************** 
  []
 
-[66
+[69
 
-] [67]) (./apendices//REGIME.tex [68]
+] [70]) (./apendices//REGIME.tex [71]
 Overfull \hbox (6.28pt too wide) in paragraph at lines 2--3
 []\OT1/txr/m/n/10 *************************************************************
 *********************** 
@@ -1412,7 +1443,7 @@ Overfull \hbox (6.28pt too wide) in paragraph at lines 6--7
 *********************** 
  []
 
-) (./apendices//3DTENSOR.tex [69
+) (./apendices//3DTENSOR.tex [72
 
 ]
 Overfull \hbox (6.28pt too wide) in paragraph at lines 2--3
@@ -1426,21 +1457,16 @@ Overfull \hbox (6.28pt too wide) in paragraph at lines 6--7
 *********************** 
  []
 
-) (./apendices//SINUSOIDALCODE.tex [70
+) (./apendices//SINUSOIDALCODE.tex [73
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 3.
-
-(c:/texlive/2014/texmf-dist/tex/latex/txfonts/omstxr.fd
-File: omstxr.fd 2000/12/15 v3.1
-)
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <9> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 3.
 Missing character: There is no ’ in font txr!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71
+ [74
 
 ]
 LaTeX Font Info:    Try loading font information for OML+txr on input line 61.
@@ -1453,40 +1479,40 @@ LaTeX Font Info:    Font shape `OML/txr/m/n' in size <9> not available
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [72]
+ [75]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [73]
+ [76]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [74])
-(./apendices//3DCODE.tex [75]
+ [77])
+(./apendices//3DCODE.tex [78]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [76
+ [79
 
 ]
 Missing character: There is no ’ in font txr!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [77]
+ [80]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [78]
+ [81]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [79]
+ [82]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [80])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2566.
+ [83])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2627.
 
-[81]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2566.
+[84]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2627.
  (./thesis.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2566.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2566.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2627.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2627.
 
 
 LaTeX Warning: There were undefined references.
@@ -1494,15 +1520,15 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2566.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2627.
  ) 
 Here is how much of TeX's memory you used:
- 16834 strings out of 493734
- 234110 string characters out of 6149469
- 610949 words of memory out of 5000000
- 19834 multiletter control sequences out of 15000+600000
+ 16840 strings out of 493734
+ 234182 string characters out of 6149469
+ 610958 words of memory out of 5000000
+ 19839 multiletter control sequences out of 15000+600000
  66336 words of font info for 192 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  41i,23n,51p,1344b,1731s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (81 pages).
+Output written on thesis.pdf (84 pages).
