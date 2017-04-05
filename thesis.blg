@@ -17,65 +17,61 @@ Repeated entry---line 497 of file 11.bib
  : @article{ballard1995high
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 569 of file 11.bib
- : @article{Papadopoulos1996513
- :                             ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 953 of file 11.bib
+Repeated entry---line 927 of file 11.bib
  : \@article{Maitournam2011232
  :                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 991 of file 11.bib
+Repeated entry---line 965 of file 11.bib
  : @thesis{zepeng
  :               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1007 of file 11.bib
+Repeated entry---line 981 of file 11.bib
  : @book{lemaitre1990mechanics
  :                            ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1021 of file 11.bib
+Repeated entry---line 995 of file 11.bib
  : @article{Bosia201239
  :                     ,
 I'm skipping whatever remains of this entry
-You've used 31 entries,
+You've used 34 entries,
             1791 wiz_defined-function locations,
-            631 strings with 8704 characters,
-and the built_in function-call counts, 6731 in all, are:
-= -- 613
-> -- 266
+            649 strings with 9234 characters,
+and the built_in function-call counts, 7329 in all, are:
+= -- 670
+> -- 278
 < -- 1
-+ -- 102
-- -- 71
-* -- 467
-:= -- 1073
-add.period$ -- 92
-call.type$ -- 31
-change.case$ -- 28
++ -- 108
+- -- 74
+* -- 505
+:= -- 1165
+add.period$ -- 101
+call.type$ -- 34
+change.case$ -- 30
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 279
-empty$ -- 684
-format.name$ -- 71
-if$ -- 1488
+cite$ -- 34
+duplicate$ -- 307
+empty$ -- 753
+format.name$ -- 74
+if$ -- 1623
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 32
-newline$ -- 157
-num.names$ -- 30
-pop$ -- 73
+int.to.str$ -- 34
+missing$ -- 36
+newline$ -- 172
+num.names$ -- 33
+pop$ -- 82
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 113
+skip$ -- 121
 stack$ -- 0
-substring$ -- 527
-swap$ -- 39
+substring$ -- 579
+swap$ -- 42
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 66
-width$ -- 33
-write$ -- 331
-(There were 8 error messages)
+while$ -- 72
+width$ -- 36
+write$ -- 363
+(There were 7 error messages)

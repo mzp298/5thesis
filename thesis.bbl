@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{luu2013formulation}
+DH~Luu, MH~Maitournam, and QS~Nguyen.
+\newblock Formulation of gradient multiaxial fatigue criteria.
+\newblock {\em International Journal of Fatigue}, 2013.
+
 \bibitem{Crossland}
 Crossland B.
 \newblock Effect of large hydrostatic pressures on the torsional fatigue
@@ -20,20 +25,52 @@ P~Ballard, K~Dang Van, A~Deperrois, and YV~Papadopoulos.
 \newblock {\em Fatigue \& Fracture of Engineering Materials \& Structures},
   18(3):397--411, 1995.
 
+\bibitem{papadopoulos1993fatigue}
+IV~Papadopoulos.
+\newblock {\em Fatigue limit of metals under multiaxial stress conditions: the
+  microscopic approach}.
+\newblock Joint Research Centre, ISEI, 1993.
+
 \bibitem{papadopoulos2001long}
 Ioannis~V Papadopoulos.
 \newblock Long life fatigue under multiaxial loading.
 \newblock {\em International Journal of Fatigue}, 23(10):839--849, 2001.
 
+\bibitem{yuan2013prediction}
+Li~Yuan and Han Xu Liu Jie~Jiang Chao.
+\newblock A prediction method on high-cycle fatigue parameters based on
+  dissipated energy computation.
+\newblock {\em Chinese Journal of Theoretical and Applied Mechanics}, 3:008,
+  2013.
+
+\bibitem{palin1998energy}
+Thierry Palin-Luc and Serge Lasserre.
+\newblock An energy based criterion for high cycle multiaxial fatigue.
+\newblock {\em European Journal of Mechanics-A/Solids}, 17(2):237--251, 1998.
+
+\bibitem{lagoda1999critical}
+Tadeusz {\L}agoda, Ewald Macha, and W{\l}odzimierz Bedkowski.
+\newblock A critical plane approach based on energy concepts: application to
+  biaxial random tension-compression high-cycle fatigue regime.
+\newblock {\em International Journal of Fatigue}, 21(5):431--443, 1999.
+
+\bibitem{Morel2000101}
+F.~Morel.
+\newblock A critical plane approach for life prediction of high cycle fatigue
+  under multiaxial variable amplitude loading.
+\newblock {\em International Journal of Fatigue}, 22(2):101 -- 119, 2000.
+
+\bibitem{FFE:FFE452}
+F~Morel.
+\newblock A fatigue life prediction method based on a mesoscopic approach in
+  constant amplitude multiaxial loading.
+\newblock {\em Fatigue and Fracture of Engineering Materials and Structures},
+  21(3):241--256, 1998.
+
 \bibitem{suresh1998fatigue}
 Subra Suresh.
 \newblock {\em Fatigue of materials}.
 \newblock Cambridge university press, 1998.
-
-\bibitem{luu2013formulation}
-DH~Luu, MH~Maitournam, and QS~Nguyen.
-\newblock Formulation of gradient multiaxial fatigue criteria.
-\newblock {\em International Journal of Fatigue}, 2013.
 
 \bibitem{Papadopoulos1996513}
 Ioannis~V. Papadopoulos and Vassilis~P. Panoskaltsis.
@@ -132,24 +169,6 @@ GM~Sinclair.
 Masaki Nakajima, Jae~Woong Jung, Yoshihiko Uematsu, and Keiro Tokaji.
 \newblock Coaxing effect in stainless steels and high-strength steels.
 \newblock {\em Key Engineering Materials}, 345:235--238, 2007.
-
-\bibitem{yuan2013prediction}
-Li~Yuan and Han Xu Liu Jie~Jiang Chao.
-\newblock A prediction method on high-cycle fatigue parameters based on
-  dissipated energy computation.
-\newblock {\em Chinese Journal of Theoretical and Applied Mechanics}, 3:008,
-  2013.
-
-\bibitem{palin1998energy}
-Thierry Palin-Luc and Serge Lasserre.
-\newblock An energy based criterion for high cycle multiaxial fatigue.
-\newblock {\em European Journal of Mechanics-A/Solids}, 17(2):237--251, 1998.
-
-\bibitem{lagoda1999critical}
-Tadeusz {\L}agoda, Ewald Macha, and W{\l}odzimierz Bedkowski.
-\newblock A critical plane approach based on energy concepts: application to
-  biaxial random tension-compression high-cycle fatigue regime.
-\newblock {\em International Journal of Fatigue}, 21(5):431--443, 1999.
 
 \bibitem{christensen2000yield}
 Richard~M Christensen.

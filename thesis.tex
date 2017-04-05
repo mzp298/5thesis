@@ -60,7 +60,7 @@
 \firstpage{1}
 
 %% Give the name of the journal
-\journalname{International Journal of Fatigue}
+\journalname{Thesis}
 
 %% Give the author list to appear in the running head
 %% Example \runauth{C.V. Radhakrishnan et al.}
@@ -179,6 +179,9 @@
 \address[b]{Laboratory of Solid Mechanics, Ecole Polytechnique, 91128 Palaiseau Cedex, France}
 \address[c]{IMSIA, ENSTA ParisTech, CNRS, CEA, EDF, Université Paris-Saclay, 828 bd des Maréchaux, 91762 Palaiseau cedex France}
 
+\tableofcontents
+\newpage
+
 \begin{abstract}
 %% Text of abstract
 The object of this paper is to propose an energy based fatigue approach which takes into account impurities and hardness in the material which affect the fatigue life while handling multidimensional time varying loading histories.
@@ -201,7 +204,7 @@ Fatigue; Energy; High cycle; Plasticity; Mean stress
 
 \end{keyword}
 
-\cortext[cor1]{Corresponding author. Tel.: +33-634435338\\Email address: zepeng.ma@polytechnique.edu }
+\cortext[cor1]{Corresponding author. Email address: zepeng.ma@polytechnique.edu }
 
 \end{frontmatter}
 
@@ -253,8 +256,33 @@ Fatigue; Energy; High cycle; Plasticity; Mean stress
 \end{flushleft}
 
 \clearpage
+\section{General introduction}
+\subsection{Industrial background and motivation}
+The search for the best performance at the best cost in the mechanical and
+transport leads to conditions of use of the mechanical components increasingly
+severe. Fatigue failures are widely studies
+because it accounts for 90\% of all service
+failures due to mechanical causes.  Fatigue failures occur when metal is
+subjected to a repetitive or fluctuating
+stress and will fail at a stress much lower
+than its tensile strength and the process happens without any plastic
+deformation (no warning).
 
-\section{Introduction of basic fatigue criteria}
+These can lead to the emergence of fatigue for
+very high level of stress gradient(for small scale or complex geometric structures) and non-constant multiaxial loading history
+. For these so-called "extreme" solicitations, the mechanisms of damage
+as well as fatigue resistance levels are mostly completely unknown.
+This poses an important problem during the dimensioning phase since, on the one hand, the
+existing endurance criteria struggle to account for behavior for this type of
+loading, and on the other hand, the fatigue data that would allow to identify a model
+adapted to this problem are almost non-existent.
+\subsection{Outline of the work}
+
+\section{Fatigue life calculation methods}
+\subsection{Basic fatigue criteria }
+This bibliographic chapter enables to present the methods to calculate the lifetime of multiaxial high cycle fatigue. In fact, the equivalent stress of multiaxial loading and variable amplitude loading reveals the necessity of study these methods. These criteria allows to determine whether the stress trajectory in the stress space leads to the failure of the points concerned.
+
+ 
 Papadopoulos suggested, in particular, to group families of fatigue criteria into four categories:
 \begin{itemize}
 \item Criteria based on strain
@@ -263,7 +291,10 @@ Papadopoulos suggested, in particular, to group families of fatigue criteria int
 \item Criteria based on plasticity-damage coupling
 \end{itemize}
 Generally, the criteria developed in strain(and sometimes in energy) are adapted to the oligocyclic fatigue where the tests are often carried out with imposed strain. Approaches in stress(and sometimes in energy), as well as those based on the coupling plasticity and damage(which have begun to emerge in recent years) are being applied in the domain of endurance. In particular, we will focus on the last three categories and analyze the different approaches.
-\subsection{Criteria based on stress}
+
+\subsubsection{Criteria based on stress}
+\vspace{6pt}
+
 Three types of approach can be distinguished:
 \begin{itemize}
 	\item Critical Plan Approaches
@@ -279,8 +310,8 @@ Thu 2008]. The micro-macro approach applied to the field of endurance was born w
 through integration at every plane of an elementary volume [Liu and Zenner 1993]. [Huyen Thi Thu 2008] proposes, in
 particular, a probabilistic approach that shows this type of integration.
 
+\textbf{Crossland Criterion}
 
-\subsubsection{Crossland Criterion}
 In several industries, the required design lifetime of many components often exceeds $ 10^8 $ cycles. This requirement is applicable to aircraft (gas turbine disks $ 10^{10} $ cycles), automobiles (car engine $ 10^8 $ cycles), and railways (high speed train $ 10^9 $ cycles). Although a large amount of fatigue data has been published in the form of S-N (where S is stress and N cycles numbers) curves, the data in the literature has been usually limited to fatigue lives up to $ 10^7 $ cycles. Using traditional fatigue criteria, a near hyperbolic relationship between stress and fatigue life is assumed, with an asymptotic limit defined as the endurance stress. To predict this asymptotic limit, the Crossland Criterion is probably the most widely known. Crossland proposed that the second invariant of the deviatoric stress tensor and the hydrostatic pressure are the variables governing the endurance limit. 
 
 Many fatigue limit criteria can be written as:
@@ -319,7 +350,8 @@ Thus the classical Crossland criterion can be written as:
 	\sqrt{J_{2,a}}+a{P_{max}}-b\leqslant 0
 \end{equation}
 
-\subsubsection{Dang Van Criterion}
+\textbf{Dang Van Criterion}
+
 In multiaxial fatigue with large number of cycles, the important role of local plasticity on the appearance of a fatigue limit is widely accepted and fully justifies the use of a multi-scale approach. Among the existing approaches, one of the most known and used is that of [Dang Van 1999]. This criterion is used in particular in the design of certain automotive structures at PSA and
 Renault. The criterion [Dang Van 1973] belongs to the family of critical plane type approaches. The main physical
 basis of this criterion focuses on the theory of elastic adaptation to two scales, mesoscopic and macroscopic. The macroscopic behavior of the material often remains elastic, only a grain oriented unfavorably undergo
@@ -367,8 +399,9 @@ $$a_D=\frac{3t_{-1}}{s_{-1}}-\frac{3}{2};$$  $$b_D=t_{-1}.$$
 In the particular case of the uniaxial tension, the criterion is written as:
 $$\Sigma_{xx,a}\left(\dfrac{1}{2}+\dfrac{a_D}{3} \right)+\Sigma_{xx,m}\left(\dfrac{a_D}{3} \right) =b_D$$
 
-\subsubsection{Papadopoulos Criterion}
-The approach proposed by [Papadopoulos 1993] also uses the concept of elastic adaptation and even the localization law. According to him, "the observations at the mesoscopic scale show that the initiation of a fatigue crack is
+\textbf{Papadopoulos Criterion}
+
+The approach proposed by \cite{papadopoulos1993fatigue} also uses the concept of elastic adaptation and even the localization law. According to him, "the observations at the mesoscopic scale show that the initiation of a fatigue crack is
 defined as the occurrence of micro-cracks corresponding to the rupture of the most deformed crystal grains in an
 aggregate. Thus, a fatigue limit criterion can be modeled by a limit value of the accumulated plastic strain in the
 most distorted grain."
@@ -390,7 +423,7 @@ He proposes to opt for a mean value of the accumulated plastic strain on all pos
          	max T_a+\alpha_\infty \Sigma_{h,max}\leqslant \gamma_\infty
          \end{equation}
          where $\alpha_\infty$ and $\gamma_\infty$ are material parameters to be determined\cite{papadopoulos2001long}.
-         $$\Sigma_{h,max}=\max\limits_{t}\{\frac{1}{3}tr(\uline{\uline{\sigma(t)}})\}$$
+         $$\Sigma_{h,max}=\max\limits_{t}\left\lbrace \frac{1}{3}tr(\uline{\uline{\sigma}}(t))\right\rbrace $$
          He introduced the resolved shear stress $\tau$:
          \begin{equation}
          	\begin{split}
@@ -423,8 +456,11 @@ He proposes to opt for a mean value of the accumulated plastic strain on all pos
          $$\Sigma_{xx,a}\left(\dfrac{1}{\sqrt{3}}+\dfrac{\alpha_\infty}{3} \right)+\Sigma_{xx,m}\left(\dfrac{a_\infty}{3} \right) =\gamma_\infty$$
          
          
-         \subsection{Criteria based on energy}
-         \subsubsection{Energy dissipation based on law of thermodynamics}
+\subsubsection{Criteria based on energy}
+\vspace{6pt}
+
+\textbf{Energy dissipation based on law of thermodynamics}
+
          In case of shell model. We assume the temperature in the thickness direction does not change. Based on the first and second law of thermodynamics, for any point M, we define $T(M,t)$ is the temperature field of $M$ at time $t$. Its 2D heat transfer function is \cite{yuan2013prediction}:
          $$\rho C \frac{\partial T(M,t)}{\partial t}-k\Delta_2 T(M,t)+\frac{2\sigma_e\varepsilon_mT(M,t)^4}{e}+\frac{2h}{e}[T(M,t)-T(M,t)^{air}]=d_1(M,t)+S_{th}(M,t)+r(M,t)$$
          
@@ -441,7 +477,8 @@ He proposes to opt for a mean value of the accumulated plastic strain on all pos
          $lg\sigma_a=-0.13lgN_F+2.85$ correlation coefficient:0.89
          
          
-         \subsubsection{Energy dissipation based on strain energy density}
+\textbf{Energy dissipation based on strain energy density}
+
          In their fatigue criterion, Froustey et al. (1992)  have considered a complete cycle of
          stresses. They use the mean value on one cycle of
          the volumic density of the elastic strain energy, $W_a$, whatever the point
@@ -485,7 +522,8 @@ He proposes to opt for a mean value of the accumulated plastic strain on all pos
          $$\sigma^*=\sqrt{2(\sigma_{Ten,-1}^D)^2-(\sigma_{RotBend,-1}^D)^2}$$
          
          
-         \subsubsection{A critical plane approach based on energy concepts}
+\textbf{A critical plane approach based on energy concepts}
+
          $$W(t)=\frac{1}{2}\sigma(t)\varepsilon(t)sgn[\sigma(t),\varepsilon(t)]$$
          $$sgn(x,y)=\frac{sgn(x)+sgn(y)}{2}$$
          
@@ -522,25 +560,366 @@ He proposes to opt for a mean value of the accumulated plastic strain on all pos
          $$lgN_F=A'-m'lgW_a$$
          $m'$ is slope of fatigue curve
          expressed by energy.
+
+\subsection{Basquin curve}
+
+\vspace{6pt}
+\textbf{Stress-Life Diagram (S-N Diagram)}
+
+The basis of the Stress-Life method is the Wohler S-N diagram, shown schematically for two
+materials in \figref{fig.sn}. The S-N diagram plots nominal stress amplitude S versus cycles to
+failure N. There are numerous testing procedures to generate the required data for a proper
+S-N diagram. S-N test data are usually displayed on a log-log plot, with the actual S-N line
+representing the mean of the data from several tests.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figures//sn.png} 
+	\caption{Typical S-N curve.}
+	\label{fig.sn}
+\end{figure}
+
+\textbf{Endurance Limit}
+
+Certain materials have a fatigue limit or endurance limit which represents a stress level below
+which the material does not fail and can be cycled infinitely. If the applied stress level is below
+the endurance limit of the material, the structure is said to have an infinite life. This is
+characteristic of steel and titanium in benign environmental conditions. A typical S-N curve
+corresponding to this type of material is shown Curve A in  \figref{fig.sn}.
+
+Many non-ferrous metals and alloys, such as aluminum, magnesium, and copper alloys, do not
+exhibit well-defined endurance limits. These materials instead display a continuously
+decreasing S-N response, similar to Curve B in \figref{fig.sn}. In such cases a fatigue strength $S_f$ for
+a given number of cycles must be specified. An effective endurance limit for these materials is
+sometimes defined as the stress that causes failure at $1x10^8$ or $5x10^8$ loading cycles.
+
+The concept of an endurance limit is used in infinite-life or safe stress designs. It is due to
+interstitial elements (such as carbon or nitrogen in iron) that pin dislocations, thus preventing
+the slip mechanism that leads to the formation of microcracks. Care must be taken when
+using an endurance limit in design applications because it can disappear due to:
+
+\vspace{6pt}
+$\bullet$ Periodic overloads (unpin dislocations)
+
+$\bullet$ Corrosive environments (due to fatigue corrosion interaction)
+
+$\bullet$ High temperatures (mobilize dislocations)
+\vspace{6pt}     
+
+The endurance limit is not a true property of a material, since other significant influences such
+as surface finish cannot be entirely eliminated. However, a test values ($S_e'$) obtained from
+polished specimens provide a baseline to which other factors can be applied. Influences that
+can affect the endurance limit include:
+
+\vspace{6pt}
+$\bullet$ Surface Finish
+
+$\bullet$ Temperature
+
+$\bullet$ Stress Concentration
+
+$\bullet$ Notch Sensitivity
+
+$\bullet$ Size
+
+$\bullet$ Environment
+
+$\bullet$ Reliability
+\vspace{6pt}         
+
+\textbf{Power Relationship}   
+
+When plotted on a log-log scale, an S-N curve can be approximated by a straight line as shown
+in \figref{fig.basquin}. Basquin’s equation is a power law relationship\ref{eq.basquin} which describes the linear relationship between the applied stress cycles (S) in the y-axis and the number of cycles to failure in the x-axis plotted on a log-log scale.
+\begin{equation}
+	N=BS^\frac{1}{b}
+	\label{eq.basquin}
+\end{equation}
+To calculate the slope of the Basquin equation, solve the system of equations:
+$$N_1=N_2\left(\dfrac{S_1}{S_2}\right)^\frac{1}{b},$$
+$$b=\dfrac{logS_1-logS_2}{logN_1-logN_2},$$
+where $b$ is the slope of the line.
+$$B=N_1S_1^{-\frac{1}{b}}=N_2S_2^{-\frac{1}{b}}.$$
+For the constant B, in industry  the stress range value (from the maximum cyclic stress to the minimum cyclic stress) is often considered. If the stress values of the S-N curve are given as alternating stresses (which is the common practice), multiply these stresses by 2 to calculate the constant B (stress range = 2* alternating stress, assuming a zero mean stress and full reversal of the cyclic load). If the S-N curve data are given in stress range values, apply them directly in the equation for estimating the constant B. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{figures//basquin.png} 
+	\caption{Idealized S-N curve for high cycle fatigue.}
+	\label{fig.basquin}
+\end{figure}
+
+The power relationship is only valid for fatigue lives that are on the design line. For ferrous metals this range is from $1x10^3$ to $1x10^6$ cycles. For non-ferrous metals, this range is from
+$1x10^3$ to $5x10^8$ cycles. 
          
-         
+\subsection{Calculation method without cycle counting}
+This part presents the existing method of prediction of lifetime, which does not need the algorithm of cycle counting. These kind of methods are still minority and usually more delicate to implement, but present the advantage of free the choice of variable of counting proved to be ``dangerous''. The method presented here is the morel method which is based on stress.
+
+Morel's method is based on a mesoscopic approach to critical plane type with the
+choice of plastic deformation as mesoscopic cumulative damage variable.  Multiaxial and variable amplitude loading can be analyzed with this method.
+\begin{flushleft}
+Macroscopic quantities
+\begin{table}[h]
+	\begin{tabular}{lllll}
+		$\uline{\uline{\Sigma}}$ & macroscopic stress tensor &  &  &  \\
+		$\uline{\uline{E}}$ & macroscopic strain tensor &  &  &  \\
+		$\uline{\uline{C}}$ & macroscopic shear stress vector  &  &  &  \\
+		$\uline{\uline{T}}$ & macroscopic resolved shear stress vector acting on an easy glide direction&  &  &  \\
+		$T_a$ & amplitude of the macroscopic resolved shear stress  &  &  &  \\	
+		$P$ & macroscopic hydrostatic stress &  &  &  \\	
+	\end{tabular}
+\end{table}
+
+Mesoscopic quantities
+\begin{table}[h]
+	\begin{tabular}{lllll}
+		$\uline{\uline{\sigma}}$& mesoscopic stress tensor &  &  &  \\
+		$\uline{\uline{\varepsilon}}$ & mesoscopic strain tensor &  &  &  \\
+		$\uline{\tau}$& mesoscopic resolved shear stress vector acting on an easy glide direction &  &  &  \\
+		$\gamma^p$& mesoscopic shear plastic strain &  &  &  \\
+		$\Gamma$ & accumulated plastic mesostrain &  &  &  \\
+		$T_\sigma$ & measure proportional to an upper bound of the plastic mesostrain accumulated on an elementary
+		material plane $\Delta$, also average value of $T_a$ &  &  &  \\
+		$T_\Sigma$ & maximum value of  $T_\sigma$&  &  &  \\
+		$H$ & phase-difference coefficient&  &  &  \\
+	\end{tabular}
+\end{table}
+\end{flushleft}
+
+\textbf{Constant amplitude loading}
+\vspace{6pt}
+
+\textbf{Local stress estimation in high cycle fatigue}
+
+By assuming that only one glide system (defined by a normal vector $\uline{n}$ to a plane and a vector
+(direction) $\uline{M}$ within this plane) is active for every plastically deforming grain of the metal, Papadopoulos [9]
+established a macro–meso passage for a glide system activated in a flowing crystal:
+\begin{equation}
+\uline{\tau}=\uline{T}-\mu\gamma^p\uline{m}
+\label{macromeso}
+\end{equation}
+where $\uline{\tau}$ and $\uline{T}$ are the mesoscopic and macroscopic
+resolved shear stresses acting along the slip direction $\uline{m}$ and defined by:
+\begin{equation}
+\uline{\tau}=(\uline{m}\cdot\uuline{\sigma}\cdot\uline{n})\uline{m}
+\label{tau}
+\end{equation}
+\begin{equation}
+\uline{T}=(\uline{m}\cdot\uuline{\Sigma}\cdot\uline{n})\uline{m}
+\label{T}
+\end{equation}
+$\gamma^p$  is the plastic mesoscopic shear strain.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures//glid.png} 
+	\caption{Path of the macroscopic shear stress $\uline{C}$ acting on a material plane $\Delta$ and the corresponding path of the macroscopic resolved shear stress $\uline{T}$ acting on an easy glide direction.}
+	\label{glid}
+\end{figure}
+
+\textbf{Initiation of slip in the crystal}
+
+The plasticity criterion is determined by Schmid's law with isotropic and kinematic hardening:
+\begin{equation}
+f(\uline{\tau},\uline{b},\tau_y)=(\uline{\tau}-\uline{b})\cdot(\uline{\tau}-\uline{b})-\tau_y^2=0
+\label{Schmid}
+\end{equation}
+where $\uline{b}$ is the kinematical hardening parameter back stress.
+
+In the description of his method, the author draws heavily on the work developed by
+Papadopoulos including the use of a measure of plastic deformation mesoscopic
+Cumulative $T_\sigma$ associated with a particular material plane and modeling the behavior of
+grain in three distinct phases (hardening, saturation and softening); he considers the cumulative mesoscopic plastic deformation $\Gamma$ as damage parameter and assumes that the initiation of a fatigue crack occurs when the latter reaches a
+critical value $D = D_R = \Gamma_R$ (\figref{3phases}). 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures//3phases.png} 
+	\caption{Yield limit and damage evolutions in the three behavior phases (hardening, saturation and softening) when a cyclic loading	is applied.}
+	\label{3phases}
+\end{figure}
+
+\textbf{Loading limit estimation}
+
+The estimation of the yield limit in the saturation phase $\tau_s$ (defining the cyclic behavior of the crystal) is
+carried out by the definition of a limit loading.
+\begin{equation}
+T_{\Sigma lim}+\alpha P_{max lim}=\beta
+\end{equation}
+\begin{equation}
+T_{\Sigma lim}=\frac{-\alpha P_m+\beta}{\alpha+\frac{T_\Sigma}{P_a}}\cdot\frac{T_\Sigma}{P_a}
+\label{Tlim}
+\end{equation}
+Now we need to establish $\tau_{lim}$. The corresponding actual amplitude of the shear stress,
+defined as half of the longest chord of the closed curve, is denoted as $C_A$.
+\begin{equation}
+H=\frac{T_{\Sigma}}{C_A}=\frac{T_{\Sigma lim}}{\tau_{lim}} \, \Rightarrow \, \tau_{lim}=\frac{T_{\Sigma lim}}{H}
+\label{eqH}
+\end{equation}
+where H constitutes a ‘phase-difference coefficient’.
+It is worth mentioning that the more open the elliptic
+path, the higher the coefficient H. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figures//H.png} 
+	\caption{Different paths and corresponding values of the phase-difference coefficient $H$.}
+	\label{figH}
+\end{figure}
+For a proportional
+loading, H is equal to $\sqrt{\pi}$. In the case of a particular
+circular path, H reaches the maximum value $\sqrt{2\pi}$(\figref{figH}). 
+
+
+\textbf{Number of cycles to failure}
+
+Once the accumulated plastic mesostrain $\Gamma$ along the particular gliding
+system reaches a critical value $\Gamma_R$, these grains are said
+to be broken. An analytical expression of the number
+of cycles to initiation (S–N curve) can be achieved:
+\begin{equation}
+\Gamma=\Gamma_R \, \Rightarrow \, N_F=pln\left(\frac{C_A}{C_A-\tau_{lim}}\right)+q\left(\frac{\tau_{lim}}{C_A-\tau_{lim}}\right)-\frac{r}{C_A}
+\label{NF}
+\end{equation}
+where $p$, $q$ and $r$ are functions of the hardening parameters of the three phases defined above.
+
+From Eq.\eqref{Tlim} and Eq.\eqref{eqH} we can find the yield point $\tau_s$ of the crystal in the saturation phase as a function of the amplitude $P_a$ and the mean value $P_m$ of the hydrostatic pressure, the phase difference of coefficient $H$ and two material related parameters $\alpha$ and $\beta$ :
+\begin{equation}
+\tau_{lim}=\tau_s=\frac{-\alpha P_m+\beta}{\alpha\frac{P_a}{C_A}+H}
+\label{taus}
+\end{equation}
+In the last relation Eq.\eqref{NF}, the detrimental effect of out-of-phase loading is introduced through $\tau_{lim}$. As the coefficient $H$ increases, $\tau_{lim}$  decreases, therefore $N_F$ decreases which leads to more accumulated damage. The identification of the model parameters requires two endurance limits and a
+single S–N curve (parameters $p$, $q$ and $r$).
+
+
+
+\textbf{Variable amplitude loads}
+
+To determine the life time in the case of multiaxial variable amplitude loads, the author performs the following steps:
+\begin{flushleft}
+	
+	1. Identification of the critical plane $\Delta_c$ by maximizing the standard deviation of the macroscopic resolved shear stress in different directions. The author introduces a new parameter $T_{\sigma rms}$:
+	\begin{equation}
+	T_{\sigma rms}(\theta,\varphi)=\sqrt{\int_{\psi=0}^{2\pi}T_{rms}^2(\theta,\varphi,\psi)d\psi}
+	\label{srms}
+	\end{equation}
+	where $T_{rms}(\theta,\varphi,\psi)$ is the standard deviation of the macroscopic resolved shear stress.
+	\vspace{8pt}
+	
+	2. Regarding the estimation of the phase difference coefficient H, it seems reasonable when the phase shift is not
+	explicitly defined (or cannot be estimated) to use the
+	most conservative value $\sqrt{2\pi}$.
+	\vspace{8pt}
+	
+	3. On each direction (m) of the critical plane $\Delta_c$:
+	\vspace{6pt}
+	
+	(a) determination of the macroscopic changes in hydrostatic pressure $P(t)$ and the macroscopic resolved shear stress $T_a(t)$;
+	\vspace{6pt}
+	
+	(b) evaluation of the saturation point by averaging the mesoscopic resolved shear stress thresholds calculated over
+	the whole sequence, $\tau_{s}=(\tau_{lim})_{mean}$, $\tau_{lim}$ is calculated with Eq.\eqref{taus};
+	\vspace{6pt}
+	
+	(c) estimation of the cumulative mesoscopic plastic strain $\Gamma$ by following the evolution of the mesoscopic yield stress $\sigma_y$  according to the three phases (hardening, saturation and softening);
+	\vspace{6pt}
+	
+	(d) calculating the number of sequences (associated with m direction) necessary to achieve $\Gamma_R$;
+	\vspace{6pt}
+	
+	4.  For complex multiaxial loadings, the author assumes that the hardening
+	and softening phases are small compared to the saturation phase\cite{Morel2000101}. In such a case, the yield limit remains constant for the whole lifetime and damage accumulation is purely linear. The analytical expression of the S–N curve(Eq.\eqref{NF}) becomes:
+	\begin{equation}
+	\Gamma=\Gamma_R \, \Rightarrow \, N_F=q\left(\frac{\tau_{lim}}{C_A-\tau_{lim}}\right)
+	\label{NFsimple}
+	\end{equation}
+	where$$q=\frac{c+\mu}{4}\frac{1}{l}$$
+	
+	The final linear summation of individual damage from different
+	critical planes would then lead to damage assessment:
+	\begin{equation}
+	\sum_{i}^{}\frac{\Gamma^{(i)}}{\Gamma_R^{(i)}}=1
+	\label{damage}
+	\end{equation}
+	
+\end{flushleft}
+
+\textbf{Experimental verification}
+\vspace{6pt}
+
+\textbf{In case of constant amplitude test }
+
+The author \cite{FFE:FFE452} consider the example of an out-of-phase bending–torsion test on a high strength steel (30NCD16). The endurance limits of this material in reversed
+bending and torsion are, respectively, $f=680 MPa$ and $t=426 MPa$.  The multiaxial sinusoidal loading is characterized by the amplitudes $\Sigma_{11a} =600 MPa$, $\Sigma_{12a} =335 MPa$ (no mean stresses)
+and the phase difference $\beta_{12} =90°$.
+
+The maximum value of $T_\sigma$ (denoted as $T_\Sigma$ ) can be deduced numerically. For this loading, we find $T_\Sigma=697 MPa$. On the critical material
+plane (where $T_\Sigma$ is reached), $C_A$ is estimated to be $282 MPa$. The phase difference coefficient $H$ is
+then simply deduced: $H=T_\Sigma /C_A =2.47$.
+
+Besides noting that $P_m =0 MPa$, $P_a=200 MPa$ and $a=0.67$, $b=775 MPa$, $T_{\Sigma lim}$ is readily
+computed with the help Eq.\eqref{taus}: $T_{\Sigma lim} =633 MPa$. Finally, $\tau_{lim} =T_{\Sigma lim} /H=256 MPa$. Once $p$, $q$ and $r$ have been identified from a $S–N$ curve with the least squares line method, $C_A $and $\tau_{lim}$ can
+be introduced into Eq. \eqref{NF} and the number of cycles to initiation can be finally calculated, i.e.
+$N_F =2×10^5$ cycles.
+
+\textbf{In case of variable amplitude test }
+
+According to the previous endurance data and the
+definition of the generalized fatigue limit (for bending
+$\tau_{lim} =f/2$ and for torsion $\tau_{lim}=t$), one can estimate the parameter $q=20 800$.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures//block.png} 
+	\caption{block sequence tests (bending/bending+torsion/torsion) performed on a mild
+		steel XC18.}
+	\label{block}
+\end{figure} 
+
+Let us consider now a block sequence composed of
+$10^4$ cycles of bending ($\Sigma_a =350 MPa$) followed by $10^4$
+cycles of combined in-phase bending–torsion ($\Sigma_a ,T_a =250 MPa, 144 MPa$)
+followed by $10^4$ cycles of torsion ($T_a =200 MPa$). This
+sequence is repeated until the initiation of a crack. The
+mean lifetime is found to be $N=1.73×10^5$ .
+
+The three generalized fatigue
+limits relative to the three blocks are estimated according
+to Eq.\eqref{taus}:
+
+$$\tau_{lim}^{bending}=155 MPa$$   $$\tau_{lim}^{torsion}=179 MPa$$  $$\tau_{lim}^{bend+tors}=157 MPa$$
+
+
+These three values and the parameter $q$ are enough to
+accumulate the damage in the three blocks using Eq.\eqref{NFsimple}:
+
+
+$$\frac{\Gamma^{(bending)}}{\Gamma_R^{(bending)}}+\frac{\Gamma^{(bend+tors)}}{\Gamma_R^{(bend+tors)}}+\frac{\Gamma^{(torsion)}}{\Gamma_R^{(torsion)}}=1$$
+
+The corresponding number of cycles to initiation is:
+$N_{prediction} <1.5×10^5$ , that is to say five successive applications of the sequence. This prediction, close to the experimental result $N=1.73×10^5$ , is a conservative one.
+
+It is important to note that if only one critical plane
+(either from bending, torsion or bending+torsion
+loading) is used for damage accumulation, one-third of
+the damage would be calculated, resulting in a nonconservative prediction.
+
+Morel's method is promising in its description aspect of limited endurance fatigue phenomenon, through the choice of the  mesoscopic plastic deformation. By using cumulative plasticity, a fatigue mechanisms occurring at the mesoscopic scale takes into account the main factors affecting the lifetime cycle fatigue (hydrostatic pressure and influence of phase shift). 
+
+However, at the present stage, it does not completely meet the demand of a predictive tool. Indeed, it is a relatively complicated method (search critical plane $\Delta_c$ and accumulated damage in each direction in the plan); its application for multiaxial variable amplitude fatigue loads application data that are still not available (an S-N curve, two endurance limits and a particular  damage accumulation test). In addition, it is limited to soft materials. On the other hand, it is not completely free of counting method because its author uses the counting of the extrema of the evolution to get the macroscopic resolved shear stress $T(t)$ and the corresponding amplitude $P_a$ and mean values $P_m$ of the hydrostatic stress in each direction (m) in $\Delta_c$. With one purpose of calculating the limit of mesoscopic elasticity $\tau_lim$ in the saturation phase of the crystal. Again, this makes it difficult and daunting task.
+
+
 \section{Space gradient effects}
-The objective of the work is first to extend some classic high cycle fatigue (HCF) criteria (as Crossland, Dang Van, Papadopoulos, ...) to take into account a sensitivity of the criteria to stress spatial variations occurring at length scale $l_g$, and second to compare the performances of the extensions through numerical simulations of experimental fatigue tests. After an introduction of the basic criteria and their gradient based extensions proposed by Luu et al., we focus on the Crossland criterion to propose a more practical and simple expression taking into account the gradient of the stress amplitude and the maximum hydrostatic stress. The proposition is then tested and applied to different simple situations: 4-point bending and cantilever rotative bending.  The relative errors between the exact solutions and the numerical simulations are estimated. Biaxial  bending-torsion tests are also simulated to demonstrate the capabilities of the approach. The generalization of the approach to other multiaxial fatigue criteria is briefly shown through the case of Papadopoulos 2001 proposal. Finally, the present study develops a simple formulation of gradient multi-axial fatigue criteria extending the classical HCF criteria. In this work only stress gradient with a beneficial effect on fatigue have been considered.
+
+The objective of the work is first to extend some classic high cycle fatigue (HCF) criteria (as Crossland, Dang Van, Papadopoulos, ...) in order  to take into account a sensitivity of the criteria to stress spatial variations occurring at length scale $l_g$, and second to compare the performances of the extensions through several experimental fatigue tests. After an introduction of the basic criteria and their gradient based extensions proposed by Luu et al., we focus on the Crossland criterion and we  propose a more practical and simple expression taking into account the gradient of the stress amplitude and the maximum hydrostatic stress.The generalization of the approach to other multiaxial fatigue criteria is also proposed.  The proposition is then tested and applied to different simple situations such as 4-point bending and cantilever rotative bending.  The relative errors between the exact solutions and the experimental data are estimated. Biaxial  bending-torsion tests are also simulated to demonstrate the capabilities of the approach.  In this work only stress gradient with a beneficial effect on fatigue have been considered. %An application to an industrial structure is finally performed.
+
 
 \subsection{Introduction}
 
 In several industries, the required design lifetime of many components often exceeds $ 10^8 $ cycles. This requirement is applicable to aircraft (gas turbine disks $ 10^{10} $ cycles), automobiles (car engine $ 10^8 $ cycles), and railways (high speed train $ 10^9 $ cycles). Although a large amount of fatigue data has been published in the form of S-N (where S is stress and N  the number of cycles to fatigue) curves, the data in the literature have been usually limited to fatigue lives up to $ 10^7 $ cycles. Using traditional fatigue criteria, a near hyperbolic relationship between stress and fatigue life is assumed, with an asymptotic limit defined as the fatigue limit (or endurance stress). 
-A large number of multiaxial fatigue criteria, generalizing this notion of fatigue limit, are available in the literature \cite{Papadopoulos1997219}\cite{ballard1995high}\cite{suresh1998fatigue}. They are practically used to design industrial components against failure. Nevertheless, most of these criteria present some drawbacks,  for instance when dealing with out-of-phase loading or with metals of different kinds from those used to develop the criteria. In fact, quite all of them are not designed to cope with high stress gradient introducing by surface treatments or notches, and also with scale effect especially present in nano or micro components. 
+A large number of multiaxial fatigue criteria, generalizing this notion of fatigue limit, are available in the literature \cite{Papadopoulos1997219}\cite{ballard1995high}\cite{suresh1998fatigue}. They are  used to design industrial components against failure. Nevertheless, most of these criteria present some drawbacks,  for instance when dealing with out-of-phase loading or with metals of different kinds from those used to develop the criteria. In fact, most of them are not designed to cope with high stress gradients such as those introduced  by surface treatments or notches, or to handle  scale effects as  specially present in nano or micro components. 
 
-More precisely, as mentioned by Luu et al. \cite{luu2013formulation}, in problems related to small electronic components and electro-mechanical devices, at sufficiently small sizes, factors as size, gradient and loading effects affecting fatigue limits are not captured by classical fatigue criteria. The general statement "the smaller the size, the higher the gradient, then the higher fatigue resistance" sums up the following observations. 
+More precisely, as mentioned by Luu et al. \cite{luu2013formulation}, in problems related to small electronic components and electro-mechanical devices, at sufficiently small sizes, factors as size, gradient and loading effects affecting fatigue limits are not captured by classical fatigue criteria. In particular,  for the same in-state stress distribution as well as nominal maximum stress and material, the smaller the sample size is, the smaller the surface or the volume of the most stressed zone is, the higher the fatigue limit is.  Moreover, the nominal fatigue limit increases in the presence of stress gradient corresponding to a decreasing stress from the surface. Experimental example illustrates and makes clearer "beneficial gradient effect" \cite{Papadopoulos1996513}. The results of the constant moment tests on specimens of the same radius but different lengths shows that the gradient effect is an order of magnitude higher than the pure size effect. In this case, size effect is proved insignificant compared to the gradient effect at the considered scale.
 
-Loading effects: the three types of tests with different volumes of the most loaded zones are examined in \cite{luu2013formulation}. In descending volume order, they are tension-compression, rotative bending and plane bending, leading to increasing order of fatigue limits.
-
-Size: for the same in-state stress distribution as well as nominal maximum stress and material, the smaller the sample size is, the smaller the surface or the volume of the most stressed zone is, the higher the fatigue limit is. 
-
-Stress gradient: the nominal fatigue limit increases in the presence of stress gradient corresponding to a decreasing stress from the surface. Experimental example illustrates and makes clearer "beneficial gradient effect" \cite{Papadopoulos1996513}. The results of the constant moment tests on specimens of the same radius but different lengths shows that the gradient effect is an order of magnitude higher than the pure size effect. In this case, size effect is proved insignificant compared to the gradient effect at the considered scale.
-
-From above it is concluded that the stress gradient factor is the most important contributer to this phenomenon. It has been generalized by several authors to include a  gradient dependence \cite{Papadopoulos1996513} in order to  introduce a sensitivity of the endurance limit to space variations occurring at length scale  $l_g$. Uniaxial normal cyclic stress states with non-zero and zero normal stress gradients, respectively, allow drawing some comments about the normal stress gradient effect. The larger the normal stress due to bending, the larger the difference between bending test points and tension-compression ellipse arc (as is shown in \figref{fig2}).
+From above it is concluded that the stress gradient factor is the most important contributer to this phenomenon. Fatigue criteria have been  generalized by several authors by including a  gradient dependence \cite{Papadopoulos1996513} in order to  introduce a sensitivity of the endurance limit to space variations occurring at length scale  $l_g$. Uniaxial normal cyclic stress states with non-zero and zero normal stress gradients, respectively,give some indication about the normal stress gradient effect. The larger the normal stress due to bending, the larger the difference between bending test points and tension-compression ellipse arc (as is shown in \figref{fig2}).
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures//fig2.jpg} 
@@ -553,7 +932,7 @@ In the paper, we consider specifically the gradient approach. We start from the 
 The new proposition adds two gradient terms ; it is then calibrated and its predictions are compared to experimental results to check its relevancy.
 
 
-\subsection{Approach of Luu et al.}
+\subsection{A first gradient approach \cite{luu2013formulation}}
 \subsubsection{General formulation}
 
 Luu et al. \cite{luu2013formulation} proposed extensions of classical HCF fatigue criteria using the gradients of the shear and normal stress to account for the gradient effect. In the case of critical plane type criteria, they defined a generalized shear stress amplitude including shear stress gradient and a generalized maximum normal (or hydrostatic) stress.
@@ -564,7 +943,7 @@ f(C_a(n^*),N_{max}(n^*))=C_a(n^*)+aN_{max}(n^*)-b\geqslant 0 ,
 \end{equation}
 with a, b being two material parameters. $f$ is a function, chosen in many cases as linear, and $n^*$ is the normal vector of the critical plane; $C_a(n^* )$, $N_{max} (n^* )$ are respectively the amplitude of shear stress and the maximum value of the normal stress on the critical plane.
 
-A new class of fatigue criteria extended from classical ones with stress gradient terms introducing not only in the normal stress but also in the shear stress components, was proposed. It concerns only free defect materials and can model both phenomena "smaller is Stronger and Higher Gradient is Stronger". 
+A new class of fatigue criteria extended from classical ones with stress gradient terms introducing not only in the normal stress but also in the shear stress components, was proposed. It concerns only free defect materials and can model both phenomena ``smaller is Stronger and Higher Gradient is Stronger". 
 
 Besides the stress gradient term appearing in the normal stress part in form of $G=\Delta(\sigma_{11}+\sigma_{22}+\sigma_{33})$, another gradient term, the gradient of the stress tensor amplitude (or alternatively of deviatoric stress tensor amplitude) $\parallel{Y}_a\parallel={\Delta\sigma}_a$ is added to the shear stress amplitude part. Basing on all these analyses a new form of fatigue criteria taking into account gradient effects, is proposed:
 \begin{equation}
@@ -573,60 +952,59 @@ f(\widetilde{C_a}(n^*),\widetilde{N_{max}}(n^*))=\widetilde{C_a}(n^*)+a\widetild
 \end{equation}
 where $\widetilde{C_a}(n^*)$ and $\widetilde{N_{max}}(n^*)$ are extended definitions of the amplitude of shear stress and of the normal stress taking into account the presence of local gradient.
 
-In the following we just focus on the Crossland criterion and its extension.
+In the following we first focus on the Crossland criterion and its extension.
 
 \subsubsection{Recall of the classical Crossland criterion}
 
-The classical Crossland criterion defines the fatigue limit of metallic specimens subjected to multi-axial cyclic stress\cite{Crossland} : 
+The classical Crossland criterion defines the fatigue limit of metallic specimens subjected to multi-axial cyclic stress\cite{Crossland} by : 
 \begin{equation}
-f(\sqrt{J_{2,a}},P_{max})=\sqrt{J_{2,a}}+aP_{max}-b\leqslant 0\label{eq:crossland}
+f(\sqrt{J_{2,a}},\sigma_{H,max})=\sqrt{J_{2,a}}+a\sigma_{H,max}-b\leqslant 0\label{eq:crossland}
 \end{equation}
-where $\sqrt{J_{2,a}}$ measures  the amplitude of variation of the second invariant of the deviatoric stress  and $P_{max}$ is the maximum hydrostatic stress observed during a loading cycle. The parameters $a$ and $b$ are material constants to be calibrated experimentally. The amplitude of the square root of the second invariant of the stress deviator can be defined, in general case, as the half-length of the longest chord of the deviatoric stress path or as the radius of the smallest hypersphere circumscribing the stress deviator loading path \cite{Papadopoulos1997219}
-\begin{equation}\sqrt{J_{2,a}}=\frac{1}{2\sqrt{2}}\min \limits_{\uline{\uline{S_1}}}\{\max \limits_{t}\sqrt{(\uline{\uline{S}}(t)-\uline{\uline{S_1}}):(\uline{\uline{S}}(t)-\uline{\uline{S_1}})}\}\end{equation}
+where $\sqrt{J_{2,a}}$ measures  the amplitude of variation of the second invariant of the deviatoric stress  and $\sigma_{H,max}$ is the maximum hydrostatic stress observed during a loading cycle. The parameters $a$ and $b$ are material constants to be calibrated experimentally. The amplitude of the square root of the second invariant of the stress deviator can be defined, in general case, as the half-length of the longest chord of the deviatoric stress path or as the radius of the smallest hypersphere circumscribing the stress deviator loading path \cite{Papadopoulos1997219}
+\begin{equation}\sqrt{J_{2,a}}=\dfrac{1}{2\sqrt{2}}\min \limits_{\uline{\uline{S_1}}}\left\lbrace \max \limits_{t}\sqrt{(\uuline{S}(t)-\uuline{S_1}):(\uuline{S}(t)-\uuline{S_1})}\right\rbrace . \end{equation}
 
-The deviatoric stress $\uline{\uline{S}}$ associated with a stress tensor $\uline{\uline{\sigma}}$  is defined by
-\begin{equation} \uline{\uline{S}}=\uline{\uline{\sigma}}-\frac{1}{3}\textrm{tr}\uline{\uline{\sigma}}\, \uline{\uline{I}}
+The deviatoric stress $\uuline{S}$ associated with a stress tensor $\uuline{\sigma}$  is defined by
+\begin{equation} \uuline{S}=\uuline{\sigma}-\dfrac{1}{3}\textrm{tr}\uuline{\sigma}\, \uuline{I}
 \end{equation}
-where $\textrm{tr}\uline{\uline{\sigma}}$ is the trace of the stress tensor $\uline{\uline{\sigma}}$ and $\uline{\uline{I}}$ the second order unit tensor.
+where $\textrm{tr}\uuline{\sigma}$ is the trace of the stress tensor $\uuline{\sigma}$ and $\uuline{I}$ the second order unit tensor.
 
 The maximum value that the hydrostatic stress reaches during the loading cycle is on the other hand:
 \begin{equation}
-P_{max}=\max\limits_{t}\{\frac{1}{3}\textrm{tr}(\uline{\uline{\sigma}}(t))\}.
+\sigma_{H,max}=\max\limits_{t}\left\lbrace \dfrac{1}{3}\textrm{tr}(\uuline{\sigma}(t))\right\rbrace .
 \end{equation}
 
-For a proportional cyclic loading, if one introduces the two extreme stress tensors $\uline{\uline{\sigma^A}}$ and $\uline{\uline{\sigma^B}}$ observed during the loading path, together with the stress range 
-\begin{equation}\Delta\uline{\uline{\sigma}}=\uline{\uline{\sigma}}^B-\uline{\uline{\sigma}}^A\end{equation}
-and its deviatoric part $\uline{\uline{\Delta s}} $, the variation of
+For a proportional cyclic loading, if one introduces the two extreme stress tensors $\uuline{\sigma}^A$ and $\uuline{\sigma}^B$ observed during the loading path, together with the stress range 
+\begin{equation}\Delta\uuline{\sigma}=\uuline{\sigma}^B-\uuline{\sigma}^A\end{equation}
+and its deviatoric part $\uuline{\Delta s} $, the variation of
 the second invariant of the stress deviator reduces to 
-\begin{equation}\sqrt{J_{2,a}}=\frac{1}{2}\max\limits_{t}\sqrt{\frac{1}{2}\Delta\uline{\uline{s}}:\Delta\uline{\uline{s}}}=\frac{1}{2}\max\limits_{t}\sqrt{\frac{1}{2}(\Delta s_{11}^2+\Delta s_{22}^2+\Delta s_{33}^2+2\Delta s_{12}^2+2\Delta s_{13}^2+2\Delta s_{23}^2)}.\end{equation}
+\begin{equation}\sqrt{J_{2,a}}=\dfrac{1}{2}\max\limits_{t}\sqrt{\dfrac{1}{2}\Delta\uuline{s}:\Delta\uuline{ s}}=\dfrac{1}{2}\max\limits_{t}\sqrt{\dfrac{1}{2}\left( \Delta s_{11}^2+\Delta s_{22}^2+\Delta s_{33}^2+2\Delta s_{12}^2+2\Delta s_{13}^2+2\Delta s_{23}^2\right) }.\end{equation}
 
 
 The material constants $a$ and $b$ can be related to  the limit $t_{-1}$ of endurance in alternate torsion and to the limit $s_{-1}$ of endurance in alternate tension-compression by
 \begin{equation}
-a=\frac{3 t_{-1}}{s_{-1}}-\sqrt{3},\quad 
+a=\dfrac{3 t_{-1}}{s_{-1}}-\sqrt{3},\quad 
 b=t_{-1}.
 \label{crossland-ab}
 \end{equation}
-
 
 \subsubsection{Formulation of Crossland criterion with gradient effect}
 
 In particular, using as a basis the classical Crossland criterion Eq.\eqref{eq:crossland} and the general framework for the development of a gradient dependent fatigue limit criterion Eq.\eqref{eq:gradient crossland}, a new version can be written in the form:
 \begin{equation}
-\sqrt{\widetilde{J_{2,a}}}+a\widetilde{P_{max}}\leqslant b .
+\sqrt{\widetilde{J_{2,a}}}+a\widetilde{\sigma_{H,max}}\leqslant b .
 \end{equation}
 
 This formula takes into account the indicator of the influence of the gradient of the stress deviator which reflects the spatial non-uniform distribution of stress state.
 
 In practice, \cite{luu2013formulation} had proposed:
 \begin{equation}
-\sqrt{{J_{2,a}}}\sqrt{1-\left(l_\tau\frac{\parallel \uline{\uline{\uline{Y}}}\parallel_{,a}}{\parallel \uline{\uline{S}}\parallel_{,a}}\right)^{n_\tau}}+aP_{max}\left(1-\Big< l_\sigma\frac{\parallel G\parallel}{P_{max}}\Big>^{n_\sigma}\right)-b < 0 .
+\sqrt{{J_{2,a}}}\sqrt{1-\left(l_\tau\dfrac{\parallel \uuline{\uline{Y}}\parallel_{,a}}{\parallel \uuline{S}\parallel_{,a}}\right)^{n_\tau}}+a\sigma_{H,max}\left(1-\left\langle  l_\sigma\dfrac{\parallel G\parallel}{\sigma_{H,max}}\right\rangle ^{n_\sigma}\right)-b < 0 .
 \end{equation}
 
-Here $\parallel \uline{\uline{\uline{Y}}}\parallel_{,a}$ is the full stress gradient and $\parallel G\parallel$ is used as an indicator of the influence of the normal stresses gradient.
+Here $\parallel \uuline{\uline{Y}}\parallel_{,a}$ is the full stress gradient and $\parallel G\parallel$ is used as an indicator of the influence of the normal stresses gradient.
 
 \begin{equation}
-\parallel{G}\parallel=\parallel{\nabla P_{max}}\parallel=\sqrt{\left(\frac{\partial P_{max}}{\partial x}\right)^2+\left(\frac{\partial P_{max}}{\partial y}\right)^2+\left(\frac{\partial P_{max}}{\partial z}\right)^2} .
+\parallel{G}\parallel=\parallel{\nabla \sigma_{H,max}}\parallel=\sqrt{\left(\dfrac{\partial \sigma_{H,max}}{\partial x}\right)^2+\left(\dfrac{\partial \sigma_{H,max}}{\partial y}\right)^2+\left(\dfrac{\partial \sigma_{H,max}}{\partial z}\right)^2} .
 \end{equation}
 
 
@@ -634,161 +1012,250 @@ Here $\parallel \uline{\uline{\uline{Y}}}\parallel_{,a}$ is the full stress grad
 \subsection{Optimized Crossland Criterion formulation}
 The precedent Luu and al. formula has six materials parameters $a$,$b$,$l_\tau$,$l_\sigma$,$n_\tau$,$n_\sigma$ to be identified experimentally. The calibration can be complicated ; it does not lead to a unique set of parameters. Physical considerations, such as the length scales, have to be taken into account for choosing the optimized material constants. For practical application in an industrial context, it is essential to reduce the number of parameters. We therefore wish to investigate a simpler construction, departing from the classical Crossland criterion.
 
-Surfaces with stresses decreasing in depth are, here and after, considered. Failure occurs at the point $x_0$ when,  $(\sqrt{J_{2,a}}+aP_{max}-b)(x_0)\geqslant 0 $. To be more general and avoid singularity, this condition should be satisfied in some $x_0$ neighboring volume of size $l_g$, leading to a criterion given by:
+Surfaces with stresses decreasing in depth are, here and after, considered. Failure occurs at the point $x_0$ when,  $(\sqrt{J_{2,a}}+a\sigma_{H,max}-b)(x_0)\geqslant 0 $. To be more general and avoid singularity, this condition should be satisfied in some $x_0$ neighboring volume of size $l_g$, leading to a criterion given by:
 
 \begin{equation}
-\inf\limits_{\uline{x}\in B(\uline{x_0},\uline{l_g})}\left(\sqrt{J_{2,a}}+aP_{max}-b\right)(x)\geqslant 0 .
+\inf\limits_{\uline{x}\in B\left( \uline{x_0},\,\uline{l_g}\right) }\left( \sqrt{J_{2,a}}+a\sigma_{H,max}-b\right) (x)\geqslant 0 .
 \label{crossland-x0-2}
 \end{equation}
 
 To obtain a suitable expression, an expansion of Eq.(\ref{crossland-x0-2}) in performed in the neighborhood of ${x_0}$. The sought formula should account for the beneficial effect of the stress gradient. Considering that the stress is decreasing in depth, a negative sign is associated with the norm of the gradient of stress tensor in to the proposed formula. In addition, the gradient term should not only affect hydrostatic stress but also shear stress.
 
-An objective formulation based on the lowest possible value of $\sqrt{J_{2,a}}$ and of $P_{max}$ in the neighborhood, is finally:
+An objective formulation based on the lowest possible value of $\sqrt{J_{2,a}}$ and of $\sigma_{H,max}$ in the neighborhood, is finally:
 
 \begin{equation}
-\sqrt{J_{2,a}}+aP_{max}-l_g\parallel{\nabla\sqrt{J_{2,a}}}+a\nabla{P_{max}}\parallel\leqslant b ,
+\sqrt{J_{2,a}}+a\sigma_{H,max}-l_g\parallel{\nabla\sqrt{J_{2,a}}}+a\nabla{\sigma_{H,max}}\parallel\leqslant b ,
 \label{modified Crossland}
 \end{equation}
 We keep the same material parameters $a$ and $b$ as before. $l_g$ is a characteristic length to be optimized to match the experimental results. The approach has only one supplementary material constant whose calibration is easy.
 
+\subsection{Optimized Papadopoulos Criterion formulation}
+Papadopoulos\cite{papadopoulos1993fatigue} proposes to opt for a mean value of the accumulated plastic strain on all possible slip systems of representative elementary volume(REV). So he chose to use a average value  of accumulated plastic deformation rather than looking at failure of a single crystal. A spherical coordinate system(\figref{fig50}) to guide the vector of normal in material plane, and the unit orientation vector $r$ linked to a sliding direction of this plan is used to conduct the integration over all possible orientations.
 
-\subsection{Calibration of the critera}
-
-In this section, two different uniaxial fatigue tests with stress gradient effects are used to calibrate the optimized gradient Crossland  and Papadopoulos criterion. An application to a biaxial test fatigue test shows the ability of the proposed approach to account the stress gradient in multiaxial cases. 
-\subsubsection{Rotating cantilever bending fatigue tests using Papadopoulos criterion}  
-the stress tensor of cantilever bending is in the following expression:
-$$\uline{\uline{\sigma}}=\sigma_{xx}sin(2\pi t/P)e_x\otimes e_x$$
-
-The resolved shear stress $\tau$ acting along a line $\xi$ of a plane $\Delta$ is given by Eq.\ref{eqres}, which in this case leads to:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures//demopp.png} 
+	\caption{Material plane $\Delta$ passing through point O of a body and its
+		associated (n, l, r) frame.}
+	\label{fig50}
+\end{figure}
+At any point $O$ of a body, a material plane $\Delta$ can be defined by its unit normal vector $\bf n$. This vector
+$\bf n$ makes an angle $\theta$ with the z-axis of a $Oxyz$ frame attached to the body, and its projection on the $xy$ plane
+makes an angle $\varphi$ with axis $x$. For each plane $\Delta$ a new quantity is introduced as the quadratic mean value, over all the sliding directions of the considered plane, of the resolved shear stress amplitude and denoted as $T_a$.This shear stress quantity was first introduced in Papadopoulos [6]
+and was subsequently used by other researchers.The critical plane according to our proposal is that onto which $T_a(\varphi,\theta)$ achieves its maximum value. The fatigue limit criterion is written as:
 \begin{equation}
-\tau(\varphi,\theta,\chi,t)=\sigma_{xx}sin(2\pi t/P)sin\theta cos\theta sin\chi.
+max T_a+\alpha_\infty \sigma_{h,max}\leqslant \gamma_\infty
 \end{equation}
-Clearly, the resolved shear stress amplitude is equal to:
-\begin{equation}
-\tau_a(\varphi,\theta,\chi)=\sigma_{xx}|sin\theta cos\theta sin\chi|.
-\end{equation}
-The generalized shear stress amplitude $T_a$ becomes:
-\begin{equation}
-T_a(\varphi,\theta)=\sqrt{\frac{1}{\pi}\int_{x=0}^{\frac{\pi}{2}}(\sigma_{xx}|sin\theta cos\theta sin\chi|)^2d\chi}
-\end{equation}
-The maximum value of $T_a$ is obtained at ($\forall\varphi,\theta=\pi/4$)and at ($\forall\varphi,\theta=3\pi/4$). It is equal to:
-\begin{equation}
-maxT_a=\sigma_{xx}/2
-\end{equation}
-The hydrostatic stress is given by:
-\begin{equation}
-\sigma_{H}(t)=\frac{1}{3}\sigma_{xx}sin(2\pi t/P)
-\end{equation}
-The maximum value of $\sigma_H$ reached in a loading cycle is:
-\begin{equation}
-\sigma_{H,max}=\sigma_{xx}/3
-\end{equation}
-Substituting the values of $T_a$ and $\sigma_{H,max}$ to Eq.\eqref{eq:papadopoulos}. We obtain the papadopoulos fatigue criterion under cantilever bending case:
-Papadopoulos criterion with beneficial gradient term as shown in Eq.(\eqref{eq:modified papa}) is given by:
+where $\alpha_\infty$ and $\gamma_\infty$ are material parameters to be determined\cite{papadopoulos2001long}.
+$$\sigma_{h,max}=\max\limits_{t}\left\lbrace \dfrac{1}{3}tr(\uline{\uline{\sigma}}(t))\right\rbrace $$
+The construction of $T_a$ is based on the calculation of a local shear stress $\tau$:
 \begin{equation}
 \begin{split}
-maxT_a+\alpha_\infty\sigma_{H,max}-l_g\parallel\nabla{maxT_a}+\alpha_\infty\sigma_{H,max}\parallel=\\ \frac{FLR}{2I} +\frac{\alpha_\infty FLR}{3I}-l_g(\frac{FL}{2I}+\frac{\alpha_\infty FL}{3I})=\\ \frac{1}{2}\sigma_{xx}+\frac{a}{3}\sigma_{xx}-l_g(\frac{1}{2R}\sigma_{xx}+\frac{a}{3R}\sigma_{xx})\leqslant \gamma_\infty ,
-\end{split}
+\tau=&[sin\theta cos\varphi\sigma_{xx}+sin\theta sin\varphi\sigma_{xy}+cos\theta\sigma_{xz}](-sin\varphi cos\chi-cos\theta cos\varphi sin\chi)+\\&[sin\theta cos\varphi\sigma_{xy}+sin\theta sin\varphi\sigma_{yy}+cos\theta\sigma_{yz}](cos\varphi cos\chi-cos\theta sin\varphi sin\chi)+\\&[sin\theta cos\varphi\sigma_{xz}+sin\theta sin\varphi\sigma_{yz}+cos\theta\sigma_{zz}]sin\theta sin\chi
+\end{split} 
+\label{eqres}
 \end{equation}
-which is to say:
+It is clear that this shear stress is a function of
+$\varphi$, $\theta$, $\chi$ and of time $t$ in the case of variable loading, i.e. $\tau=\tau(\varphi, \theta, \chi, t)$. Upon fixing a pair of angles $(\varphi, \theta)$ (i.e. a plane
+$\Delta$) and an angle $\chi$ (i.e. a line $\xi$ on $\Delta$), one can define the amplitude of the resolved shear stress $\tau_a$, acting on $\Delta$
+along $\xi$ by the formula:
 \begin{equation}
-\sigma_{xx}\leqslant\frac{\gamma_\infty}{\frac{1}{2}+\frac{\alpha_\infty}{3}-l_g(\frac{1}{2R}+\frac{\alpha_\infty}{3R})}\, .
+\tau_a(\varphi,\theta,\chi)=\dfrac{1}{2}\big[\max \limits_{t\in P}\tau_a(\varphi,\theta,\chi ,t)-\min \limits_{t\in P}\tau_a(\varphi,\theta,\chi ,t)\big]
 \end{equation}
-where
-$$\alpha_\infty=\frac{3(s_{-1}-s_0)}{2(2s_0-s_{-1})},$$
-$$\gamma_\infty=\frac{s_0s_{-1}}{2(2s_0-s_{-1})}.$$
+Now, for a given plane $\Delta$, i.e. for a fixed pair of angles ($\varphi$, $\theta$),
+the generalized shear stress amplitude $T_a$ is defined as the $L^2$ average in the plane $\Delta$ of the amplitude of resolved shear stress:
+\begin{equation}
+T_a(\varphi,\theta)=2\sqrt{\dfrac{1}{\pi}\int_{x=0}^{\frac{\pi}{2}} \tau_a^2(\varphi,\theta,\chi)d\chi}
+\label{Ta}
+\end{equation}
+We note the fatigue limit in fully reversed torsion $t_{-1}$ and the fatigue limit in fully reversed bending $f_{-1}$. From these two tests we get the parameters:
+$$\gamma_\infty=t_{-1},$$ 
+$$\alpha_\infty=3\left( \dfrac{t_{-1}}{f_{-1}}-\dfrac{1}{2}\right) .$$
+The Papadopoulos fatigue limit criterion achieves the form:
+\begin{equation}
+maxT_a+3\left( t_{-1}/f_{-1}-1/2\right) \sigma_{h,max}\leqslant t_{-1}.
+\label{eq:papadopoulos}
+\end{equation}
+Now,  the Papadopoulos Criterion can be simply extended  to cases with gradient effects by
+\begin{equation}
+maxT_a+\alpha_\infty\sigma_{H,max}-l_g\parallel\nabla{maxT_a}+\alpha_\infty\nabla\sigma_{H,max}\parallel\leqslant \gamma_\infty .
+\label{eq:modified papa}
+\end{equation}
 
-We do not have sufficient data of the experimental materials of zero-to-tension fatigue limit $s_0$ to calibrate these two parameters.
+\subsection{Optimized Dang Van Criterion formulation}
+The Dang Van criterion as presented in \cite{ballard1995high} is expressed as:
+\begin{equation}
+\max \limits_{\vec{n}}\left\lbrace \max \limits_{t}\left\{\tau{(\vec{n},t)}+a_D\sigma_H(t)\right\}\right\rbrace \leqslant b_D.
+\label{dv}
+\end{equation}
+
+Here, $\tau$ denotes the mesoscopic shear stress and is obtained from a mesoscopic stress tensor $\hat{\bm{\sigma}}$ defined by:
+$$\hat{\bm{\sigma}}(t)=(\bm{\sigma}(t)-s^\star),$$
+where $s^\star$ is the center of the smallest hypersphere circumscribed to the loading path in deviatoric stress space. It is obtained by solving a ``min-max" problem as follows:
+$$s^\star = arg \min\limits_{s_1}\left\{\max\limits_t\parallel s(t)-s_1\parallel\right\}.$$
+In the case of fully reversed loading, the values $s^\star=0$ can be directly deduced without solving the ``min-max problem" as in general case.
+
+The principal stress values of stress tensor $\widetilde{\sigma}$ being denoted  by $\hat{\sigma}_{\Rmnum{3}}(t)\leqslant\hat{\sigma}_{\Rmnum{2}}(t)\leqslant\hat{\sigma}_{\Rmnum{1}}(t)$, one gets the amplitude of shear stress by:
+$$\tau(t)=\dfrac{1}{2}\left( \hat{\sigma}_{\Rmnum{1}}(t)-\hat{\sigma}_{\Rmnum{3}}(t)\right) .$$
+Moreover, $\sigma_H(t)$ denotes  the hydrostatic stress as a function of the time.
+The material characteristic parameters $a_D$ and $b_D$ are finally  given from traction compression and torsion fatigue limites by  :
+$$a_D=\dfrac{3t_{-1}}{s_{-1}}-\dfrac{3}{2};$$  $$b_D=t_{-1}.$$
+
+Now,  the Dang Van criterion can be extended to a graident dependent criterion by 
+\begin{equation}
+\max \limits_{t}\left\{\tau{(t)}+a_D\sigma_H(t)\right\}-l_g\parallel	\max \limits_{t}\left\{{\nabla\tau{(t)}}+a_D\nabla\sigma_H(t)\right\}\parallel\leqslant b_D.
+\label{modified dangvan}
+\end{equation}
+\subsection{Calibration of the critera}
+
+In this section, two different uniaxial fatigue tests with stress gradient effects are used to calibrate the optimized gradient Crossland, Papadopoulos and DangVan criteria. An application to a biaxial test fatigue test shows the ability of the proposed approach to account for stress gradient in multiaxial cases. 
 
 
-\subsubsection{Fully reversed 4-point bending and rotating cantilever bending fatigue tests using Crossland criterion}
-The model of 4-point bending is first considered. The bar made of steel has both ends fixed. The radius $R$ is a variable ranging from 1mm to 30mm enough to highlight the fact "the smaller, the stronger". The length $L$ of the bar is 100 mm.
+\subsubsection{Fully reversed 4-point bending and rotating cantilever bending fatigue tests}
+\textbf{With Crossland criterion}
+The model of 4-point bending is first considered. The bar made of steel has both ends fixed. The radius $R$ is a variable ranging from 1mm to 30mm in order to  challenge the fact "the smaller, the stronger". The length $L$ of the bar is 100 mm.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.4\textwidth]{figures//fig11.jpg} 
-	\caption{4-point bending test \cite{papadopoulos1996invariant} }
+	\caption{4-point bending test \cite{Papadopoulos1996513} }
 	\label{fig11}
 \end{figure}
 
 The bending moment is the same in the interval $L\leqslant x \leqslant L+l$ and equal to
-$M = FL$ (\figref{fig11}). The bending stress $\bm{\sigma}$ and its gradient $\textbf{Y}$ for
-$L\leqslant x \leqslant L+l$ and  $-R\leqslant y \leqslant R$ are then:
-
-$$\uline{\uline{\sigma}}=\sigma_{xx}sin(wt)e_x\otimes e_x=\frac{FLy}{I}sin(wt) e_x\otimes e_x $$ 
-with
-$ \quad I=\frac{\pi R^4}{4}$\\
-The maximum stress during the cyclic loading in the bar  is:
-$\;\; \sigma_{max}=\frac{FLy}{I}$.
-
-\noindent The gradient components of $\textbf{Y}$ is:
-$\;\;\sigma_{xx,x}=0, \sigma_{xx,y}=\frac{FL}{I}=\frac{\sigma_{max}}{y},\sigma_{xx,z}=0$.
-
-\noindent The macroscopic stress range is: $ \quad \uline{\uline{\Delta\sigma}}(t)=2\sigma_{max}e_x\otimes e_x $
-The hydrostatics stress:
+$M = FL$ (\figref{fig11}).
+For $L\leqslant x \leqslant L+l$ and  $-R\leqslant y \leqslant R$, the bending stress $\bm{\sigma}$  is
 \begin{equation}
-P_{max}=\max\limits_{t}\{\frac{1}{3}\textrm{tr}(\sigma(t))\}=\frac{1}{3}\sigma_{max}=\frac{FLy}{3I},
+\uuline{\sigma}=\sigma_{xx}sin(wt)e_x\otimes e_x=\dfrac{FLy}{I}sin(wt) e_x\otimes e_x \label{bending4} \end{equation}
+with $I=\pi R^4/4$.  The maximum stress during the cyclic loading in the bar  is thus 
+$ \sigma_{max}=\dfrac{FLy}{I}$, 
+while the macroscopic stress range is $ \Delta\uuline{\sigma}(t)=2\sigma_{max}e_x\otimes e_x $, and the 
+hydrostatics stress takes the value
+\begin{equation}
+\sigma_{H,max}=\max\limits_{t}\left\lbrace \dfrac{1}{3}\textrm{tr}(\sigma(t))\right\rbrace =\dfrac{1}{3}\sigma_{max}=\dfrac{FLy}{3I}.
 \end{equation}
-Deviator of the macroscopic stresses:
+From the value of  the deviatoric stress
 \begin{equation} 
-\uline{\uline{\Delta S}}=\uline{\uline{\Delta\sigma}}-\frac{1}{3}\textrm{tr}\uline{\uline{\Delta\sigma}}\uline{\uline{I}}=
+\Delta\uuline{ S}=\Delta\uuline{\sigma}-\dfrac{1}{3}\textrm{tr}\Delta\uuline{\sigma}\uuline{I}=
 \left(
 \begin{array}{ccc}
-\frac{4}{3}\sigma_{max} & 0 & 0\\
-0 & -\frac{2}{3}\sigma_{max} & 0\\ 
-0 & 0 & -\frac{2}{3}\sigma_{max}\\
-\end{array}\right) .
+\dfrac{4}{3}\sigma_{max} & 0 & 0\\
+0 & -\dfrac{2}{3}\sigma_{max} & 0\\ 
+0 & 0 & -\dfrac{2}{3}\sigma_{max}\\
+\end{array}\right) ,
 \end{equation}
-The second invariant of the stress deviator is then:
+we can compute the second invariant of the stress deviator :
 \begin{equation}
-\sqrt{J_{2,a}}=\frac{1}{2\sqrt{2}}\sqrt{\uline{\uline{\Delta S}}:\uline{\uline{\Delta S}}}=\frac{\sigma_{max}}{\sqrt{3}} =\frac{FLy}{\sqrt{3}I} .
+\sqrt{J_{2,a}}=\dfrac{1}{2\sqrt{2}}\sqrt{\Delta \uuline{S}:\Delta \uuline{S}}=\dfrac{\sigma_{max}}{\sqrt{3}} =\dfrac{FLy}{\sqrt{3}I} .
 \end{equation}
 
 
-Then the gradient part has the value:
+Then the gradient part is given by:
 \begin{equation}
-\nabla\sqrt{J_{2,a}}=\frac{\partial\sqrt{J_{2,a}}}{\partial x}\uline{e}_x+\frac{\partial\sqrt{J_{2,a}}}{\partial y}\uline{e}_y+\frac{\partial\sqrt{J_{2,a}}}{\partial z}\uline{e}_z=(0,\frac{FL}{\sqrt{3}I},0) ,
+\nabla\sqrt{J_{2,a}}=\dfrac{\partial\sqrt{J_{2,a}}}{\partial x}\uline{e}_x+\dfrac{\partial\sqrt{J_{2,a}}}{\partial y}\uline{e}_y+\dfrac{\partial\sqrt{J_{2,a}}}{\partial z}\uline{e}_z=\left( 0,\dfrac{FL}{\sqrt{3}I},0\right)  ,
 \end{equation}
 and
 \begin{equation}
-\nabla P_{max}=(0,\frac{FL}{3I},0).
+\nabla \sigma_{H,max}=(0,\dfrac{FL}{3I},0).
 \end{equation}
 The parameters $a$ and $b$ of the standard Crossland criterion, are obtained from fully reversed tension-compression fatigue limit $s_{-1}$  and torsion fatigue limit $t_{-1}$ using Eq.(\ref{crossland-ab}).
 
 From Eq.(\ref{eq:crossland}), standard Crossland criterion without gradient effect (for radius $R$) is:
 \begin{equation}
-\sqrt{J_{2,a}}+aP_{max}=\frac{FLR}{\sqrt{3}I} +\frac{aFLR}{3I}\leqslant b.
+\sqrt{J_{2,a}}+a\sigma_{H,max}=\dfrac{FLR}{\sqrt{3}I} +\dfrac{aFLR}{3I}\leqslant b.
 \label{eq4pcross}
 \end{equation}
 The gradient term here is given by:
 \begin{equation}
-\parallel{\nabla\sqrt{J_{2,a}}}+a{\nabla P_{max}}\parallel=\frac{FL}{\sqrt{3}I}+\frac{aFL}{3I}.
+\parallel{\nabla\sqrt{J_{2,a}}}+a{\nabla \sigma_{H,max}}\parallel=\dfrac{FL}{\sqrt{3}I}+\dfrac{aFL}{3I}.
 \label{cross-gradient-term}
 \end{equation}
 
-By comparison we can see in 4-point bending test the difference between classical and modified Crossland criterion is related to the product of the characteristic length $l_g$ and the term (\ref{cross-gradient-term}) associated to the decrease of the stress in depth. This value shows how much the modification affects the Crossland criterion. 
+By comparison we can see in 4-point bending test the difference between classical and modified Crossland criterion corresponds to the product of the characteristic length $l_g$ by the term (\ref{cross-gradient-term}) associated to the decrease of the stress in depth. This value shows how much the modification affects the Crossland criterion. 
 
 \noindent Crossland criterion with beneficial gradient term as shown in Eq.(\ref{modified Crossland}) is given by:
 \begin{equation}
 \begin{split}
-\sqrt{J_{2,a}}+aP_{max}-l_g(\parallel{\nabla\sqrt{J_{2,a}}}+a\nabla{P_{max}}\parallel)=\\ \frac{FLR}{\sqrt{3}I} +\frac{aFLR}{3I}-l_g(\frac{FL}{\sqrt{3}I}+\frac{aFL}{3I})=\\ \frac{1}{\sqrt{3}}\sigma_{max}+\frac{a}{3}\sigma_{max}-l_g(\frac{1}{\sqrt{3}R}\sigma_{max}+\frac{a}{3R}\sigma_{max})\leqslant b\, ,
+\sqrt{J_{2,a}}+a\sigma_{H,max}-l_g(\parallel{\nabla\sqrt{J_{2,a}}}+a\nabla{\sigma_{H,max}}\parallel)&=\\ \dfrac{FLR}{\sqrt{3}I} +\dfrac{aFLR}{3I}-l_g\left( \dfrac{FL}{\sqrt{3}I}+\dfrac{aFL}{3I}\right) 
+&=\\ \dfrac{1}{\sqrt{3}}\sigma_{max}+\dfrac{a}{3}\sigma_{max}-l_g\left( \dfrac{1}{\sqrt{3}R}\sigma_{max}+\dfrac{a}{3R}\sigma_{max}\right) &\leqslant b\, ,
 \end{split}
 \end{equation}
 which is to say:
 \begin{equation}
-\sigma_{max}\leqslant\frac{b}{\frac{1}{\sqrt{3}}+\frac{a}{3}-l_g(\frac{1}{\sqrt{3}R}+\frac{a}{3R})}\, .
+\sigma_{max}\leqslant\dfrac{b}{\dfrac{1}{\sqrt{3}}+\dfrac{a}{3}-l_g\left( \dfrac{1}{\sqrt{3}R}+\dfrac{a}{3R}\right) }\, .
 \end{equation}
 
-The material parameters $a$ and $b$ are obtained using their classical expressions as Eq.(\ref{crossland-ab}) from tests free of stress gradient. The corresponding fatigue limit are denoted $s_{ref}$ for the alternate tension-compression test, and $t_{ref}$ for the alternate torsion test. For a specimen of radius $R$
-the alternate bending fatigue limit is denoted $f(R)$.
+The material parameters $a$ and $b$ are obtained using their classical expressions as Eq.(\ref{crossland-ab}) from tests free of stress gradient. The corresponding fatigue limit are denoted $s_{ref}$ for the alternate tension-compression test, and $t_{ref}= b$ for the alternate torsion test. For a specimen of radius $R$
+the alternate bending fatigue limit is denoted $f_c(R)$.
 We can observe that:
 \begin{equation}
-f(R)=\frac{b}{\frac{1}{\sqrt{3}}+\frac{a}{3}-l_g(\frac{1}{\sqrt{3}R}+\frac{a}{3R})}\geqslant s_{ref}
+f_c(R)=\dfrac{b}{\dfrac{1}{\sqrt{3}}+\dfrac{a}{3}-l_g\left( \dfrac{1}{\sqrt{3}R}+\dfrac{a}{3R}\right) }\geqslant s_{ref} = \dfrac{b}{\dfrac{1}{\sqrt{3}}+\dfrac{a}{3}},
 \label{crossland-fr}
 \end{equation}
-$f(R)$ tends to $s_{ref}$ for large radii.
+and that $f_c(R)$ tends to $s_{ref}$ for large values of $R$.
 
-\newpage
+\textbf{With Papadopoulos criterion}  
+From \ref{bending4}, the resolved shear stress $\tau$ acting along a line $\xi$ of a plane $\Delta$ is given by Eq.\ref{eqres}, which in this case leads to:
+\begin{equation}
+\tau(\varphi,\theta,\chi,t)=\sigma_{xx}sin(2\pi t/P)sin\theta cos\theta sin\chi.
+\end{equation}
+Clearly, for the worse case in $\chi$,  the resolved shear stress amplitude is equal to:
+\begin{equation}
+\tau_a(\varphi,\theta,\chi)=\sigma_{xx}|sin\theta cos\theta sin\chi|.
+\end{equation}
+The generalized shear stress amplitude $T_a$ becomes:
+\begin{equation}
+T_a(\varphi,\theta)=2\sqrt{\dfrac{1}{\pi}\int_{\chi=0}^{\frac{\pi}{2}}(\sigma_{xx}|sin\theta cos\theta sin\chi|)^2d\chi}
+\end{equation}
+The maximum value of $T_a$ is obtained at ($\theta=\pi/4$) and at ($\theta=3\pi/4$). It is equal to:
+\begin{equation}
+maxT_a=\sigma_{xx}/2
+\end{equation}
+The hydrostatic stress is given by:
+\begin{equation}
+\sigma_{H}(t)=\dfrac{1}{3}\sigma_{xx}sin(2\pi t/P)
+\end{equation}
+The maximum value of $\sigma_H$ reached in a loading cycle is:
+\begin{equation}
+\sigma_{H,max}=\sigma_{xx}/3
+\end{equation}
+Papadopoulos criterion with beneficial gradient term as shown in Eq.\eqref{eq:modified papa} is then given by:
+\begin{equation}
+\begin{split}
+maxT_a+\alpha_\infty\sigma_{H,max}-l_g\parallel\nabla{maxT_a}+\alpha_\infty\sigma_{H,max}\parallel&=\\\dfrac{FLR}{2I} +\dfrac{\alpha_\infty FLR}{3I}-l_g\left( \dfrac{FL}{2I}+\dfrac{\alpha_\infty FL}{3I}\right) &=\\ \dfrac{1}{2}\sigma_{max}+\dfrac{a}{3}\sigma_{max}-l_g\left( \dfrac{1}{2R}\sigma_{max}+\dfrac{a}{3R}\sigma_{max}\right) &\leqslant \gamma_\infty = t_{ref} ,
+\end{split}
+\end{equation}
+which is to say:
+\begin{equation}
+\sigma_{max}\leqslant\dfrac{\gamma_\infty}{\dfrac{1}{2}+\dfrac{\alpha_\infty}{3}-l_g(\dfrac{1}{2R}+\dfrac{\alpha_\infty}{3R})} .
+\end{equation}
+For a specimen of radius $R$
+the alternate bending fatigue limit is denoted $f_p(R)$.
+We can observe that:
+\begin{equation}
+f_p(R)=\dfrac{\gamma_\infty}{\dfrac{1}{2}+\dfrac{\alpha_\infty}{3}-l_g\left( \dfrac{1}{2R}+\dfrac{\alpha_\infty}{3R}\right) }\geqslant s_{ref} = \dfrac{\gamma_\infty}{\dfrac{1}{2}+\dfrac{\alpha_\infty}{3}}.
+\label{papa-fr}
+\end{equation}
+
+\textbf{With Dang Van criterion}  
+Under fully reversed loading we have:
+$$\tau(t)=\dfrac{1}{2}(\sigma_{xx}(t)-0)$$ 
+From Eq.\eqref{modified dangvan} we can deduce Dang Van criterion.
+\begin{equation}
+\begin{split}
+\max \limits_{t}\left\{\tau{(t)}+a_D\sigma_H(t)\right\}-l_g\parallel{\nabla\tau{(t)}}+a_D\nabla\sigma_H(t)\parallel&=\\ \dfrac{FLR}{2I} +\dfrac{aFLR}{3I}-l_g\left( \dfrac{FL}{2I}+\dfrac{aFL}{3I}\right) &=\\ \dfrac{1}{2}\sigma_{max}+\dfrac{a}{3}\sigma_{max}-l_g\left( \dfrac{1}{2R}\sigma_{max}+\dfrac{a}{3R}\sigma_{max}\right) &\leqslant b_D= t_{ref}\, ,
+\end{split}
+\end{equation}
+which is to say:
+\begin{equation}
+\sigma_{max}\leqslant\dfrac{b}{\dfrac{1}{2}+\dfrac{a}{3}-l_g\left( \dfrac{1}{2R}+\dfrac{a}{3R}\right) }.
+\end{equation}
+We can observe that the corresponding bending limit is thus
+$$f_D(R)=\dfrac{b}{\dfrac{1}{2}+\dfrac{a}{3}-l_g\left( \dfrac{1}{2R}+\dfrac{a}{3R}\right) }\geqslant s_{ref} = \dfrac{b}{\dfrac{1}{2}+\dfrac{a}{3}}.
+$$
+
+
+\textbf{Comparison with experimental data}
 \begin{figure}[!h]
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{figures//fig3.jpg} 
@@ -796,41 +1263,20 @@ $f(R)$ tends to $s_{ref}$ for large radii.
 		\label{fig9}
 	\end{center}
 \end{figure}
-In the case of cantilever fully reversed bending. Let us denote
-the corresponding fatigue limit by $\sigma_{max}$.
+The case of cantilever fully reversed bending corresponds to the four point bending test except that there, the bending moment is function of $x$. Thus, the maximum stress $\sigma_{max}$ for a given section is a function of $x$. But, the $y$ dimension of the beam is much smaller than its $x$ dimension, which allows us to neglect gradients in $x$ . All  expressions of the four point bending case thus  apply to this cas. 
 
-The second invariant of the stress deviator is then:
-\begin{equation}
-\sqrt{J_{2,a}}=\frac{1}{2\sqrt{2}}\sqrt{\uline{\uline{\Delta S}}:\uline{\uline{\Delta S}}}=\frac{\sigma_{max}}{\sqrt{3}} .
-\end{equation}
-
-The hydrostatics stress:
-\begin{equation}
-P_{max}=\max\limits_{t}\{\frac{1}{3}\textrm{tr}(\sigma(t))\}=\frac{1}{3}\sigma_{max}.
-\end{equation}
-
-Which results in the same gradient terms as in 4-point bending.
-
-\begin{Figure}{Fatigue limits with gradient effect for different radii.}[label]
-	\graphfile*[34]{figures//4pcarbon.png}[]
-	\graphfile*[34]{figures//4p1220.png}[]
+\newpage
+\begin{Figure}[h!]{Fatigue limits with gradient effect for different radii.}[label]
+	\graphfile*[34]{figures//carbonsteel.png}[]
+	\graphfile*[34]{figures//1220steel.png}[]
 	\\
-	\graphfile*[34]{figures//4p1035.png}[]
-	\graphfile*[34]{figures//4p40kh.png}[]
+	\graphfile*[34]{figures//1035steel.png}[]
+	\graphfile*[34]{figures//40khsteel.png}[]
 \end{Figure}
 
-Eq.(\ref{crossland-fr}) with $a$ et $b$ calibrated from given $S_{ref}$ and $t_{ref}$ is used to estimate the characteristic length $l_g$ in order to give the best correlation between simulated and experimental fatigue limit obtained in rotating cantilever bending tests for different materials and radii. The results are sketched in Fig.(\ref{label}).
+Eq.(\ref{crossland-fr}) with $a$ et $b$ calibrated from given $S_{ref}$ and $t_{ref}$ is used to estimate the characteristic length $l_g$ in order to give the best correlation between simulated and experimental fatigue limit obtained in rotating cantilever bending tests for different materials and radii. The results are sketched in Fig.(\ref{label}) and the corresponding parameters are shown in Table.\ref{tab.paras}.
 
-
-\noindent The  fatigue limit of carbon steel is in alternate torsion is $t_{ref}=151MPa$  and the fatigue limit in alternate tension-compression is $s_{ref}=222MPa$. After fitting, we get $l_g=0.3297$.
-
-\noindent The  fatigue limit of SAE 1220 steel is in alternate torsion is $t_{ref}=143MPa$  and the fatigue limit in alternate tension-compression is $s_{ref}=191MPa$.After fitting, we get $l_g=0.3755$.
-
-\noindent  The  fatigue limit of SAE 1035 steel is in alternate torsion is $t_{ref}=172MPa$  and the fatigue limit in alternate tension-compression is $s_{ref}=234MPa$. After fitting, we get $l_g=0.2861$.
-
-\noindent   The  fatigue limit of 40Kh steel is in alternate torsion is $t_{ref}=180MPa$  and the fatigue limit in alternate tension-compression is $s_{ref}=297MPa$. After fitting, we get $l_g=0.1424$.
-
-\begin{table}[]
+\begin{table}[!h]
 	\centering
 	\caption{Length scales of different materials}
 	\label{my-label}
@@ -841,22 +1287,22 @@ Eq.(\ref{crossland-fr}) with $a$ et $b$ calibrated from given $S_{ref}$ and $t_{
 		\textbf{\begin{tabular}[c]{@{}c@{}}$\bm{t_{ref}}$\\ {[}MPa{]}\end{tabular}} & 143                                     & 151                                       & 172                                     & 180                                     \\
 		\textbf{\begin{tabular}[c]{@{}c@{}}$\bm{l_g}$\\ {[}mm{]}\end{tabular}}      & 0.3755                                  & 0.3297                                    & 0.2861                                  & 0.1424                                  \\ \hline
 	\end{tabular}
+	\label{tab.paras}
 \end{table}
 
 We can observe a very interesting phenomenon that the smaller fatigue limit is, the larger influence of gradient effect is.
 
-\newpage
+
 \subsubsection{Bending-torsion fatigue tests}
 \textbf{With Crossland criterion}
-The bending moment is a linear function of $x, M_b= -F(L-x)$. The twisting moment is denoted $M_t$. The stress $\sigma_{xx}$ now varies along the depth (i.e. y-axis) and the length (i.e. x-axis) of the specimen. Consequently, the gradient of $\sigma_{xx}$ has two non-zero components, the derivatives with respect to x and y. Considering the critical points (located at
-$y=\pm R$) The bending stress and its gradient for $0\leqslant x\leqslant L$ are given by the formulas: 
+The bending moment is a linear function of $x, M_b= -F(L-x)$. The twisting moment is denoted $M_t$. The stress $\sigma_{xx}$ now varies along the depth (i.e. y-axis) and the length (i.e. x-axis) of the specimen, but as above we will neglect the gradient in $x$ as compared to the gradient in $y$. The bending stress is given here by : 
 \begin{equation}
-\sigma_{a}=\frac{-F(L-x)}{I}R=\frac{M_b}{I}y
+\sigma_{a}=\dfrac{-F(L-x)}{I}R=\dfrac{M_b}{I}y \quad \text{ with } \quad I=\dfrac{\pi R^4}{4},
 \end{equation}
-with $\quad I=\frac{\pi R^4}{4}\,,\quad 
-\tau_{a}=\frac{M_t}{J}y \quad \text{and  }
-J=\frac{1}{2}\pi R^4$.
-The stress tensor $\uline{\uline{\sigma}}$ is then:
+while the twisting shear stress is given by 
+$ \tau_{a}=\dfrac{M_t}{J}y \quad \text{ with  }
+J=\dfrac{\pi R^4}{2}$. 
+The stress tensor $\uuline{\sigma}$ is then:
 \begin{equation} 
 \uline{\uline{\sigma}}(t)=
 \left(
@@ -866,138 +1312,140 @@ The stress tensor $\uline{\uline{\sigma}}$ is then:
 0 & 0 & 0\\
 \end{array}\right) .
 \end{equation}
-The stress range tensor is:
+Its range tensor is:
 \begin{equation} 
-\uline{\uline{\Delta\sigma}}=
+\Delta\uuline{\sigma}=
 \left(
 \begin{array}{ccc}
 2\sigma_a& 2\tau_a & 0\\
 2\tau_a& 0 & 0\\ 
 0 & 0 & 0\\
-\end{array}\right) .
+\end{array}\right) ,
 \end{equation}
-Deviator of the macroscopic stresses:
+with deviator
 \begin{equation} 
-\uline{\uline{\Delta S}}=\uline{\uline{\Delta\sigma}}-\frac{1}{3}\textrm{tr}\uline{\uline{\Delta\sigma}}=
+\Delta\uuline{ S}=\Delta\uuline{\sigma}-\dfrac{1}{3}\textrm{tr}\Delta\uuline{\sigma}=
 \left(
 \begin{array}{ccc}
-\frac{4}{3}\sigma_{a} & 2\tau_a & 0\\
-2\tau_a & -\frac{2}{3}\sigma_a & 0\\ 
-0 & 0 & -\frac{2}{3}\sigma_a\\
+\dfrac{4}{3}\sigma_{a} & 2\tau_a & 0\\
+2\tau_a & -\dfrac{2}{3}\sigma_a & 0\\ 
+0 & 0 & -\dfrac{2}{3}\sigma_a\\
 \end{array}\right) .
 \end{equation}
 The second invariant of the stress deviator is then:
 \begin{equation}
-\sqrt{J_{2,a}}=\frac{1}{2\sqrt{2}}\sqrt{\uline{\uline{\Delta S}}:\uline{\uline{\Delta S}}}=\sqrt{\frac{1}{3}\sigma_a^2+\tau_a^2}=\sqrt{\frac{M_b^2}{3I^2}+\frac{M_t^2}{4J^2}}y.
+\sqrt{J_{2,a}}=\dfrac{1}{2\sqrt{2}}\sqrt{\Delta \uuline{S}:\Delta \uuline{S}}=\sqrt{\dfrac{1}{3}\sigma_a^2+\tau_a^2}=\sqrt{\dfrac{M_b^2}{3I^2}+\dfrac{M_t^2}{J^2}}y.
 \end{equation}
-The hydrostatics stress:
+As for the  hydrostatics stress, we have
 \begin{equation}
-P_{max}=\max\limits_{t}\{\frac{1}{3}\textrm{tr}(\sigma(t))\}=\frac{\sigma_{a}}{3}=\frac{M_b}{3I}y ,
+\sigma_{H,max}=\max\limits_{t}\left\lbrace \dfrac{1}{3}\textrm{tr}(\sigma(t))\right\rbrace =\dfrac{\sigma_{a}}{3}=\dfrac{M_b}{3I}y .
 \end{equation}
 Then the gradient part has the value:
 \begin{equation}
 \begin{split}
-\nabla\sqrt{J_{2,a}}=\frac{\partial\sqrt{J_{2,a}}}{\partial x}\uline{e}_x+\frac{\partial\sqrt{J_{2,a}}}{\partial y}\uline{e}_y+\frac{\partial\sqrt{J_{2,a}}}{\partial z}\uline{e}_z=(0,\sqrt{\frac{M_b^2}{3I^2}+\frac{M_t^2}{4J^2}},0)\\=(0,\frac{\sqrt{\frac{1}{3}\sigma_a^2+\tau_a^2}}{y},0) ,
+\nabla\sqrt{J_{2,a}}=\dfrac{\partial\sqrt{J_{2,a}}}{\partial x}\uline{e}_x+\dfrac{\partial\sqrt{J_{2,a}}}{\partial y}\uline{e}_y+\dfrac{\partial\sqrt{J_{2,a}}}{\partial z}\uline{e}_z=\left( 0,\sqrt{\dfrac{M_b^2}{3I^2}+\dfrac{M_t^2}{J^2}},0\right) \\=\left( 0,\dfrac{\sqrt{\frac{1}{3}\sigma_a^2+\tau_a^2}}{y},0\right) \, ,
 \end{split}
 \end{equation}
 and
 \begin{equation}
-\nabla P_{max}=(0,\frac{M_b}{3I},0)=(0,\frac{\sigma_a}{3y},0).
+\nabla \sigma_{H,max}=\left( 0,\dfrac{M_b}{3I},0\right) =\left( 0,\dfrac{\sigma_a}{3y},0\right) .
 \end{equation}
 The parameters $a$ and $b$ of the standard Crossland criterion, are obtained from fully reversed tension-compression fatigue limit $s_{ref}$  and torsion fatigue limit $t_{ref}$ using Eq.(\ref{crossland-ab}).
 
 \noindent From Eq.(\ref{eq:crossland}), standard Crossland criterion without gradient effect writes:
 \begin{equation}
-\sqrt{J_{2,a}}+aP_{max}=\sqrt{\frac{\sigma_a^2}{3}+\tau_a^2}+\frac{\sigma_a}{3}\leqslant b.
+\sqrt{J_{2,a}}+a\sigma_{H,max}=\sqrt{\dfrac{\sigma_a^2}{3}+\tau_a^2}+\dfrac{\sigma_a}{3}\leqslant b.
 \label{eqrbcross}
 \end{equation}
 The gradient term here is given by:
 \begin{equation}
-\parallel{\nabla\sqrt{J_{2,a}}}+a{\nabla P_{max}}\parallel= \frac{\sqrt{\frac{\sigma_a^2}{3}+\tau_a^2}}{y}+\frac{a\sigma_a}{3y}.
+\parallel{\nabla\sqrt{J_{2,a}}}+a{\nabla \sigma_{H,max}}\parallel= \dfrac{\sqrt{\dfrac{\sigma_a^2}{3}+\tau_a^2}}{y}+\dfrac{a\sigma_a}{3y}.
 \end{equation}
-Crossland criterion with beneficial gradient term as shown in Eq.(\ref{modified Crossland}):
+Crossland criterion with beneficial gradient term as shown in Eq.(\ref{modified Crossland}) now writes
 \begin{equation}
 \begin{split}
-\sqrt{J_{2,a}}+aP_{max}-l_g\parallel{\nabla\sqrt{J_{2,a}}}+a\nabla{P_{max}}\parallel=\\\sqrt{\frac{\sigma_a^2}{3}+\tau_a^2}+\frac{a\sigma_a}{3}-l_g(\frac{\sqrt{\frac{\sigma_a^2}{3}+\tau_a^2}}{y}+\frac{a\sigma_a}{3y})\leqslant b
+\sqrt{J_{2,a}}+a\sigma_{H,max}-l_g\parallel{\nabla\sqrt{J_{2,a}}}+a\nabla{\sigma_{H,max}}\parallel&=\\\sqrt{\dfrac{\sigma_a^2}{3}+\tau_a^2}+\dfrac{a\sigma_a}{3}-l_g\left( \dfrac{\sqrt{\dfrac{\sigma_a^2}{3}+\tau_a^2}}{y}+\dfrac{a\sigma_a}{3y}\right) &\leqslant b.
 \end{split}
 \end{equation}
-
 \textbf{With Papadopoulos criterion}
-We can find the resolved shear stress $\tau_a(\varphi,\theta,\chi ,t)$ with Eq.\eqref{eqres}:
+We can find the resolved shear stress $\tau(\varphi,\theta,\chi ,t)$ with Eq.\eqref{eqres}:
 \begin{equation}
 \begin{split}
-\tau_a(\varphi,\theta,\chi ,t)=&[sin(\theta) cos(\phi)\sigma_a sin(\omega t) + sin(\theta) sin(\phi) \tau_a sin(\omega t)] [-sin(\phi)cos(\chi)-\\&cos(\theta)cos(\phi)sin(\chi)]+[sin(\theta)cos(\phi) \tau_a sin(\omega t)]\\&[cos(\phi) cos(\chi)-cos(\theta) sin(\phi) sin(\chi)] ,
+\tau(\varphi,\theta,\chi ,t)=&[sin(\theta) cos(\phi)\sigma_a sin(\omega t) + sin(\theta) sin(\phi) \tau_a sin(\omega t)] \\&[-sin(\phi)cos(\chi)-cos(\theta)cos(\phi)sin(\chi)]+\\&[sin(\theta)cos(\phi) \tau_a sin(\omega t)][cos(\phi) cos(\chi)-cos(\theta) sin(\phi) sin(\chi)] ,
 \end{split}
 \end{equation}
 
-We use 1stOpt to calculate $\max \limits_{t\in P}\tau_a(\varphi,\theta,\chi ,t)=0.05\sigma_a + 1.0944\tau_a$ and $\min \limits_{t\in P}\tau_a(\varphi,\theta,\chi ,t)=- 0.2236\sigma_a - 0.8944\tau_a$. Therefore we can get: $$\tau_a(\varphi,\theta,\chi)=\frac{1}{2}\big[\max \limits_{t\in P}\tau_a(\varphi,\theta,\chi ,t)-\min \limits_{t\in P}\tau_a(\varphi,\theta,\chi ,t)\big]=0.1368\sigma_a+0.9944\tau_a,$$
-
-The generalized shear stress amplitude $T_a$ is then:
+Although the intermediate calculations are complicated, the result achieves the very simple form\cite{Papadopoulos1997219}. The generalized shear stress amplitude $T_a$ is then:
+$$T_a(\varphi,\theta)=\sqrt{\dfrac{1}{\pi}\int_{x=0}^{\frac{\pi}{2}} \tau^2(\varphi,\theta,\chi)d\chi}
+=\sqrt{\dfrac{\sigma_a^2}{3}+\tau_a^2}.
 $$
-T_a(\varphi,\theta)=\sqrt{\frac{1}{\pi}\int_{x=0}^{\frac{\pi}{2}} \tau_a^2(\varphi,\theta,\chi)d\chi}=\sqrt{\frac{1}{2}\tau_a^2(\varphi,\theta,\chi)}=0.0967\sigma_a+0.7031\tau_a.
-$$
-$$\sigma_{H,max}=\frac{1}{3}\sigma_a$$
+$$\sigma_{H,max}=\dfrac{1}{3}\sigma_a$$
 The modified Papadopoulos criterion from Eq.\eqref{eq:modified papa} is:
 $$maxT_a+\alpha_\infty\sigma_{H,max}-l_g\parallel\nabla{maxT_a}+\alpha_\infty\sigma_{H,max}\parallel\leqslant \gamma_\infty,$$
-with
-$$\alpha_\infty=\frac{3(s_{-1}-s_0)}{2(2s_0-s_{-1})},$$
-$$\gamma_\infty=\frac{s_0s_{-1}}{2(2s_0-s_{-1})}.$$
-Then the gradient part has the value:
+From the above calculation and the linear dependance of the stress field as function of $y$, 
+Papadopoulos criterion with beneficial gradient term reduces to 
 \begin{equation}
 \begin{split}
-\nabla{maxT_a}=\frac{\partial{maxT_a}}{\partial x}\uline{e}_x+\frac{\partial{maxT_a}}{\partial y}\uline{e}_y+\frac{\partial{maxT_a}}{\partial z}\uline{e}_z=(0,\frac{0.0967\sigma_a+0.7031\tau_a}{y},0),
+maxT_a+\alpha_\infty\sigma_{H,max}-l_g\parallel\nabla{maxT_a}+\alpha_\infty\sigma_{H,max}\parallel&=\\\sqrt{\dfrac{\sigma_a^2}{3}+\tau_a^2}+\dfrac{\alpha_\infty\sigma_a}{3}-l_g\left( \dfrac{\sqrt{\dfrac{\sigma_a^2}{3}+\tau_a^2}}{y}+\dfrac{\alpha_\infty\sigma_a}{3y}\right) &\leqslant \gamma_\infty.
 \end{split}
-\end{equation}
-and
-\begin{equation}
-\nabla P_{max}=(0,\frac{M_b}{3I},0)=(0,\frac{\sigma_a}{3y},0).
+\label{modified Papadopoulos}
 \end{equation}
 
+\textbf{With Dang Van criterion}
+The principle stresses in 2D tensor are expressed as:
+$$\sigma_1=\dfrac{\sigma_a}{2}+\sqrt{\left( \dfrac{\sigma_a}{2}\right)^2+\tau_a^2 }$$
+$$\sigma_2=\dfrac{\sigma_a}{2}-\sqrt{\left( \dfrac{\sigma_a}{2}\right)^2+\tau_a^2 }$$
+With this one gets the amplitude of shear stress by:
+$$\max\limits_{t}\tau(t)=\dfrac{1}{2}(\sigma_1-\sigma_2)=\sqrt{\left( \dfrac{\sigma_a}{2}\right)^2+\tau_a^2 }$$
+Dang Van criterion with beneficial gradient term as shown in Eq.(\ref{Dang Van}) now becomes :
 \begin{equation}
 \begin{split}
-maxT_a+\alpha_\infty\sigma_{H,max}-l_g\parallel\nabla{maxT_a}+\alpha_\infty\sigma_{H,max}\parallel=\\0.0967\sigma_a+0.7031\tau_a+\frac{\alpha_\infty\sigma_a}{3}-l_g(\frac{0.0967\sigma_a+0.7031\tau_a}{y}+\frac{\alpha_\infty\sigma_a}{3y})\leqslant \gamma_\infty.
+\max\limits_{t}\left\{\tau{(t)}+a_D\sigma_H(t)\right\}-l_g\parallel{\nabla\tau{(t)}}+a_D\nabla\sigma_H(t)\parallel&=
+\\\sqrt{\left(\dfrac{\sigma_a}{2}\right)^2+\tau_a^2}+\dfrac{a_D\sigma_a}{3}-l_g\left( \dfrac{\sqrt{\left(\dfrac{\sigma_a}{2}\right)^2+\tau_a^2}}{y}+\dfrac{a\sigma_a}{3y}\right) &\leqslant b_D.
 \end{split}
+\label{Dang Van}
 \end{equation}
 
-\noindent
-But currently we lack the experimental data of fatigue limits in zero-to-tension $s_0$.
+\textbf{Comparison with experimental data}
+This classical Crossland ellipse arc delimits in the $s_{ref}-t_{ref}$  plane the safe domain against fatigue failure. In the case of fully reversed in-phase tension-compression and torsion fatigue tests, it gives the ``ellipse arc equation''\cite{Papadopoulos1996513} :
+\begin{equation}
+\left( \dfrac{\tau_a}{t_{ref}}\right) ^2+\left( \dfrac{2s_{ref}}{\sqrt{3}t_{ref}}-1\right) \left( \dfrac{\sigma_a}{s_{ref}}\right) ^2+\left( 2-\dfrac{2s_{ref}}{\sqrt{3}t_{ref}}\right) \dfrac{\sigma_a}{s_{ref}}\leqslant 1
+\label{crossland}
+\end{equation}
 
-\subsubsection{Comparison with experimental data}
-This ellipse arc delimits in the $s_{ref}-t_{ref}$  plane the safe domain against fatigue failure(the blue arc). Clearly,
-Eq. \eqref{eqrbcross} is the Crossland criterion for combined normal and shear stress. However, if one tries	to predict the behavior of the material in combined bending and torsion, which involves  the gradients of normal and	shear stresses, high discrepancies between predictions and experimental data will be found. 
+However, if one tries to predict the behavior of the material in combined bending and torsion, which involves  the gradients of normal and shear stresses, high discrepancies between predictions and experimental data will be found. 
 
-\begin{figure}[h!]
+By introducing the values of $\sqrt{J_{2,a}}$ and $\sigma_{H,max}$ in the the classical Crossland criterion, along with the change of parameter $\alpha_\infty$  from $\left(\dfrac{3 t_{-1}}{s_{-1}}-\sqrt{3}\right)$ to $\left(\dfrac{3 t_{-1}}{f_{-1}}-\sqrt{3}\right)$ in Eq.\eqref{eq:crossland}, we obtain the "Papadopoulos ellipse arc" based on $\left(t_{-1},f_{-1} \right) $ in the plane of amplitudes $\sigma_a$ and $\tau_a$:
+\begin{equation}
+\left(\dfrac{\tau_a}{t_{-1}}\right)^2+\left(\dfrac{2f_{-1}}{\sqrt{3}t_{-1}}-1\right)\left(\dfrac{\sigma_a}{f_{-1}}\right)^2+\left(2-\dfrac{2f_{-1}}{\sqrt{3}t_{-1}}\right)\dfrac{\sigma_a}{f_{-1}}\leqslant 1
+\label{papa}
+\end{equation}
+
+Our proposal takes into account both gradients of hydrostatic stress and shear stress. Choosing the proper $l_g$(here $l_g=2.5mm$ ) allows us to predict the experiments within the acceptable range as shown in \figref{4340} at the critical locations $y=R$. These results, represented in the $\sigma_a, \tau_a$ plane (the so called fatigue ellipse arc)  illustrate that our proposal is quite satisfactory in biaxial case.	
+
+\begin{figure}[!h]
 	\includegraphics[width=\textwidth]{figures//4340.png}
-	\caption{Fully reversed combined bending-twisting fatigue limit data (Findley et al.\cite{findley1956theory}, Papadopoulos and Panoskaltsis\cite{papadopoulos1996invariant}).}
+	\caption{Fully reversed combined bending-twisting fatigue limit data (Findley et al.\cite{findley1956theory}, Papadopoulos and Panoskaltsis\cite{papadopoulos1996invariant}) compared with updated values computed with gradient effects with $l_g = 2.5 \, mm$.}
 	\label{4340}
 \end{figure}
 
 
-By introducing the values of $\sqrt{J_{2,a}}$ and $P_{max}$ in the the classical Crossland criterion, along with the change of parameter $a$  from $\left(\frac{3 t_{-1}}{s_{-1}}-\sqrt{3}\right)$ to $\left(\frac{3 t_{-1}}{f_{-1}}-\sqrt{3}\right)$ in Eq.\eqref{eq:crossland}, we obtain the "Papadopoulos ellipse arc" equation in the plane of amplitudes $\sigma_a$ and $\tau_a$ (the black arc):
-\begin{equation}
-(\frac{\tau_a}{t_{-1}})^2+(\frac{2f_{-1}}{\sqrt{3}t_{-1}}-1)(\frac{\sigma_a}{f_{-1}})^2+(2-\frac{2f_{-1}}{\sqrt{3}t_{-1}})\frac{\sigma_a}{f_{-1}}\leqslant 1
-\label{papa}
-\end{equation}
-
-Our proposal takes into account both gradients of hydrostatic stress and shear stress. Choosing the proper $l_g$ allows us to predict the experiments within the acceptable range as shown in \figref{4340} (the red arc). These results illustrate that our proposal is quite satisfactory in biaxial case.
 
 \newpage
 \subsection{Discussion}
-\noindent\textbf{Remark 1} (Gradient terms). In this paper, the pure size effect has not been considered and only stress gradient effect is modeled. \vspace{6pt} \\
-\textbf{Remark 2} (Material characteristic length scale $l_g$). We study here the fatigue limit of macroscopic specimens and components for which the crack initiation is generally detected by loss of stiffness corresponding to crack length which can reach a millimeter. We choose $l_g$ ranging from $0.1$ to $0.5$mm. To verify the relevancy of this choice, we need more experimental data.\vspace{6pt} \\
-\textbf{Remark 3} (Extensions to other criteria). The extension of the proposition to other fatigue criteria is straightforward. For instance, the modified Papadopoulos criterion \cite{papadopoulos2001long} is written as :
-\begin{equation}
-\max{T_a}+a_p P_{max}- l_g \parallel{\nabla\{\max{T_a}\}}+a_p\nabla{P_{max}}\parallel\leqslant b_p .
-\label{modified papa}
-\end{equation}
-
+\noindent\textbf{Remark 1} (Gradient terms). In this paper, the pure size effect has not been considered and only stress gradient effect is modeled. Whereas the latter is dominant rather than totally to the pure size effect as usually believed
+\vspace{6pt} \\
+\textbf{Remark 2} (Material characteristic length scale $l_g$). We study here the fatigue limit of macroscopic specimens and components for which the crack initiation is generally detected by loss of stiffness corresponding to crack length which can reach a millimeter. We choose $l_g$ ranging from $0.1$ to $2.5$mm(depending on crack nucleation definition). To verify the relevancy of this choice, we need more experimental data.
+\vspace{6pt} \\
+\textbf{Remark 3} (Extensions to other load case). This new criteria is generalized to multiaxial cases to capture
+both well-known phenomena ‘‘Smaller is Stronger’’ and ‘‘Higher Gradient is Stronger’’ and thus can reproduce fatigue experimental data even at small scale.
 
 \subsection{Conclusion}
 
 The present study develops a simple formulation of gradient
 multi-axial fatigue criteria extending the classical HCF criteria.
 The objective is to model the surface gradient effects (yielding
-apparent size and loading effects), which is not included yet in classical mechanics but become important at small scale or in the presence of notches, by taking into account just the gradient effect.  Besides, for notched fatigue problems, this approach may be still applicable.
+apparent size and loading effects), which is not included yet in classical mechanics but become important at small scale or in the presence of notches, by taking into account just the gradient effect.  This is achieved by a simple and versatile technique, which we have validated on a few significative examples.  This effect allows us to discriminate between a compression tension test combined with a torsion test and a bending twisting test.  The extra cost is the apparition of a length scale $l_g$ which has to be determined by adequate experiments at different sizes. 
 
 Nevertheless, in this work only simple fatigue tests have been examined. In these tests, the gradient has a beneficial effect on fatigue. However, cases where the effect can be presumably negative, especially under the circumstances of residual stresses, can be encountered. A reexamination and validation for complex loading could be perspective for this research direction. 
 
@@ -1243,7 +1691,7 @@ with
 \begin{equation}\eta=\frac{1-\alpha_2}{1-\alpha_1}=
 \frac{A_{\uppercase\expandafter{\romannumeral2 2}} - A_{\uppercase\expandafter{\romannumeral2}}^\ast(P_{m2})}{A_{\uppercase\expandafter{\romannumeral2 1}} - A_{\uppercase\expandafter{\romannumeral2}}^\ast(P_{m1})}\frac{ \sigma_{u} - \sigma_{eqMax1}}{ \sigma_{u} - \sigma_{eqMax2}}=
 \frac{\sqrt{J_{2,a_2}} - s_{-1}(1-3bP_{m_2})}{\sqrt{J_{2,a_1}} - s_{-1}(1-3bP_{m_1})}\frac{ \sigma_{u} - \max(2\sqrt{J_{2,a_1}})}{  \sigma_{u} - \max(2\sqrt{J_{2,a_2}})}
-\label{eta}
+\label{eq.eta}
 \end{equation}
 
 In the case of high-low loading sequence($\sigma_1>\sigma_2$):
@@ -1346,7 +1794,7 @@ $P_{m_1}=8.8342E5 Pa$
 \vspace{6pt}
 $P_{m_2}=4.9693E5 Pa$
 
-Substituting the above to Eq.\eqref{eta} we can get $\eta$ in High-Low sequence:
+Substituting the above to Eq.\eqref{eq.eta} we can get $\eta$ in High-Low sequence:
 $$\eta_1=0.0721,$$
 
 in Low-High sequence:
@@ -1393,7 +1841,7 @@ $P_{m_1}=3.9298E5 Pa$
 \vspace{6pt}
 $P_{m_2}=3.1438E5 Pa$
 
-Substituting the above to Eq.\eqref{eta} we can get $\eta$ in High-Low sequence:
+Substituting the above to Eq.\eqref{eq.eta} we can get $\eta$ in High-Low sequence:
 $$\eta_1=0.3174,$$
 
 in Low-High sequence:
@@ -1436,7 +1884,7 @@ $P_{m_1}=6.8921E8 Pa$
 \vspace{6pt}
 $P_{m_2}=7.1700E8 Pa$
 
-Substituting the above to Eq.\eqref{eta} we can get $\eta$ in High-Low sequence:
+Substituting the above to Eq.\eqref{eq.eta} we can get $\eta$ in High-Low sequence:
 $$\eta_1=0.7170,$$
 
 in Low-High sequence:
@@ -1453,7 +1901,7 @@ The predicted results are shown in \figref{2stressRB}.
 \clearpage
 
 
-\subsection{Experimental verification of the proposed model }
+\section{Handling general loadings}
 
 What makes automobile fatigue so difficult to predict is that, unlike standard tests done in a laboratory, an automobile's structure has to endure a complex, mostly random, set of static as well as cyclical stresses when in service, such as in \figref{complexloading} which could represent load data from testing or measurement, extracting the cyclic information can be challenging. 
 
@@ -1465,7 +1913,7 @@ What makes automobile fatigue so difficult to predict is that, unlike standard t
 \end{figure}
 
 
-\subsubsection{Cycle Counting Method}
+\subsection{Cycle Counting Method}
 
 The object of all cycle counting methods is to compare the effect of variable amplitude load histories to fatigue data and curves obtained with simple constant amplitude load cycles. Rainflow counting is a process to obtain cyclic data of complex loading. Its name comes from the original description from the Japanese researchers Matsuiski and Endo where they describe the process in terms of rain falling off a pagoda style roof. A more insightful description based on cyclic plasticity is usually used to explain the method.
 
@@ -1544,11 +1992,11 @@ The rainflow procedure can be automated so that cyclic content of complex loadin
 \end{figure}
 
 
-\subsubsection{Using the method of plasticity accumulation}
+\subsection{Multiaxial loading: existing models and limitations(Roux)}
 
 In HCF, the material undergoes elastic deformation at the macroscopic level; plastic deformation occurs only near a stress concentration area, if there is.
 
-\subsection{Discussion}
+\textbf{Discussion}
 
 The Chaboche law is based on this assumption: fatigue damage occurs and accumulates only when the loading stress is higher than its fatigue limit. However, Eq.\eqref{chabochemulti} neglects the damage contribution of the loading stress which is lower than the fatigue
 limit. According to some experimental results such as: Lu
@@ -1558,7 +2006,8 @@ of the main reasons for prediction errors.
 
 Impurities in the material affect the fatigue life. So does the material's hardness, and especially its surface condition. How the components were heat-treated in the factory is another factor. The operating temperature makes a difference, too. Worse still is the structural component's shape: notches and sharp corners create concentrations of stress that can initiate cracks. Thus further studies should be carried out concerning these factors.
 
-\section{Multiscale energy dissipation approach}
+\subsection{Multiscale energy dissipation approach}
+
 The object of this work is to propose an energy based fatigue approach which takes into account impurities and hardness in the material which affect the fatigue life while handling multidimensional time varying loading histories.
 
 Our fundamental thought is to assume that the local dissipated energy at small scale governs fatigue at failure. The proposal of our model is to consider a plastic behavior at the mesoscopic scale with a dependence of the yield function not only on the deviatoric part of the stress but also on the hydro static part. A kinematic hardening under the assumptions of associative plasticity is also considered. We follow the Dang Van paradigm. The structure is elastic at the macroscopic scale. At each material points, there is a stochastic distribution of weak points which will undergo strong plastic yielding, which contribute to energy dissipation without affecting the overall macroscopic stress.
@@ -2095,8 +2544,8 @@ In a general loading case, $\dot{W}$ is to be computed. By integrating Eq.\eqref
 \end{equation}
 The evolution of $\uline{\uline{S}}$, $\uline{\uline{b}}$ and $\uline{\uline{\dot{\varepsilon}^p}}$ are given in section 1.4. Equation \eqref{dt} and \eqref{Wdot} are therefore our proposed damage law.
 
-\subsection{Loop on time and scales}
-\subsubsection{Integration rules for $\dot{W}$ and $\delta D$}
+\section{Numerical implementation and validation}
+\subsection{Integration rules for $\dot{W}$ and $\delta D$}
 Our first approach takes one cycle as unit time. We compute analytically the energy dissipation at each scale during this cycle. The method is valid for simple loading history and which includes the integration on all weakening scales. The damage $D$ is accumulated after each cycle.
 
 However, there are certain limitations of this method. Firstly we need a load history decomposition in cycles. Secondly in real life the perfect close loop cycle is hardly applicable.
@@ -2174,14 +2623,14 @@ After changing the integration limit, $\left( \dfrac{x+1}{2}\right) ^{\frac{1}{1
 Damage accumulation is deduced from Eq.\eqref{dt}:
 \begin{equation}
 	g_{n+1}=g_n+\dfrac{\dot{W}dt}{W_F}
-	\label{damage}
+	\label{eq.gdamage}
 \end{equation}
 
 with $g_n=\left[ 1-\left( 1-D_{n}\right)^{\gamma+1} \right]^{1-\alpha}$.
 
-We upgrade the damage step by step following Eq.\eqref{damage}. When $D$ reaches one, the material fails. 
+We upgrade the damage step by step following Eq.\eqref{eq.gdamage}. When $D$ reaches one, the material fails. 
 
-\subsubsection{Regime determination under multiple scales}
+\subsection{Regime determination under multiple scales}
 The material could be both in elastic and plastic regime under different scales. To be more elaborate, we reuse the fundamental equations in different regimes. At scale $s$, we have a dissipation rate given by:
 $$\dot{w}(s)=\left( \uline{\uline{S}}-\uline{\uline{b}}\right):\dot{\uline{\uline{\varepsilon}}}^p, $$
 which differs between plastic and elastic regime.
@@ -2299,7 +2748,7 @@ With Eq.\eqref{allscalerate}, the final expression of energy dissipation W durin
 \end{equation}
 
 
-We have the damage accumulation deduced in Eq.\eqref{damage}:
+We have the damage accumulation deduced in Eq.\eqref{eq.gdamage}:
 $$g_{n+1}=g_n+\dfrac{\dot{W}dt}{W_F}=g_n+\dfrac{W}{W_F},$$
 with $D_n=\left[1-\left(1-g_n^{\frac{1}{1-\alpha}} \right)^{\frac{1}{\gamma+1}}  \right]. $
 
@@ -2510,8 +2959,8 @@ Further research of energy based failure criteria should be focused on the follo
 \end{enumerate}
 
 
-\section{Application to real data}
-\subsection{Time filtering of load signal}
+\section{Multi-dimensional application}
+
 We have a 52 minutes recording of an average customer which have driven 18.3 kilometers. A complete set of forces were recorded at the center of the left front wheel (LFW in English but RAVG in French for Roue AVant Gauche). This wheel is driving and sustains the engine mass (half of it).\\
 FX: Force in the axial direction (from rear to front), a positive (resp. negative) force corresponds to an acceleration (resp. deceleration) of the vehicle.\\
 FY: Force in the horizontal direction (from driver to shotgun), a positive (resp. negative) force corresponds to an right (resp. left) turn.\\
@@ -2586,10 +3035,6 @@ $$\Delta W\doteq\int\hat{\sigma}:\hat{\varepsilon}dt$$
 
 To start with simple case we assume our signal is sinusoidal. Now we want the distribution of orientation of the slips in the metal. Statistics method gives us the yield limit distribution.
 
-\subsection{Calculation of local stress histories (PSA)}
-\subsection{Results from a standard Chaboche approach}
-\subsection{Results from the new approach}
-\section{Ideas to introduce chronology effects}
 
 \vspace{6pt}
 \noindent
@@ -2609,20 +3054,20 @@ We are grateful for the financial and technical support of Chaire PSA.
 \appendixpage
 \addcontentsline{toc}{section}{Appendices}\markboth{APPENDICES}{}
 \lstset{% general command to set parameter(s)
-	basicstyle=\small, % 设置字体大小
-	keywordstyle=\color{red}, % 设置关键字格式（颜色等等）
+	basicstyle=\small, 
+	keywordstyle=\color{red}, 
 	identifierstyle=, % nothing happens
-	commentstyle=\color{blue}, % 设置注释的格式
+	commentstyle=\color{blue}, 
 	stringstyle=\ttfamily, % typewriter type for strings
 	showstringspaces=false} % no special string spaces
-\begin{subappendices}
-	\section{DETAILED EXPLOITATION}
-	\input{apendices//EXPLOITATION}
-	\input{apendices//REGIME}
-	\input{apendices//3DTENSOR}    
-	\section{MATLAB CODE LISTING}
-	\input{apendices//SINUSOIDALCODE}
-	\input{apendices//3DCODE}
-\end{subappendices}
+%\begin{subappendices}
+%	\section{DETAILED EXPLOITATION}
+%	\input{apendices//EXPLOITATION}
+%	\input{apendices//REGIME}
+%	\input{apendices//3DTENSOR}    
+%	\section{MATLAB CODE LISTING}
+%	\input{apendices//SINUSOIDALCODE}
+%	\input{apendices//3DCODE}
+%\end{subappendices}
 \end{document}
 
