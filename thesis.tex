@@ -1,6 +1,13 @@
 \documentclass[3p,times,procedia,number]{elsarticle}
 \flushbottom
+\usepackage{titlesec}
 
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \usepackage{ecrc}
 %\usepackage{amsmath}
 \usepackage{amsmath}
@@ -182,15 +189,6 @@
 \tableofcontents
 \newpage
 
-\begin{abstract}
-%% Text of abstract
-The object of this paper is to propose an energy based fatigue approach which takes into account impurities and hardness in the material which affect the fatigue life while handling multidimensional time varying loading histories.
-
-Our fundamental thought is to assume that the local dissipated energy at small scale governs fatigue at failure. The proposal of our model is to consider a plastic behavior at the mesoscopic scale with a dependence of the yield function not only on the deviatoric part of the stress but also on the hydro static part. A kinematic hardening under the assumptions of associative plasticity is also considered. We follow the Dang Van paradigm. The structure is elastic at the macroscopic scale. At each material points, there is a stochastic distribution of weak points which will undergo strong plastic yielding, which contribute to energy dissipation without affecting the overall macroscopic stress.
-
-Instead of using the number of cycles, we use the concept of loading time. To elaborate real life loading history more accurately, mean stress effect is taken into account in mesoscopic yield function and non-linear damage accumulation law are also considered in our model. Fatigue will then be determined from the plastic shakedown cycle and from a phenomenological fatigue law linking lifetime and accumulated mesoscopic plastic dissipation.
- 
-\end{abstract}
 
 \begin{keyword}
 Fatigue; Energy; High cycle; Plasticity; Mean stress
@@ -207,8 +205,6 @@ Fatigue; Energy; High cycle; Plasticity; Mean stress
 \cortext[cor1]{Corresponding author. Email address: zepeng.ma@polytechnique.edu }
 
 \end{frontmatter}
-
-
 \clearpage
 \begin{flushleft}
 	\textbf{Nomenclature}
@@ -225,9 +221,6 @@ Fatigue; Energy; High cycle; Plasticity; Mean stress
 			$N_F$& number of cycles to failure &  &  &  \\
 			 $\dot{p}$ & accumulated plastic strain rate given as $\sqrt{\frac{2}{3}}||\dot{\varepsilon}_p||$ &  &  &  \\
 			$D$ & damage variable  &  &  &  \\
-			$M(),\alpha()$& functions in the nonlinear continuous damage model &  &  &  \\
-			$M_0,a,b,\gamma$ & coefficients of the nonlinear continuous damage model &  &  &  \\
-			$\sigma_{\sigma_m}$ & fatigue limit for a non-zero mean stress  &  &  &  \\
 			$\sigma_{a}$ & stress amplitude &  &  &  \\
 			$\sigma_{u}$ & ultimate tensile stress &  &  &  \\
 			$\langle$ $\rangle$& Macaulay bracket symbol.$\langle$ $\rangle$ is defined as $\langle m\rangle=0$ if $m\leqslant0$ , $\left\langle m\right\rangle=m$ if $m>0$&  &  &  \\
@@ -241,26 +234,60 @@ Fatigue; Energy; High cycle; Plasticity; Mean stress
 						$W_F$ & dissipated energy to failure per unit volume &  &  &  \\
 						$E$ & Young's modulus &  &  &  \\
 						$k=500\sim800MPa$ & hardening parameter &  &  &  \\
-						$\beta=1\sim50$ & weakening scales distribution exponent  &  &  &  \\
-						$\gamma=0\sim50$ & material parameter from Chaboche law(Wohler curve exponent)  &  &  &  \\
+						$\beta$ & weakening scales distribution exponent  &  &  &  \\
+						$\gamma$ & material parameter from Chaboche law(Wohler curve exponent)  &  &  &  \\
 						$\alpha=1 - a\left\langle \dfrac{\max\limits_{t}\sqrt{J_{2,a}}(t)+a_c{P_{max}(t)}-b_c}{ \sigma_{u} - 2\max\sqrt{J_{2,a}}}\right\rangle$ & characterizes non-linearity of damage accumulation &  &  &  \\
 						$a$ & material parameter from Chaboche law &  &  &  \\
-						$\sigma_{y}$ & macroscopic yield stress(normal or shear) &  &  &  \\
 						$\lambda=0\sim5$& hydrostatic pressure sensitivity &  &  &  \\
 		             	$\uline{\uline{S}}=dev\dot{\uline{\uline{\Sigma}}}$ & deviatoric part of the stress tensor &  &  &  \\
 						$\sigma_H$& macroscopic hydrostatic pressure &  &  &  \\
 						$A_{\uppercase\expandafter{\romannumeral2}}=\tau_{oct,a}=\sqrt{\dfrac{1}{3}J_{2,a}}$& the amplitude of octahedral shear stress &  &  &  \\
 						$s_{-1}$& tensile fatigue limit for $R=-1$  &  &  &  \\
+$ \dot{\varepsilon}_p$ & rate of effective plastic strain &  &  &  \\
+$W_0$ & reference density of damage energy &  &  &  \\
+$J_2$ & The second principal invariant of the stress deviatoric tensor &  &  &  \\
+$\sigma_{VM}=\sqrt{3J_{2}}$& Von Mises stress &  &  &  \\
 		\end{tabular}
 	\end{table}
 \end{flushleft}
 
 \clearpage
 \section{General introduction}
+The fatigue of metallic structures subjected to cyclic stresses is a phenomenon
+Which is traditionally studied at two levels. The fatigue is respectively qualified
+``low cycle" or ``high cycle" if the load causing the rupture is applied
+during a small or a large number of cycles. In turn, ``high cycle fatigue" is divided
+in two domains: ``limited endurance" where we speak of the finite lifetime regime
+and "unlimited endurance" where the structure can support a number of cycles theoretically
+infinite without it breaking. 
+
+ The threshold value dividing low- and high-cycle fatigue is somewhat arbitrary, but is generally
+based on the raw material’s behavior at the micro-structural level in response to the applied stresses. Low cycle
+failures typically involve significant plastic deformation. An example would be reversed 90° bending
+of a paper clip. Gross plastic deformation will take place on the first bend, but failure will not occur until
+approximately 20 cycles. Plastic deformation does play a role in high cycle fatigue; however, the plastic
+deformation is very localized and not necessarily discernible by a macroscopic evaluation of the
+component. In summary, while a valve spring designer may consider a failure at 10,000 cycles very short
+life, the failure can still be the result of high-cycle fatigue because the material response at the
+micro-structural level is the same as in a 10,000,000-cycle failure under lower applied stresses.
+Most metals with a body centered cubic crystal structure have a characteristic response to cyclic stresses.
+These materials have a threshold stress limit below which fatigue cracks will not initiate. This threshold
+stress value is often referred to as the endurance limit. In steels, the life associated with this behavior is
+generally accepted to be $2x10^6$
+cycles. In other words, if a given stress state does not induce a fatigue
+failure within the first $2x10^6$
+cycles, future failure of the component is considered unlikely. For spring
+applications, a more realistic threshold life value would be $2x10^7$ cycles. Metals with a face center cubic
+crystal structure (e.g. aluminum, austenitic stainless steels, copper, etc.) do not typically have an endurance
+limit. For these materials, fatigue life continues to increase as stress levels decrease; however, a threshold
+limit is not typically reached below which infinite life can be expected.
+
 \subsection{Industrial background and motivation}
 The search for the best performance at the best cost in the mechanical and
 transport leads to conditions of use of the mechanical components increasingly
-severe. Fatigue failures are widely studies
+severe. The latter can cause the occurrence of a fatigue limit for levels of
+very high loads (in tension or in compression) and important triaxiality rates
+. Fatigue failures are widely studies
 because it accounts for 90\% of all service
 failures due to mechanical causes.  Fatigue failures occur when metal is
 subjected to a repetitive or fluctuating
@@ -276,9 +303,94 @@ This poses an important problem during the dimensioning phase since, on the one 
 existing endurance criteria struggle to account for behavior for this type of
 loading, and on the other hand, the fatigue data that would allow to identify a model
 adapted to this problem are almost non-existent.
+
+On the other hand, the mechanical components are generally of complex nature undergoing
+complex loads. Manufacturers are looking for a model of lifetime
+of their components, which is simple to use, great applicability to metallic materials
+ and which treats almost all cases of possible loads. In the domain of
+limited endurance, very few criteria are proposed. At present, none of them
+can not be used in design offices, and does not fully meet the demand for a tool to
+predictive lifetime. Indeed, most of the existing approaches rely on
+methods of counting cycles, whose extension to the case of multiaxial stresses turns out to be
+difficult or even impossible because of the difficulty of extracting and defining cycles.
+
+Previous work carried out in collaboration with the PSA company shows that the criteria
+of multi-axial endurance used for fatigue dimensioning (Papadopoulos model
+and Dang Van's criterion) struggle to account effectively for these very
+individuals. It therefore seems essential to characterize the mechanisms
+damage of this type of loading and to implement a modeling
+capable of reflecting these particular fatigue conditions.
+
+The approach to solving the problem posed has four main stages:
+
+$\bullet$ Decoupling the effects of the stress gradient and the size effect.
+
+$\bullet$ Observations of the associated damage mechanisms during loading, by
+understanding the non-linearity of damage accumulation and the history dependent sequence effect.
+
+$\bullet$ Construction of a model of fatigue behavior that accounts for the effects of
+microscopic plasticity as well as the major damage effect. 
+
+$\bullet$Numerical simulation of cyclic loading conditions and random loading history.
+
+The aim of this thesis is to establish a deterministic model of lifetime
+on metal structures working in limited endurance, which handles almost all load cases
+(with constant and variable amplitudes) without recourse to cycle counting.
+
 \subsection{Outline of the work}
+The fatigue of materials with many cycles is one of the phenomena that can lead to
+rupture of machine parts or structures in operation. Its progressive character
+masked until sudden breakage does not allow easy prediction of the durability of the
+structure.
+The main factors influencing the fatigue resistance of materials are very numerous
+(loading mode, temperature, microstructural heterogeneities, residual stresses ...),
+making it a complex phenomenon to study. A lot of work has been done in the goal of
+better understanding the influence of these different factors. One of the main parameters
+influential, repeatedly studied, is the damage mechanism of the time varying stress.
+
+Numerous experimental observations made on metallic materials have shown
+That the damage mechanisms operating in fatigue with large number of cycles and
+leading to breakup are two categories. In a first step known as the priming step,
+microplasticity mechanisms, generally operating around heterogeneities specific to the
+material (inclusions, porosities, etc.), are the origin of the appearance of microcracks. If the load level is high enough, these cracks increase and cross a number of
+microstructural barriers (e.g. grain boundaries). When the crack has reached a size
+sufficiently large in relation to the microstructure and that the plasticized zone is confined to
+a second phase intervenes where it propagates according to the laws of the
+mechanics of the rupture.
+
+Two types of very distinct approaches are often used to model these mechanisms. The
+ first concerns priming and mainly uses the framework of the mechanics of the
+microplasticity considered to be the main cause of onset
+of a crack. The second uses the fracture mechanics framework to estimate the number
+of cycles necessary for the propagation of a pre-existing crack. 
+
+Although the first bibliographic part of this document is devoted to the presentation of
+criteria from different categories of approaches, it will be questioned, during the modeling of the
+behavior of the cast aluminum alloy, a probabilistic model
+competition between mechanisms related to the appearance of micro-cracks and others associated with the
+Non-propagation of pre-existing cracks.
+
+Therefore, in our work we consider both the two mechanisms exit and there are stochastic distribution of pre-existing micro-cracks which undergo strong plastic yielding in cyclic load history. The number of cycles to failure is determined from the plastic shakedown cycle.
+
+The bibliographical study conducted in the first part of this thesis aims to
+overview the basic multiaxial fatigue criteria and the physical basis of their origin. Models using the elastic adaptation concept, plasticity / damage on the mesoscopic scale as well as energy
+are compared. We will show that some loading effects are correctly reflected, however for others, the predictions are very different from one approach to another.
+
+The second part is devoted to the extension of some classic high cycle fatigue (HCF) criteria in order  to take into account a sensitivity of the criteria to stress spatial variations, and second to compare the performances of the extensions through several experimental fatigue tests. The gradient beneficial effect on bending-torsion in comparison with tension-compression is presented. Mechanisms of different approaches are compared and a more practical and simple expression taking into account the gradient of the stress amplitude and the maximum hydrostatic stress. The generalization of the approach to other multiaxial fatigue criteria is also proposed.  The proposition is then tested and applied to different simple situations such as cantilever rotative bending. The relative errors between the exact solutions and the experimental data are estimated. Biaxial  bending-torsion tests are also simulated to demonstrate the capabilities of the approach. 
+
+The non-linearity of damage accumulation in fatigue is discussed in the third part using the application of loadings
+The objective of this section is to contribute to the development life model that take into account the presence of complex variations of the stress tensor. We focus on Chaboche damage accumulation law in case of multiaxial high cycle fatigue. Heuristic formulations with different multiaxial fatigue criteria have been proposed.
+
+In the fourth part, there is more particularly a question of the use of loading history from industrial component. 
+Cycle counting method to compare the effect of variable amplitude load histories to fatigue data and curves obtained with simple constant amplitude load cycles is presented. It will be shown that the use of an probabilistic, taking into account the impurities and hardness in the material method is proposed. A kinematic hardening under the assumptions of associative plasticity is also considered. Usually, the effect of the average stress on loading levels below the yield strength of the material seems well documented in the scientific literature. Beyond this threshold, the mechanisms of damage in play appear less known because less studied. The proposal of our model is to consider a plastic behavior at the mesoscopic scale with a dependence of the yield function not only on the deviatoric part of the stress but also on the hydrostatic part. For fatigue behavior observed under random loading history, the energy approach makes it possible to combine effectively  with the damage accumulation law discussed in Section III.
+
+The fifth chapter of the document deals with the numerical implementation of our method with different experimental results.
+Instead of doing the integration directly which can be difficult for complex loading, the Gaussian
+Quadrature rule with Legendre points is used to give the value of local dissipated energy rate. Cyclic and random tests on aluminum alloy used for automobile suspension arm is calibrated with our model. Then a multidimensional  application is performed showing the capability of prediction on fatigue life of different material and loading patterns.
+
 
 \section{Fatigue life calculation methods}
+
 \subsection{Basic fatigue criteria }
 This bibliographic chapter enables to present the methods to calculate the lifetime of multiaxial high cycle fatigue. In fact, the equivalent stress of multiaxial loading and variable amplitude loading reveals the necessity of study these methods. These criteria allows to determine whether the stress trajectory in the stress space leads to the failure of the points concerned.
 
@@ -355,7 +467,7 @@ Thus the classical Crossland criterion can be written as:
 In multiaxial fatigue with large number of cycles, the important role of local plasticity on the appearance of a fatigue limit is widely accepted and fully justifies the use of a multi-scale approach. Among the existing approaches, one of the most known and used is that of [Dang Van 1999]. This criterion is used in particular in the design of certain automotive structures at PSA and
 Renault. The criterion [Dang Van 1973] belongs to the family of critical plane type approaches. The main physical
 basis of this criterion focuses on the theory of elastic adaptation to two scales, mesoscopic and macroscopic. The macroscopic behavior of the material often remains elastic, only a grain oriented unfavorably undergo
-plastic deformation. The author states the following hypothesis: " The
+plastic deformation. The author states the following hypothesis: `` The
 multiscale approach is settled on the assumption that under high cycle fatigue loading a structure
 will not be fractured by fatigue if an elastic shakedown is reached at the macroscopic scale as well
 as at mesoscopic scale " [Dang Van 1999]. The approach developed first is
@@ -455,11 +567,21 @@ He proposes to opt for a mean value of the accumulated plastic strain on all pos
          In the particular case of the uniaxial tension, the criterion is written as:
          $$\Sigma_{xx,a}\left(\dfrac{1}{\sqrt{3}}+\dfrac{\alpha_\infty}{3} \right)+\Sigma_{xx,m}\left(\dfrac{a_\infty}{3} \right) =\gamma_\infty$$
          
-         
 \subsubsection{Criteria based on energy}
-\vspace{6pt}
+Depending on the type of density of deformation energy considered per cycle, the
+Energy criteria are divided into three groups [Macha et al 1999]:
+\begin{itemize}
+	\item  criteria based on law of thermodynamics
+	\item  criteria based on elastic energy
+	\item  criteria based on plastic energy
+	\item  criteria based on the sum of elastic and plastic energies
+\end{itemize}
 
-\textbf{Energy dissipation based on law of thermodynamics}
+The criteria based on the elastic deformation energy can be used in fatigue with a large number of cycles, whereas those based on the plastic deformation energy are more suitable for oligocyclic fatigue.
+
+[Ellyin 1974]\cite{Ellyin1974} is one of the first to propose a fatigue criterion based on cyclic shear deformation energy. This approach was taken up and complemented by [Lefebvre et al 1981]\cite{neale1981criterion} and [Ellyin et al., 1991]\cite{ellyin1991phase} for the case of multiaxial loadings. In France, this approach is reflected in the work of [Froustrey-Lasserre 1992]\cite{Froustey1992} and then in [Palin-Luc 1996]\cite{palin1996fatigue} and [Banvillet 2001]\cite{vidal1996prevision}.
+
+\paragraph{Energy dissipation based on law of thermodynamics}
 
          In case of shell model. We assume the temperature in the thickness direction does not change. Based on the first and second law of thermodynamics, for any point M, we define $T(M,t)$ is the temperature field of $M$ at time $t$. Its 2D heat transfer function is \cite{yuan2013prediction}:
          $$\rho C \frac{\partial T(M,t)}{\partial t}-k\Delta_2 T(M,t)+\frac{2\sigma_e\varepsilon_mT(M,t)^4}{e}+\frac{2h}{e}[T(M,t)-T(M,t)^{air}]=d_1(M,t)+S_{th}(M,t)+r(M,t)$$
@@ -477,7 +599,7 @@ He proposes to opt for a mean value of the accumulated plastic strain on all pos
          $lg\sigma_a=-0.13lgN_F+2.85$ correlation coefficient:0.89
          
          
-\textbf{Energy dissipation based on strain energy density}
+\paragraph{Energy dissipation based on strain energy density}
 
          In their fatigue criterion, Froustey et al. (1992)  have considered a complete cycle of
          stresses. They use the mean value on one cycle of
@@ -522,13 +644,13 @@ He proposes to opt for a mean value of the accumulated plastic strain on all pos
          $$\sigma^*=\sqrt{2(\sigma_{Ten,-1}^D)^2-(\sigma_{RotBend,-1}^D)^2}$$
          
          
-\textbf{A critical plane approach based on energy concepts}
-
+\paragraph{A critical plane approach based on energy concepts}
+In 1999 Tadeusz et al.\cite{lagoda1999critical} proposed under multiaxial loadings the normal strain energy density in the critical plane (i.e. the plane of the maximum damage) is understood as the energy parameter. The history of strain energy density is schematized with use of the rain-flow algorithm. Fatigue damage is accumulated according to Palmgren-Miner hypothesis and the standard fatigue characteristic of the material, rescaled with use of the considered energy parameter. 
          $$W(t)=\frac{1}{2}\sigma(t)\varepsilon(t)sgn[\sigma(t),\varepsilon(t)]$$
          $$sgn(x,y)=\frac{sgn(x)+sgn(y)}{2}$$
          
          $sgn(x),sgn(y)=0,1,-1$ for distinguishing positive and negative works in a
-         fatigue cycle\cite{lagoda1999critical}.
+         fatigue cycle.
          
          If the stress and strain reach their maximum values,
          $\sigma_a$ and $\varepsilon_a$, then the maximum energy density value is
@@ -561,6 +683,136 @@ He proposes to opt for a mean value of the accumulated plastic strain on all pos
          $m'$ is slope of fatigue curve
          expressed by energy.
 
+\paragraph{Lamefip Criterion}
+Ellyin\cite{ellyin2012fatigue} showed that the use of both the plastic and elastic strain work can be used
+as damage parameter in multiaxial fatigue. The LAMEFIP criterion (Banvillet et al. [2003]\cite{banvillet2003volumetric}),
+devoted to the field of endurance or limited endurance, uses for damage parameter, the volumetric density of the strain work given to the material per loading cycles after elastic shakedown(supposed to be reached after a few thousands cycles ).
+
+The proposal is based on two main hypothesis : (i) the strain work given to the material per loading cycle is considered as the driving force for fatigue crack initiation and (ii) it is calculated after macroscopic elastic shakedown.
+
+Many authors use cycle counting techniques to extract, from a random stress tensor sequence, cycles from which the damage could be estimated. These techniques have two main drawbacks : (i) the choice of the cycle counting algorithm influences the calculated fatigue life since the number of counted cycles is algorithm dependent (Dowling [1983]\cite{dowling1983fatigue}), and (ii) for multiaxial non-proportional stress states, in many approaches from the literature, the variable chosen for cycle counting differs from the damage parameter. To avoid such drawbacks an incremental model has been developed. The strain work density given at a point M is written in an incremental way as follows :
+
+$$dW_g(M,t)=\sum_{i=1}^{3}\sum_{j=1}^{3}\sigma_{ij}\left( M,t\right)\dot{\epsilon}_{ij}\left( M,t\right)H\left( \sigma_{ij}\left( M,t\right),\dot{\sigma}_{ij}\left( M,t\right)\right)dt .$$
+
+\noindent
+- where $\epsilon_{ij}\left( M,t\right)$ are the strain tensor components and $\dot{x}= dx/dt$,\\
+- $\sigma_{ij}\left( M,t\right)$ are the stress tensor components,\\
+- and H represents the Heaviside function : $H(a) = 1$ if $a \geqslant 0$; $H(a) = 0$ if $a < 0$.
+
+As underlined by Ellyin\cite{ellyin2012fatigue}, the strain work can be calculated as the sum of elastic and plastic strain works, so that :
+$$dW_g(M,t)=dW_g^e(M,t)+dW_g^p(M,t).$$
+The framework of this study being HCF and MCF, they choose to consider only the elastic part of the strain work (Eq.\eqref{eq.lamefip1}) in the elastic shakedown state. The cumulated strain work on a time
+sequence of duration $T$ is equivalent to the integral of $dW_g^e(M,t)$ over $T$ as in Eq.\eqref{eq.lamefip2}. Banvillet et al. [2003]\cite{banvillet2003volumetric} has shown that for an uniaxial stress state $W_g$ is not shape dependent (sinus, triangle,square, etc...).
+\begin{equation}
+dW_g^e(M,t)=\sum_{i=1}^{3}\sum_{j=1}^{3}\sigma_{ij}\left( M,t\right)\dot{\epsilon}_{ij}^e\left( M,t\right)H\left( \sigma_{ij}\left( M,t\right),\dot{\sigma}_{ij}\left( M,t\right)\right)dt .
+\label{eq.lamefip1}
+\end{equation}
+\begin{equation}W_g(M,t)=\int_{T}dW_g(M,t).\label{eq.lamefip2}
+\end{equation}
+
+To take into account the material sensitivity to the stress triaxiality, the triaxiality degree at a point M is defined by the ratio of the strain work associated with the spherical part of the stress tensor over the total given in the work of Banvillet et al.[2003]\cite{banvillet2003volumetric}, but in an incremental way :
+$$dT(M,t)=\dfrac{dW_g^{Sph}(M,t)}{dW_g(M,t)} \ \ if \ \  dW_g(M,t)\neq0,\ otherwise \ \ dT(M,t)=0,$$
+with
+$$dW_g^{Sph}(M,t)=\dfrac{1}{3}\sum_{k=1}^{3}\sigma_{kk}(M,t)\sum_{l=1}^{3}\dot{\epsilon}_{ll}^e(M,t)H\left( \sum_{k=1}^{3}\sigma_{kk}(M,t)\sum_{l=1}^{3}\dot{\epsilon}_{ll}^e(M,t)\right)dt .$$
+The material sensitivity to stress triaxiality is considered by using an empirical function
+$F(dT,\beta_m)$ (Eq.\eqref{eq.lamefip3}) depending on the material parameter $\beta_m$ identified from two fully reversed
+fatigue limits (rotating bending and torsion). At any instant, for a multiaxial stress state, the
+strain work given to the material is corrected to evaluate an uniaxial equivalent strain work
+$d{W_f}_{eq} (M,t)$ (Eq.\eqref{eq.lamefip4}). Under uniaxial stress state $d{W_g}_{eq} (M,t)=dW_g(M,t)$.
+\begin{equation}
+F(dT(M,t),\beta_m)=\dfrac{1}{1-dT(M,t)}\left[ 1-\dfrac{1}{\beta_m}ln\left[1+dT(M,t)(e^{\beta_m}-1) \right] \right] .
+\label{eq.lamefip3}
+\end{equation}
+\begin{equation}
+d{W_g}_{eq} (M,t)=d{W_g}(M,t)\dfrac{F(dT_{uniax,\beta_m})}{F(dT(M,t),\beta_m)}.
+\label{eq.lamefip4}
+\end{equation}
+
+\subsubsection{Criteria based on plasticity-damage coupling}
+In recent years, a new class of criteria coupling mesoplasticity and damage has emerged. [Lemaitre Sermage Desmorat 1999]\cite{lemaitre1999two} have, for example, evolved the approach introduced by [Lemaitre and Chaboche 1985]\cite{lemaitre1985mecanique} based on the thermodynamics of irreversible processes and the mechanics of continuous media. [Flaceli{\`e}re et al. 2004]\cite{flaceliere2004contribution} also proposed a model based on a plasticity-damage coupling and attempted to account for the phenomena of damage observed experimentally on a C35 steel. In this work, we will focus on a more recent approach proposed by [Monchiet et al 2006]\cite{monchiet2006contributions}.
+\paragraph{Criterion of Monchiet et al}
+In order to account for the coupling plasticity-damage in HCF, [Monchiet et al. 2006]\cite{monchiet2006contributions} uses a micro-mechanical approach based on the work of [Gurson 1977]\cite{gurson1977continuum}. The damage is represented by a magnitude $f$ related to the development of porosity in the sliding bands at the origin of the initiation of the fatigue cracks. A load surface, of the type defined by Gurson, is used:
+\begin{equation}
+\dfrac{\Sigma_{equ}^2}{\Sigma_0^2}+2fcosh\left(\dfrac{3}{2}\dfrac{\Sigma_h}{\Sigma_0}-1-f^2=0 \right),
+\label{eq.monchiet1}
+\end{equation}
+where $\Sigma_{equ}$ Is the equivalent stress, $\Sigma_h$ The hydrostatic stress and $\Sigma_0$ the elastic limit of the matrix.
+
+The authors take into account two mechanisms of damage:
+
+\vspace{6pt}
+\begin{itemize}
+	\item  The first is related to the creation of gaps by annihilation of dislocations. This mechanism is at the origin of the accumulation of point defects of the lacunar or interstitial type along the persistent slip bands (PSB). The phenomenological model proposed by [Essmann et al 1979]\cite{doi:10.1080/01418618108239541} gives access to the porosity $f_a$:
+\begin{equation}
+f_a= A_0\left\lbrace k_a\gamma_{cum}-1+exp\left(-k_a\gamma_{cum} \right)  \right\rbrace .
+\label{eq.monchiet2}
+\end{equation}
+
+	\item  The second mechanism is related to the growth of micro-cavities. Using an incompressibility hypothesis, $f_g$ is defined by:
+\begin{equation}
+f_g=\left\lbrace 1-exp\left(3\epsilon_h^p \right) \right\rbrace.
+\label{eq.monchiet3}
+\end{equation}
+\end{itemize}
+
+	It is important to note that the first mechanism involves the accumulated plasticity $\gamma_{cum}$, related to amplitude effects. The second mechanism depends on the hydrostatic plastic deformation $\epsilon_h^p$, and allows the taking into account of the mean stress effects.
+	
+	The fatigue criterion is established on the basis of the following hypothesis: "a sufficient condition for nucleation of a fatigue crack is obtained if the porosity reaches a critical value $f_c$".
+	\begin{equation}
+	f\left( \gamma_{cum},\epsilon_h^p\right) =f_a+f_g\leqslant f_c.
+	\label{eq.monchiet4}
+	\end{equation}
+
+Noting $\gamma_c$, the critical value of the cumulative plasticity for which the fatigue criterion is reached when $\epsilon_h^p=0$, it becomes:
+\begin{equation}
+f_c=\left\lbrace A_0\left\lbrace k_a\gamma_{c}-1+exp\left(-k_a\gamma_{c} \right)  \right\rbrace \right\rbrace.
+\label{eq.monchiet5}
+\end{equation}
+The use of Eq.\eqref{eq.monchiet4} and Eq.\eqref{eq.monchiet5} leads, for the limiting cases $k_a >> 1$ Eq.\eqref{eq.monchiet6}, $k_a << 1$ Eq.\eqref{eq.monchiet7}, noting $\epsilon_c$(The critical plastic deformation, equal to $f_c / 3$ in the case of $\gamma_{cum} 0$), there is:
+\begin{equation}
+\dfrac{\gamma_{cum}}{\gamma_{c}}+\dfrac{\epsilon_h^p}{\epsilon_c}=1,
+\label{eq.monchiet6}
+\end{equation}
+\begin{equation}
+\left( \dfrac{\gamma_{cum}}{\gamma_{c}}\right) ^2+\dfrac{\epsilon_h^p}{\epsilon_c}=1.
+\label{eq.monchiet7}
+\end{equation}
+
+The effect of the mean stress is taken into account by the term hydrostatic deformation. Since $\gamma_{cum}$ and $\epsilon_h^p$ are defined on the grain scale, the macroscopic expression of the criterion requires to link these quantities to the macroscopic magnitudes of the loading.
+
+The next step is to look for elastic adaptation conditions and to apply a micro-macro path. The numerical results obtained make it possible to establish the following relations between the loading parameters and the parameters of the local criterion:
+
+\begin{equation}
+\left( \dfrac{T_a}{\tau_d}\right) ^2+2f_ccosh\left\lbrace\dfrac{\sqrt{3}}{2}\dfrac{\Sigma_{h,a}}{\tau_h} \right\rbrace-1-f_c^2=0.
+	\label{eq.monchiet8}
+\end{equation}
+\begin{equation}
+\Sigma_{h,m}=-\left( \dfrac{4c}{f_cln(f_c)}\left( 1-f_c\right)+3k^{\ast} \right) \epsilon_h^p.
+	\label{eq.monchiet9}
+\end{equation}
+
+In Eq.\eqref{eq.monchiet8}, $\tau_d$ and $\tau_h$ are the deviatoric and hydrostatic part of the plastic flow threshold associated with an isotropic hardening.
+
+In Eq.\eqref{eq.monchiet8}, $c$ and $k^{\ast}$ are parameters related respectively to the kinematic hardening and to the homogenization scheme.
+
+The implementation of this criterion requires the identification of 12 parameters:
+\begin{flushleft}
+\qquad - \qquad two parameters, $\gamma_c$ and $\epsilon_c$ linked to the local criterion.\\
+\qquad - \qquad two parameters, $A_0$ and $k_a$, related to the mechanisms of nucleation of cracks.\\
+\qquad - \qquad three parameters related to hardening, $R_0$ And $\tau_0$ linked to the isotropic hardening, $c$ linked to\\
+\qquad  \ \   \qquad   the kinematic hardening\\
+\qquad - \qquad two coefficients linked to the homogenization scheme, $\mu$ and $k$.\\
+\qquad - \qquad a cubic anisotropy coefficient of the grain $p_1$\\
+\qquad - \qquad a latent coefficient of strain hardening h\\
+\qquad - \qquad a critical porosity coefficient $f_c$\\
+\end{flushleft}
+
+All of these parameters are microscopic, which poses a problem in their identification. Some elements of this modeling have been taken up by [Charkaluk and Constantinescu 2009]\cite{charkaluk2009revisiting}, [Charkaluk et al. 2007]\cite{charkaluk2007approche} in dissipative approaches.
+
+
+
+
+
 \subsection{Basquin curve}
 
 \vspace{6pt}
@@ -572,7 +824,7 @@ failure N. There are numerous testing procedures to generate the required data f
 S-N diagram. S-N test data are usually displayed on a log-log plot, with the actual S-N line
 representing the mean of the data from several tests.
 
-\begin{figure}[h!]
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{figures//sn.png} 
 	\caption{Typical S-N curve.}
@@ -655,11 +907,12 @@ $1x10^3$ to $5x10^8$ cycles.
 \subsection{Calculation method without cycle counting}
 This part presents the existing method of prediction of lifetime, which does not need the algorithm of cycle counting. These kind of methods are still minority and usually more delicate to implement, but present the advantage of free the choice of variable of counting proved to be ``dangerous''. The method presented here is the morel method which is based on stress.
 
-Morel's method is based on a mesoscopic approach to critical plane type with the
+\subsubsection{Morel's method}
+Morel's method\cite{Morel2000101} is based on a mesoscopic approach to critical plane type with the
 choice of plastic deformation as mesoscopic cumulative damage variable.  Multiaxial and variable amplitude loading can be analyzed with this method.
 \begin{flushleft}
 Macroscopic quantities
-\begin{table}[h]
+\begin{table}[!h]
 	\begin{tabular}{lllll}
 		$\uline{\uline{\Sigma}}$ & macroscopic stress tensor &  &  &  \\
 		$\uline{\uline{E}}$ & macroscopic strain tensor &  &  &  \\
@@ -671,7 +924,7 @@ Macroscopic quantities
 \end{table}
 
 Mesoscopic quantities
-\begin{table}[h]
+\begin{table}[!h]
 	\begin{tabular}{lllll}
 		$\uline{\uline{\sigma}}$& mesoscopic stress tensor &  &  &  \\
 		$\uline{\uline{\varepsilon}}$ & mesoscopic strain tensor &  &  &  \\
@@ -1457,7 +1710,7 @@ damage, some accidents occur for these components. Research shows that a reliabl
 particularly important in the design, safety assessments,
 and optimization of engineering components and structures. Thus, it is important to formulate an accurate method
 to evaluate the fatigue damage accumulation and effectively predict the fatigue life of these components.
-The objective of this work is to contribute to the development life model that take into account the presence of complex variations of the stress tensor. We focus on Chaboche damage accumulation law in case of multiaxial high cycle fatigue. Heuristic formulations with different multiaxial fatigue criteria have been proposed. An application to an industrial structure is then performed.
+The objective of this work is to contribute to the development life model that take into account the presence of complex variations of the stress tensor. We focus on Chaboche damage accumulation law in case of multiaxial high cycle fatigue. Heuristic formulations with different multiaxial fatigue criteria have been proposed. 
 
 \subsection{The notion of damage in fatigue}
 
@@ -1506,7 +1759,8 @@ The Palmgren-Miner linear accumulation law gives good results only for loads for
 		\label{nonlinear accumulation}
 	\end{minipage}
 \end{figure} 
-\clearpage
+
+\newpage
 \subsubsection{Classic Chaboche damage law}
 
 In periodic cyclic loadings, one way of writing a damage law which expresses the experimental results is to assume that the damage per cycle is a function of the maximum and the mean values of the stress:
@@ -1655,7 +1909,7 @@ The damage is expressed the same as in uniaxial case:
 	\centering
 	\includegraphics[width=\textwidth]{figures//Dratio1.png}
 	\vspace{-12pt}
-	\caption{Influence of function $\alpha$ in a plot of fatigue damage versus cycle ratio}
+	\caption{Influence of function $\alpha$ in a plot of fatigue damage versus cycle ratio with $\gamma=0.1$}
 	\label{Alpha}
 \end{figure}
 These theories account for the nonlinear nature of fatigue damage accumulation by using nonlinear relations such as Eq.\eqref{damage} where the power $\alpha$ depends on the load level(see \figref{Alpha}).
@@ -1665,7 +1919,7 @@ These theories account for the nonlinear nature of fatigue damage accumulation b
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures//Dratio2.png}
 	\vspace{-12pt}
-	\caption{Influence of function $\gamma$ in a plot of fatigue damage versus cycle ratio}
+	\caption{Influence of function $\gamma$ in a plot of  damage versus fatigue life ratio with $\alpha=0.8$}
 \end{figure}
 
 \clearpage
@@ -1775,7 +2029,7 @@ $\gamma=6$
 $A_{\uppercase\expandafter{\romannumeral2}}-N_F$ figure is shown in \figref{JNrotation}. 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figures//JNrotation.png} 
+	\includegraphics[width=\textwidth]{figures//JNrotation.png} 
 	\caption{$A_{\uppercase\expandafter{\romannumeral2}}-N_F$ curve in rotation at r=0.1}
 	\label{JNrotation}
 \end{figure}
@@ -1804,7 +2058,7 @@ The predicted results are shown in \figref{2stressR}.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figures//2stressR.png} 
+	\includegraphics[width=\textwidth]{figures//2stressR.png} 
 	\caption{Two-stress level loading in pure rotation at r=0.1}
 	\label{2stressR}
 \end{figure}
@@ -1822,7 +2076,7 @@ $\gamma=6$
 The $A_{\uppercase\expandafter{\romannumeral2}}-N_F$ figure is shown in \figref{JNbending}.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figures//JNbending.png} 
+	\includegraphics[width=\textwidth]{figures//JNbending.png} 
 	\caption{$A_{\uppercase\expandafter{\romannumeral2}}-N_F$ curve in 4-point bending at y=3}
 	\label{JNbending}
 \end{figure}
@@ -1851,7 +2105,7 @@ The predicted results are shown in \figref{2stressB}.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figures//2stressB.png} 
+	\includegraphics[width=\textwidth]{figures//2stressB.png} 
 	\caption{Two-stress level loading in 4-point bending at y=3}
 	\label{2stressB}
 \end{figure}
@@ -1863,7 +2117,7 @@ The $A_{\uppercase\expandafter{\romannumeral2}}-N_F$ figure is shown in \figref{
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figures//JNRB.png} 
+	\includegraphics[width=\textwidth]{figures//JNRB.png} 
 	\caption{$A_{\uppercase\expandafter{\romannumeral2}}-N_F$ curve in rotative bending at r=3}
 	\label{JNRB}
 \end{figure}
@@ -1894,7 +2148,7 @@ The predicted results are shown in \figref{2stressRB}.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figures//2stressRB.png} 
+	\includegraphics[width=\textwidth]{figures//2stressRB.png} 
 	\caption{Two-stress level loading in rotative bending at r=0.5}
 	\label{2stressRB}
 \end{figure}
@@ -1914,6 +2168,31 @@ What makes automobile fatigue so difficult to predict is that, unlike standard t
 
 
 \subsection{Cycle Counting Method}
+A counting method is a method for identifying a statistical event
+in a random loading sequence. This event can be, for example, extrema,
+ranges or cycles of the signal. A method of counting stress cycles determines
+therefore the number or the density of presence of the stress cycles in the loading signal.
+In other words, the counting method consists in discretizing the loading sequence
+variable in simple elementary cycles easy to implement in any forecasting process
+of fatigue life. Indeed, each elementary cycle, extracted from the sequence of
+load, is denoted by its amplitude and its mean value to which corresponds one
+well-defined lifetime. Then, the elementary damage of the extracted cycle is calculated using
+a rule of damage. The process repeats along the sequence studied to evaluate
+the total damage by means of an accumulation law, and consequently to determine the number of
+sequences at break.
+
+Some methods of counting have been developed by the experts. They all lead to different results and therefore, for some, to errors in the calculation of the duration of life. We can cite by way of example six major families of counting techniques,
+described in various works \cite{ASTM1985}:
+
+\vspace{6pt}
+\noindent
+- the counting of the loading time,\\
+- the counting of extrema between two passages by the mean value,\\
+- the counting of areas,\\
+- the counting of paired ranges,\\
+- the counting of overflows,\\
+- rainflow cycle counting, say ``the drop of water."
+\vspace{6pt}
 
 The object of all cycle counting methods is to compare the effect of variable amplitude load histories to fatigue data and curves obtained with simple constant amplitude load cycles. Rainflow counting is a process to obtain cyclic data of complex loading. Its name comes from the original description from the Japanese researchers Matsuiski and Endo where they describe the process in terms of rain falling off a pagoda style roof. A more insightful description based on cyclic plasticity is usually used to explain the method.
 
@@ -2509,7 +2788,7 @@ If the dissipated energy accumulates linearly until a failure value $W_F$, we ca
 From Eq.\eqref{eq:w}, we then obtain that the model predicts as expected a power law dependence in function of $S_{max}$.
 However, experiments shows that the damage or the energy accumulation of a material evolves non-linearly in time. We should introduce below a method to handle such a nonlinearity.
 
-\subsection{Nonlinearity of damage accumulation}
+\subsection{Damage accumulation without cycle counting}
 \subsubsection{Energy approach with Chaboche law}
 The Chaboche law\cite{lemaitre1990mechanics} is essentially a damage incremental law for cyclic loading of stress intensity $\sigma$ with a deviatoric part ${A}_{\uppercase\expandafter{\romannumeral2}}$ and hydrostatic part $\Sigma_H$, defining the damage increase by:
 
@@ -3045,7 +3324,7 @@ We are grateful for the financial and technical support of Chaire PSA.
 
 \clearpage
 \bibliographystyle{unsrt}
-\bibliography{11}
+\bibliography{11thesis}
 \addcontentsline{toc}{section}{Reference}
 
 

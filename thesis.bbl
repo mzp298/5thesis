@@ -36,6 +36,42 @@ Ioannis~V Papadopoulos.
 \newblock Long life fatigue under multiaxial loading.
 \newblock {\em International Journal of Fatigue}, 23(10):839--849, 2001.
 
+\bibitem{Ellyin1974}
+Ellyin F.
+\newblock A criterion for fatigue under multiaxial states of stress.
+\newblock {\em Mechanics Research Communications}, pages Vol.1 No 4, 219--224.,
+  1974.
+
+\bibitem{neale1981criterion}
+KW~Neale and F~Ellyin.
+\newblock A criterion, for low-cycle fatigue failure under biaxial states of
+  stress.
+\newblock {\em Journal of Engineering Materials and Technology}, 103:1, 1981.
+
+\bibitem{ellyin1991phase}
+F~Ellyin, K~Golos, and Z~Xia.
+\newblock In-phase and out-of-phase multiaxial fatigue.
+\newblock {\em ASME J. Eng. Mater. Technol}, 113:112, 1991.
+
+\bibitem{Froustey1992}
+Dubar~L. Froustey~C., Laserre~S.
+\newblock Validit{\'e} des crit{\`e}res de fatigue multiaxiale {\`a}
+  l’endurance en flexion-torsion.
+\newblock pages Mat--Tech ‘92’, IITT--International, France, 79--85, 1992.
+
+\bibitem{palin1996fatigue}
+Thierry Palin-Luc.
+\newblock {\em Fatigue multiaxiale d'une fonte GS sous sollicitations
+  combin{\'e}es d'amplitude variable}.
+\newblock PhD thesis, 1996.
+
+\bibitem{vidal1996prevision}
+Emmanuelle Vidal-Sall{\'e}.
+\newblock {\em Pr{\'e}vision de la dur{\'e}e de vie en fatigue multiaxiale sous
+  sollicitations d'amplitude variable {\`a} l'aide d'un crit{\`e}re global}.
+\newblock PhD thesis, LMSo-Laboratoire de M{\'e}canique des Solides, EA 675
+  (Lyon, INSA), 1996.
+
 \bibitem{yuan2013prediction}
 Li~Yuan and Han Xu Liu Jie~Jiang Chao.
 \newblock A prediction method on high-cycle fatigue parameters based on
@@ -53,6 +89,68 @@ Tadeusz {\L}agoda, Ewald Macha, and W{\l}odzimierz Bedkowski.
 \newblock A critical plane approach based on energy concepts: application to
   biaxial random tension-compression high-cycle fatigue regime.
 \newblock {\em International Journal of Fatigue}, 21(5):431--443, 1999.
+
+\bibitem{ellyin2012fatigue}
+Fernand Ellyin.
+\newblock {\em Fatigue damage, crack growth and life prediction}.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{banvillet2003volumetric}
+Alexis Banvillet, Thierry Palin-Luc, and Serge Lasserre.
+\newblock A volumetric energy based high cycle multiaxial fatigue citerion.
+\newblock {\em International Journal of Fatigue}, 25(8):755--769, 2003.
+
+\bibitem{dowling1983fatigue}
+NE~Dowling.
+\newblock Fatigue life prediction for complex load versus time histories.
+\newblock {\em Journal of Engineering Materials and Technology},
+  105(3):206--214, 1983.
+
+\bibitem{lemaitre1999two}
+J~Lemaitre, JP~Sermage, and R~Desmorat.
+\newblock A two scale damage concept applied to fatigue.
+\newblock {\em International Journal of fracture}, 97(1):67--81, 1999.
+
+\bibitem{lemaitre1985mecanique}
+J~Lema{\^\i}tre and Jean~Louis Chaboche.
+\newblock M{\'e}canique des mat{\'e}riaux solides.
+\newblock 1985.
+
+\bibitem{flaceliere2004contribution}
+Laurent Flaceli{\`e}re.
+\newblock {\em Contribution a la mod{\'e}lisation du dommage en fatigue
+  multiaxiale d’un acier C36: confrontation {\`a} l’exp{\'e}rience}.
+\newblock PhD thesis, Poitiers, 2004.
+
+\bibitem{monchiet2006contributions}
+Vincent Monchiet.
+\newblock {\em Contributions {\`a} la mod{\'e}lisation microm{\'e}canique de
+  l'endommagement et de la fatigue des m{\'e}taux ductiles}.
+\newblock PhD thesis, Lille 1, 2006.
+
+\bibitem{gurson1977continuum}
+Arthur~L Gurson et~al.
+\newblock Continuum theory of ductile rupture by void nucleation and growth:
+  Part i—yield criteria and flow rules for porous ductile media.
+\newblock {\em Journal of engineering materials and technology}, 99(1):2--15,
+  1977.
+
+\bibitem{doi:10.1080/01418618108239541}
+U.~Essmann, U.~Gösele, and H.~Mughrabi.
+\newblock A model of extrusions and intrusions in fatigued metals i.
+  point-defect production and the growth of extrusions.
+\newblock {\em Philosophical Magazine A}, 44(2):405--426, 1981.
+
+\bibitem{charkaluk2009revisiting}
+E~Charkaluk, A~Constantinescu, H~Ma{\"\i}tournam, and K~Dang Van.
+\newblock Revisiting the dang van criterion.
+\newblock {\em Procedia Engineering}, 1(1):143--146, 2009.
+
+\bibitem{charkaluk2007approche}
+E~Charkaluk and A~Constantinescu.
+\newblock Approche dissipative en fatigue: influence de la contrainte moyenne
+  en fatigue polycyclique.
+\newblock In {\em Proceedings National MECAMAT Symposium}, 2007.
 
 \bibitem{Morel2000101}
 F.~Morel.
@@ -141,6 +239,12 @@ J.~L. Chaboche and P.~M. Lesne.
 \newblock A non-linear continuous fatigue damage model.
 \newblock {\em Fatigue , Fracture of Engineering Materials , Structures},
   11(1):1--17, 1988.
+
+\bibitem{ASTM1985}
+ASTM.
+\newblock Standard practices for cycle fatigue counting in fatigue analysis.
+\newblock {\em Designation E 1049-85, vol. 03.01 of Metal Test Methods and
+  Analytical procedure.}, pages 836--848, 1985.
 
 \bibitem{xi2008strengthening}
 Lu~Xi and Zheng Songlin.
